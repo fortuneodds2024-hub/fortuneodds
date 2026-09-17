@@ -613,55 +613,75 @@
           <!-- Form Column -->
           <div class="bg-white p-8 sm:p-10 rounded-3xl border border-brand-gold/40 shadow-xl md:col-span-2">
             <h2 class="text-2xl font-bold text-stone-900 mb-6">填寫您的品牌健檢需求</h2>
-            <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+<!-- 隱藏式傳輸 iframe：讓資料背景送出至 Google 表單，不會跳出醜陋的 Google 頁面 -->
+            <iframe name="hidden_gform" id="hidden_gform" style="display:none;" onload="if(window.isFormSubmitted){onGoogleFormSuccess();}"></iframe>
+
+            <!-- 
+              【重要設定教學】：
+              1. 請將下方 action 中的 "YOUR_FORM_ID" 替換成你的 Google 表單 ID
+                 例如：https://docs.google.com/forms/d/e/1FAIpQLSdX.../formResponse
+              2. 將每個 input 的 name="entry.XXXXXX" 改為你 Google 表單對應題目的 entry ID
+            -->
+            <form 
+              id="brandInquiryForm"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScHHl5mKdFIqHkLcyY2aFVTmJCqKwQZNW1-7vK4PIejUkccIg/formResponse" 
+              method="POST" 
+              target="hidden_gform" 
+              onsubmit="return handleFormSubmit(event)" 
+              class="space-y-6"
+            >
               <div class="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-xs font-bold text-stone-700 mb-2">聯絡人姓名 / 職稱 *</label>
-                  <input type="text" required placeholder="例：林執行長 / 王院長" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red" />
+                  <input type="text" name="entry.1124234225" required placeholder="例：林執行長 / 王院長" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red bg-stone-50/50" />
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-stone-700 mb-2">聯絡電話 *</label>
-                  <input type="tel" required placeholder="例：0912-345-678" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red" />
+                  <input type="tel" name="entry.1688354033" required placeholder="例：0912-345-678" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red bg-stone-50/50" />
                 </div>
               </div>
 
               <div class="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label class="block text-xs font-bold text-stone-700 mb-2">品牌名稱 *</label>
-                  <input type="text" required placeholder="例：樸原健康診所" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red" />
+                  <label class="block text-xs font-bold text-stone-700 mb-2">品牌 / 診所名稱 *</label>
+                  <input type="text" name="entry.1422924157" required placeholder="例：微光美學診所" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red bg-stone-50/50" />
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-stone-700 mb-2">所屬產業 *</label>
-                  <select required class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                  <select name="entry.228181534" required class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-brand-red bg-stone-50/50">
                     <option value="">請選擇產業</option>
-                    <option value="醫美診所">醫美/牙醫/等醫療診所/</option>
-                    <option value="美業沙龍">美業/皮膚管理/個人工作室</option>
-                    <option value="產品電商">美妝/保養品/保健食品電商</option>
+                    <option value="醫美診所">醫美診所 / 微整抗老</option>
+                    <option value="美業沙龍">美甲美睫 / 紋繡SPA沙龍</option>
+                    <option value="生技保健">生技健康食品 / 機能飲品</option>
+                    <option value="保養品電商">美妝保養品電商</option>
                     <option value="其他美學產業">其他相關美學產業</option>
-                    <option value="其他產業">其他產業</option>
                   </select>
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs font-bold text-stone-700 mb-2">諮詢的服務項目（可多選填寫）</label>
+                <label class="block text-xs font-bold text-stone-700 mb-2">諮詢的服務項目（可多選）</label>
+                <!-- 多選項目在送出時會自動合併寫入 entry.1000005 欄位 -->
+                <input type="hidden" name="entry.1243327572" id="combined_services" value="" />
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-stone-700">
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 品牌定位與CIS視覺</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 數位廣告投放</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 短影音IP代操</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 視覺整合與包裝設計</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 官網 UI/UX 設計</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 官方 LINE 深度建置</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="品牌定位與CIS視覺" class="service-checkbox accent-brand-red"> 品牌定位與CIS視覺</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="數位廣告投放操盤" class="service-checkbox accent-brand-red"> 數位廣告投放操盤</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="短影音與醫師IP" class="service-checkbox accent-brand-red"> 短影音與醫師IP</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="視覺整合與包裝" class="service-checkbox accent-brand-red"> 視覺整合與包裝</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="官網 UI/UX 設計" class="service-checkbox accent-brand-red"> 官網 UI/UX 設計</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="官方 LINE 深度建置" class="service-checkbox accent-brand-red"> 官方 LINE 深度建置</label>
+                  <label class="flex items-center gap-2 cursor-pointer select-none"><input type="checkbox" value="營運顧問" class="service-checkbox accent-brand-red"> 營運顧問</label>
                 </div>
               </div>
 
               <div>
                 <label class="block text-xs font-bold text-stone-700 mb-2">目前營運痛點或期望目標</label>
-                <textarea rows="3" placeholder="例如：想重新做品牌包裝、需要精準獲取自費微整客源、預算規劃..." class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red"></textarea>
+                <textarea name="entry.700204104" rows="3" placeholder="例如：想重新做品牌包裝、需要精準獲取自費微整客源、預算規劃..." class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red bg-stone-50/50"></textarea>
               </div>
 
-              <button type="submit" class="w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold rounded-xl text-sm transition-all shadow-md">
-                提交預約需求（顧問將於 24 小時內聯繫）
+              <button type="submit" id="submitBtn" class="w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+                <span>提交預約需求（顧問將於 24 小時內聯繫）</span>
+                <i data-lucide="send" class="w-4 h-4"></i>
               </button>
             </form>
 
@@ -673,6 +693,7 @@
       </div>
     </section>
   </main>
+
 
   <!-- ==================== GLOBAL FOOTER ==================== -->
   <footer class="bg-stone-950 text-stone-400 py-16 border-t border-stone-800">
