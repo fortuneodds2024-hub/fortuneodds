@@ -556,117 +556,98 @@
   </main>
 
   <!-- ==================== PAGE 6: CONTACT (聯絡預約) ==================== -->
-  <main id="page-contact" class="page-section flex-1">
+ <main id="page-contact" class="page-section flex-1">
     <section class="py-20 bg-stone-900 text-white text-center">
       <div class="max-w-4xl mx-auto px-4">
         <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Get In Touch</span>
-        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-4">預約 30 分鐘品牌增長診斷</h1>
-        <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
-          填寫需求或直接加入官方 LINE，顧問團隊將在 24 小時內與您聯繫
+        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-4">聯絡心想事成 ｜ 預約品牌健檢</h1>
+        <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto font-serif italic">
+          “ May the odds be ever in your favor. ” ── 願機會永遠對你有利！
         </p>
       </div>
     </section>
 
     <section class="py-20 bg-brand-cream">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-10">
-          <!-- Contact Info Column -->
-          <div class="space-y-8 md:col-span-1">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <!-- Main Dual Contact Cards -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Card 1: LINE 官方客服 (主要通道) -->
+          <div class="bg-white rounded-3xl p-8 sm:p-10 border-2 border-[#06C755]/30 shadow-xl hover:border-[#06C755] transition-all flex flex-col justify-between">
             <div>
-              <h2 class="text-xl font-bold text-stone-900 mb-2">聯絡資訊</h2>
-              <p class="text-stone-600 text-xs leading-relaxed">
-                心想事成品牌孵化 位於台中南屯，歡迎預約面對面諮詢或線上會議。
+              <div class="w-14 h-14 rounded-2xl bg-[#06C755]/10 text-[#06C755] flex items-center justify-center mb-6">
+                <i data-lucide="message-circle" class="w-8 h-8"></i>
+              </div>
+              <span class="text-xs font-bold text-[#06C755] uppercase tracking-wider">Most Recommended 推薦管道</span>
+              <h2 class="text-2xl font-black text-stone-900 mt-1 mb-3">官方 LINE 即時預約</h2>
+              <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                最即時的高效率對談管道！加入後直接傳送您的品牌或診所名稱，顧問團隊將於 24 小時內與您安排 30 分鐘 1 對 1 增長健檢。
               </p>
-            </div>
-
-            <div class="space-y-4 text-xs text-stone-700">
-              <div class="flex items-start gap-3 p-4 bg-white rounded-2xl border border-brand-gold/30">
-                <i data-lucide="map-pin" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
-                <div>
-                  <div class="font-bold text-stone-900">總部位置</div>
-                  <div class="mt-1">台中市南屯區大業路131號</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3 p-4 bg-white rounded-2xl border border-brand-gold/30">
-                <i data-lucide="message-circle" class="w-5 h-5 text-[#06C755] shrink-0 mt-0.5"></i>
-                <div>
-                  <div class="font-bold text-stone-900">LINE 官方帳號</div>
-                  <div class="mt-1">
-                    <a href="https://lin.ee/rRWdlRi" target="_blank" class="text-brand-red font-bold hover:underline">點此直達加入 LINE 諮詢</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3 p-4 bg-white rounded-2xl border border-brand-gold/30">
-                <i data-lucide="instagram" class="w-5 h-5 text-pink-600 shrink-0 mt-0.5"></i>
-                <div>
-                  <div class="font-bold text-stone-900">Instagram</div>
-                  <div class="mt-1">
-                    <a href="https://www.instagram.com/fortune.odds/" target="_blank" class="text-stone-700 hover:text-brand-red">@fortune.odds</a>
-                  </div>
-                </div>
+              <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200 text-xs text-stone-700 space-y-1.5 font-mono mb-6">
+                <div>📌 官方 LINE 連結：lin.ee/rRWdlRi</div>
+                <div>💬 服務時間：週一至週五 10:00 - 19:00</div>
+                <div>⚡ 專人 1 對 1 諮詢 / 保密合約簽署</div>
               </div>
             </div>
+            <a href="https://lin.ee/rRWdlRi" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-[#06C755] hover:bg-[#05a847] text-white font-bold text-base text-center transition-all shadow-lg flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>點此立即加入 LINE 諮詢</span>
+            </a>
           </div>
 
-          <!-- Form Column -->
-          <div class="bg-white p-8 sm:p-10 rounded-3xl border border-brand-gold/40 shadow-xl md:col-span-2">
-            <h2 class="text-2xl font-bold text-stone-900 mb-6">填寫您的品牌健檢需求</h2>
-            <form onsubmit="handleFormSubmit(event)" class="space-y-6">
-              <div class="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs font-bold text-stone-700 mb-2">聯絡人姓名 / 職稱 *</label>
-                  <input type="text" required placeholder="例：林執行長 / 王院長" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red" />
+          <!-- Card 2: 總部地址與參訪諮詢 -->
+          <div class="bg-white rounded-3xl p-8 sm:p-10 border border-brand-gold/40 shadow-xl flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center mb-6">
+                <i data-lucide="map-pin" class="w-8 h-8"></i>
+              </div>
+              <span class="text-xs font-bold text-brand-gold-dark uppercase tracking-wider">Headquarters 門市總部</span>
+              <h2 class="text-2xl font-black text-stone-900 mt-1 mb-3">總部親訪與線上會議</h2>
+              <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                心想事成總部位於台中南屯，歡迎醫美診所主理人、美業沙龍創辦人或生技品牌團隊預約實體面對面專案策略會議。
+              </p>
+              <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200 text-xs text-stone-700 space-y-2 mb-6">
+                <div class="flex items-start gap-2">
+                  <strong class="shrink-0 text-stone-900">總部地址：</strong>
+                  <span>台中市南屯區大業路131號</span>
                 </div>
-                <div>
-                  <label class="block text-xs font-bold text-stone-700 mb-2">聯絡電話 *</label>
-                  <input type="tel" required placeholder="例：0912-345-678" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red" />
+                <div class="flex items-start gap-2">
+                  <strong class="shrink-0 text-stone-900">官方 IG：</strong>
+                  <a href="https://www.instagram.com/fortune.odds/" target="_blank" class="text-brand-red font-bold hover:underline">@fortune.odds</a>
+                </div>
+                <div class="flex items-start gap-2">
+                  <strong class="shrink-0 text-stone-900">會議形式：</strong>
+                  <span>台中實體參訪 / Google Meet 線上遠端會議</span>
                 </div>
               </div>
+            </div>
+            <a href="https://www.instagram.com/fortune.odds/" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-base text-center transition-all shadow-md flex items-center justify-center gap-2">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+              <span>前往 Instagram 了解最新動態</span>
+            </a>
+          </div>
+        </div>
 
-              <div class="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xs font-bold text-stone-700 mb-2">品牌名稱 *</label>
-                  <input type="text" required placeholder="例：樸原健康診所" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red" />
-                </div>
-                <div>
-                  <label class="block text-xs font-bold text-stone-700 mb-2">所屬產業 *</label>
-                  <select required class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm text-stone-700 focus:outline-none focus:ring-2 focus:ring-brand-red">
-                    <option value="">請選擇產業</option>
-                    <option value="醫美診所">醫美/牙醫/等醫療診所/</option>
-                    <option value="美業沙龍">美業/皮膚管理/個人工作室</option>
-                    <option value="產品電商">美妝/保養品/保健食品電商</option>
-                    <option value="其他美學產業">其他相關美學產業</option>
-                    <option value="其他產業">其他產業</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-stone-700 mb-2">諮詢的服務項目（可多選填寫）</label>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-stone-700">
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 品牌定位與CIS視覺</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 數位廣告投放</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 短影音IP代操</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 視覺整合與包裝設計</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 官網 UI/UX 設計</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-brand-red"> 官方 LINE 深度建置</label>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-stone-700 mb-2">目前營運痛點或期望目標</label>
-                <textarea rows="3" placeholder="例如：想重新做品牌包裝、需要精準獲取自費微整客源、預算規劃..." class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red"></textarea>
-              </div>
-
-              <button type="submit" class="w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold rounded-xl text-sm transition-all shadow-md">
-                提交預約需求（顧問將於 24 小時內聯繫）
-              </button>
-            </form>
-
-            <div id="formFeedback" class="hidden mt-6 p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-center text-sm font-semibold">
-              🎉 感謝您的預約！顧問團隊已收到您的資料，將會儘速與您聯繫。
+        <!-- Consultation Steps (3-step easy guide) -->
+        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-brand-gold/30">
+          <div class="text-center max-w-2xl mx-auto mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Simple Process</span>
+            <h3 class="text-xl sm:text-2xl font-black text-stone-900 mt-1">品牌增長健檢預約 3 步驟</h3>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-6 text-center">
+            <div class="p-6 rounded-2xl bg-brand-cream/60 border border-brand-gold/20">
+              <div class="w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto mb-3 text-sm">1</div>
+              <h4 class="font-bold text-stone-900 text-sm mb-1">加入官方 LINE</h4>
+              <p class="text-xs text-stone-600">點擊加好友，確認官方帳號 @fortune.odds</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-brand-cream/60 border border-brand-gold/20">
+              <div class="w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto mb-3 text-sm">2</div>
+              <h4 class="font-bold text-stone-900 text-sm mb-1">傳送品牌現況</h4>
+              <p class="text-xs text-stone-600">告知您的品牌名稱、主要業務與期望達成的營運目標</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-brand-cream/60 border border-brand-gold/20">
+              <div class="w-10 h-10 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto mb-3 text-sm">3</div>
+              <h4 class="font-bold text-stone-900 text-sm mb-1">安排 1 對 1 健檢</h4>
+              <p class="text-xs text-stone-600">資深策略顧問於 24 小時內親自聯繫並敲定會議時間</p>
             </div>
           </div>
         </div>
