@@ -168,58 +168,45 @@
   </header>
 
   <!-- ==================== PAGE 1: HOME (首頁) ==================== -->
-  <main id="page-home" class="page-section active flex-1">
-<!-- Hero Banner Option A: Editorial Asymmetry -->
-<section class="relative pt-16 pb-20 md:pt-28 md:pb-32 overflow-hidden border-b border-brand-charcoal/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Hero Banner Option B: Dark Sovereign -->
+<section class="relative pt-20 pb-28 md:pt-32 md:pb-40 bg-brand-charcoal text-white overflow-hidden">
+  <!-- Subtle Ambient Glow -->
+  <div class="absolute -top-40 right-0 w-[36rem] h-[36rem] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
     
-    <!-- Top Metadata Track -->
-    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-brand-charcoal/15 pb-6 mb-12 text-xs font-mono tracking-widest text-brand-charcoal/70">
-      <div class="flex items-center gap-3">
-        <span class="inline-block w-2 h-2 rounded-full bg-brand-red"></span>
-        <span class="uppercase">FORTUNE ODDS INCUBATOR &bull; EST. 2026</span>
-      </div>
-      <div class="hidden sm:block uppercase">
-        AESTHETIC MEDICINE / BIO-BEAUTY / LUXURY RETAIL
-      </div>
+    <!-- Status Badge -->
+    <div class="inline-flex items-center gap-3 px-4 py-1.5 border border-brand-gold/30 bg-white/5 backdrop-blur-xs rounded-full text-xs font-mono tracking-widest text-brand-gold">
+      <span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
+      <span>專為 醫美診所 ✕ 連鎖美業 ✕ 生技保健 打造</span>
     </div>
 
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
-      <!-- Left: Massive Typography -->
-      <div class="lg:col-span-8 space-y-6">
-        <div class="inline-block px-3 py-1 bg-brand-charcoal text-brand-cream text-[11px] font-mono tracking-widest uppercase font-bold">
-          High-Ticket Brand Scaling
-        </div>
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-black text-brand-charcoal tracking-tight leading-[1.08]">
-          玩行銷找心想，<br/>
-          <span class="italic text-brand-red font-serif">事成不同凡響</span>。
-        </h1>
-      </div>
+    <!-- Hero Title -->
+    <div class="space-y-4">
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-black tracking-tight leading-tight">
+        玩行銷找心想<br/>
+        <span class="text-brand-gold font-serif italic">事成不同凡響</span>
+      </h1>
+      <p class="font-serif italic text-lg sm:text-2xl text-stone-400 tracking-wider">
+        “ May the odds be ever in your favor. ”
+      </p>
+    </div>
 
-      <!-- Right: Manifesto & CTA Group -->
-      <div class="lg:col-span-4 space-y-8">
-        <div class="border-l-2 border-brand-red pl-6 space-y-2">
-          <p class="font-serif italic text-base sm:text-lg text-brand-charcoal font-semibold">
-            “ May the odds be ever in your favor. ”
-          </p>
-          <p class="text-xs sm:text-sm text-brand-charcoal/80 leading-relaxed font-sans">
-            拒絕碎片拼湊。從定位重塑、爆款短影音到私域轉單，一站式孵化持續盈利的常勝品牌。
-          </p>
-        </div>
+    <p class="text-stone-300 text-sm sm:text-base max-w-2xl mx-auto font-normal leading-relaxed">
+      願機會永遠對你有利。我們不講空泛理論，只做能被市場驗證的爆發性成長——以視覺暴力拉滿品牌溢價，用私域沉澱終身價值。
+    </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <a href="javascript:void(0)" onclick="navigateTo('contact')" 
-             class="px-8 py-4 bg-brand-charcoal hover:bg-brand-red text-white text-xs font-mono font-bold tracking-widest uppercase transition-all duration-300 flex items-center justify-between group shadow-lg">
-            <span>預約 30 分鐘診斷</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
-          </a>
-          <a href="javascript:void(0)" onclick="navigateTo('portfolio')" 
-             class="px-6 py-4 border border-brand-charcoal/30 hover:border-brand-charcoal text-brand-charcoal text-xs font-mono font-bold tracking-widest uppercase transition-colors text-center">
-            實戰案例庫
-          </a>
-        </div>
-      </div>
+    <!-- Clean Actions -->
+    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="javascript:void(0)" onclick="navigateTo('contact')" 
+         class="w-full sm:w-auto px-9 py-4 bg-brand-red hover:bg-white hover:text-brand-charcoal text-white font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-xl shadow-brand-red/20">
+        預約 30 分鐘品牌診斷
+      </a>
+      <a href="https://www.instagram.com/fortune.odds/" target="_blank" rel="noopener noreferrer"
+         class="w-full sm:w-auto px-8 py-4 border border-stone-700 hover:border-brand-gold text-stone-300 hover:text-brand-gold font-mono text-xs uppercase tracking-widest font-semibold transition-colors flex items-center justify-center gap-2">
+        <i data-lucide="instagram" class="w-4 h-4"></i>
+        <span>觀看 IG 即時案例拆解</span>
+      </a>
     </div>
 
   </div>
