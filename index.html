@@ -934,86 +934,386 @@
     </section>
   </main>
 
-  <!-- ==================== PAGE 4: PORTFOLIO (實戰案例) ==================== -->
-  <main id="page-portfolio" class="page-section flex-1">
-    <section class="py-20 bg-stone-900 text-white text-center">
-      <div class="max-w-4xl mx-auto px-4">
-        <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Proven Case Studies</span>
-        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-4">實戰案例與合作成果</h1>
-        <p class="text-stone-400 text-sm sm:text-base max-w-xl mx-auto">
-          我們不講空話，讓數據與品牌形象為我們代言
+ <!-- ==================== PAGE 4: PORTFOLIO (WORKS 創意事務所分類案例) ==================== -->
+<main id="page-portfolio" class="page-view flex-1 bg-[#fef6e8]">
+  
+  <!-- 頁頭標題區 (極簡前衛排版) -->
+  <section class="pt-24 pb-14 px-6 md:px-16 border-b border-brand-charcoal/10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+      <div>
+        <div class="inline-flex items-center gap-3 text-brand-red text-xs tracking-[0.3em] font-mono uppercase mb-4">
+          <span class="w-8 h-[1px] bg-brand-red"></span>
+          Selected Works & Proven Metrics
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-serif text-brand-charcoal leading-tight">
+          實戰實績，<br class="hidden sm:inline" />
+          <span class="italic text-brand-red font-normal">以美學與數據代言。</span>
+        </h1>
+      </div>
+      <div class="flex flex-col items-start md:items-end gap-3">
+        <a href="https://www.canva.com/design/DAHESLv_x8M/4Oph9xwgYH065TSJqycxxQ/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 border border-brand-charcoal text-brand-charcoal text-xs font-mono uppercase tracking-widest rounded-full hover:bg-brand-red hover:border-brand-red hover:text-white transition-all duration-300">
+          <span>開啟 Canva 完整作品簡報</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+        <span class="font-mono text-[11px] text-brand-charcoal/50">ARCHIVE 2024 — 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 類別篩選列 (Filter Tabs - 橫向滑動/沉浸切換) -->
+  <section class="sticky top-20 z-30 bg-[#fef6e8]/95 backdrop-blur border-b border-brand-charcoal/10 px-6 md:px-16 py-4">
+    <div class="max-w-7xl mx-auto flex items-center gap-2 sm:gap-4 overflow-x-auto no-scrollbar text-xs font-mono tracking-widest uppercase">
+      <button onclick="filterWorks('all')" class="work-tab-btn active px-4 py-2 rounded-full transition-all duration-300 bg-brand-red text-white" data-category="all">
+        全部 / All (6)
+      </button>
+      <button onclick="filterWorks('consulting')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="consulting">
+        全案操盤 / Consulting
+      </button>
+      <button onclick="filterWorks('cis')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="cis">
+        品牌識別 / CIS
+      </button>
+      <button onclick="filterWorks('line')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="line">
+        官方 LINE / Private CRM
+      </button>
+      <button onclick="filterWorks('video')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="video">
+        短影音 IP / Video
+      </button>
+      <button onclick="filterWorks('web')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="web">
+        網頁包裝 / UI & Pack
+      </button>
+    </div>
+  </section>
+
+  <!-- 作品瀑布網格區 (大圖視差感卡片) -->
+  <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
+    <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+
+      <!-- 案例 1: 醫美全案 (諮詢顧問 + LINE + 短影音) -->
+      <article class="work-card group cursor-pointer" data-category="consulting line video" onclick="openCaseModal('case1')">
+        <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" alt="醫美診所全案操盤" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+          <div class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full">
+            醫美全案操盤
+          </div>
+          <div class="absolute bottom-4 right-4 bg-brand-red text-white font-mono text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg">
+            門診預約 +280%
+          </div>
+        </div>
+        <div class="flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+          <h2 class="text-2xl font-serif text-brand-charcoal group-hover:text-brand-red transition-colors">
+            台中微整抗老診所：3 個月門診預約破新高
+          </h2>
+          <span class="font-mono text-xs text-brand-gold ml-4 shrink-0">2026</span>
+        </div>
+        <p class="text-sm text-brand-charcoal/70 mt-3 line-clamp-2">
+          院長短影音 IP 塑造結合官方 LINE 微整評估自動漏斗，名單成本下降 42%，私域累積 6,500+ 精準好友。
         </p>
-        <div class="mt-6">
-          <a href="https://www.canva.com/design/DAHESLv_x8M/4Oph9xwgYH065TSJqycxxQ/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gold text-stone-950 rounded-full text-xs font-bold hover:bg-white transition-all shadow-md">
-            <span>開啟精選實戰作品集簡報 (Portfolio Presentation)</span>
-            <i data-lucide="external-link" class="w-4 h-4"></i>
+        <div class="flex flex-wrap gap-2 mt-4 font-mono text-[11px] text-brand-charcoal/50">
+          <span>#CIS視覺</span>
+          <span>#醫師IP短影音</span>
+          <span>#LINE私域自動化</span>
+        </div>
+      </article>
+
+      <!-- 案例 2: 生技電商 (顧問 + 網頁包裝) -->
+      <article class="work-card group cursor-pointer" data-category="consulting web" onclick="openCaseModal('case2')">
+        <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000&auto=format&fit=crop" alt="生技保養電商" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+          <div class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full">
+            生技保養電商
+          </div>
+          <div class="absolute bottom-4 right-4 bg-brand-red text-white font-mono text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg">
+            首季破 850 萬
+          </div>
+        </div>
+        <div class="flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+          <h2 class="text-2xl font-serif text-brand-charcoal group-hover:text-brand-red transition-colors">
+            敏感肌修護精華：新品牌上市起盤佈局
+          </h2>
+          <span class="font-mono text-xs text-brand-gold ml-4 shrink-0">2026</span>
+        </div>
+        <p class="text-sm text-brand-charcoal/70 mt-3 line-clamp-2">
+          冷淡風極簡容器結構設計、科研可視化高轉化長頁與 Meta 漏斗投放，平均 ROAS 達 4.2x。
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4 font-mono text-[11px] text-brand-charcoal/50">
+          <span>#包裝結構設計</span>
+          <span>#官網UIUX</span>
+          <span>#成效投放ROAS</span>
+        </div>
+      </article>
+
+      <!-- 案例 3: 官方 LINE 私域範例 (LINE) -->
+      <article class="work-card group cursor-pointer" data-category="line" onclick="openCaseModal('case3')">
+        <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop" alt="高端沙龍 SPA LINE 私域" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+          <div class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full">
+            官方 LINE @ 私域建置
+          </div>
+          <div class="absolute bottom-4 right-4 bg-brand-gold text-brand-charcoal font-mono text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg">
+            回購率 48%
+          </div>
+        </div>
+        <div class="flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+          <h2 class="text-2xl font-serif text-brand-charcoal group-hover:text-brand-red transition-colors">
+            高訂美甲沙龍：會員自動化預約與喚醒系統
+          </h2>
+          <span class="font-mono text-xs text-brand-gold ml-4 shrink-0">2025</span>
+        </div>
+        <p class="text-sm text-brand-charcoal/70 mt-3 line-clamp-2">
+          客製精品圖文選單、預約無縫串接與沉睡客自動標籤推播，大幅節省 70% 櫃檯人工預約確認時間。
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4 font-mono text-[11px] text-brand-charcoal/50">
+          <span>#LINE選單美學</span>
+          <span>#自動預約串接</span>
+          <span>#CRM精準標籤</span>
+        </div>
+      </article>
+
+      <!-- 案例 4: 品牌 CIS 識別 (CIS) -->
+      <article class="work-card group cursor-pointer" data-category="cis" onclick="openCaseModal('case4')">
+        <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
+          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop" alt="品牌 CIS 識別" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+          <div class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full">
+            企業視覺識別 CIS
+          </div>
+          <div class="absolute bottom-4 right-4 bg-brand-gold text-brand-charcoal font-mono text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg">
+            全套視覺規範
+          </div>
+        </div>
+        <div class="flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+          <h2 class="text-2xl font-serif text-brand-charcoal group-hover:text-brand-red transition-colors">
+            植萃香氛保養品牌：東方現代美學識別重構
+          </h2>
+          <span class="font-mono text-xs text-brand-gold ml-4 shrink-0">2025</span>
+        </div>
+        <p class="text-sm text-brand-charcoal/70 mt-3 line-clamp-2">
+          將古典印信意象與當代極簡襯線字體融合，交付完整品牌規範手冊、實體包材與門市導視系統。
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4 font-mono text-[11px] text-brand-charcoal/50">
+          <span>#LOGO設計</span>
+          <span>#色彩規範手冊</span>
+          <span>#實體物料延伸</span>
+        </div>
+      </article>
+
+      <!-- 案例 5: 社群短影音 IP (VIDEO) -->
+      <article class="work-card group cursor-pointer" data-category="video" onclick="openCaseModal('case5')">
+        <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1000&auto=format&fit=crop" alt="短影音 IP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+          <div class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full">
+            短影音 IP 孵化
+          </div>
+          <div class="absolute bottom-4 right-4 bg-brand-red text-white font-mono text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg">
+            播放破 350 萬
+          </div>
+        </div>
+        <div class="flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+          <h2 class="text-2xl font-serif text-brand-charcoal group-hover:text-brand-red transition-colors">
+            皮秒雷射權威醫師：知識型短影音 IP 矩陣
+          </h2>
+          <span class="font-mono text-xs text-brand-gold ml-4 shrink-0">2025</span>
+        </div>
+        <p class="text-sm text-brand-charcoal/70 mt-3 line-clamp-2">
+          以詼諧闢謠與硬核專業對比切入，打破醫療生硬說教，單支短片自然流量突破 48 萬次觀看。
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4 font-mono text-[11px] text-brand-charcoal/50">
+          <span>#Reels腳本企劃</span>
+          <span>#短影音後製剪輯</span>
+          <span>#個人IP打造</span>
+        </div>
+      </article>
+
+      <!-- 案例 6: UI/UX 與包裝設計 (WEB) -->
+      <article class="work-card group cursor-pointer" data-category="web" onclick="openCaseModal('case6')">
+        <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop" alt="UI UX 設計" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
+          <div class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full">
+            UI / UX 體驗設計
+          </div>
+          <div class="absolute bottom-4 right-4 bg-brand-gold text-brand-charcoal font-mono text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg">
+            轉換率 +3.4%
+          </div>
+        </div>
+        <div class="flex items-baseline justify-between border-b border-brand-charcoal/15 pb-3">
+          <h2 class="text-2xl font-serif text-brand-charcoal group-hover:text-brand-red transition-colors">
+            醫學美容保養 D2C：沉浸式電商官網重構
+          </h2>
+          <span class="font-mono text-xs text-brand-gold ml-4 shrink-0">2025</span>
+        </div>
+        <p class="text-sm text-brand-charcoal/70 mt-3 line-clamp-2">
+          以藝廊展陳邏輯打造結帳動線，極簡留白與微互動，讓高客單保養套組結帳流失率大幅降低 28%。
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4 font-mono text-[11px] text-brand-charcoal/50">
+          <span>#Shopify/Shopline</span>
+          <span>#流暢結帳漏斗</span>
+          <span>#高階美學排版</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==================== 案例詳情彈窗 (Case Study Detail Modal) ==================== -->
+  <div id="case-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+    <div class="bg-[#fef6e8] max-w-3xl w-full rounded-3xl overflow-hidden shadow-2xl border border-brand-charcoal/15 flex flex-col max-h-[90vh]">
+      <!-- 彈窗頂部關閉按鈕 -->
+      <div class="flex items-center justify-between px-8 py-5 border-b border-brand-charcoal/10 bg-[#faeee5]">
+        <span id="modal-category" class="font-mono text-xs text-brand-red tracking-widest uppercase font-bold">CASE ARCHIVE</span>
+        <button onclick="closeCaseModal()" class="text-brand-charcoal/70 hover:text-brand-red text-xl font-mono p-1">✕</button>
+      </div>
+
+      <!-- 彈窗內文 -->
+      <div class="p-8 overflow-y-auto space-y-6">
+        <div>
+          <h3 id="modal-title" class="text-2xl sm:text-3xl font-serif text-brand-charcoal">案例標題</h3>
+          <p id="modal-subtitle" class="font-mono text-xs text-brand-gold mt-1">INDUSTRY / SCOPE</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4 border-y border-brand-charcoal/10 font-mono">
+          <div class="p-4 bg-[#faeee5] rounded-xl">
+            <span class="text-[11px] text-brand-charcoal/60 block">METRIC 01</span>
+            <span id="modal-metric-1" class="text-2xl font-serif font-bold text-brand-red">+280%</span>
+          </div>
+          <div class="p-4 bg-[#faeee5] rounded-xl">
+            <span class="text-[11px] text-brand-charcoal/60 block">METRIC 02</span>
+            <span id="modal-metric-2" class="text-2xl font-serif font-bold text-brand-charcoal">-42%</span>
+          </div>
+          <div class="p-4 bg-[#faeee5] rounded-xl col-span-2 sm:col-span-1">
+            <span class="text-[11px] text-brand-charcoal/60 block">METRIC 03</span>
+            <span id="modal-metric-3" class="text-xl font-serif font-bold text-brand-gold">3 個月</span>
+          </div>
+        </div>
+
+        <div class="space-y-3 text-sm text-brand-charcoal/80 leading-relaxed">
+          <h4 class="font-bold text-brand-charcoal font-mono text-xs uppercase tracking-wider text-brand-red">/ 挑戰痛點與心想策略解法</h4>
+          <p id="modal-body-desc">詳細敘述...</p>
+        </div>
+
+        <div class="pt-4 flex justify-between items-center">
+          <a href="https://lin.ee/rRWdlRi" target="_blank" class="px-6 py-3 bg-brand-red text-white text-xs font-mono tracking-widest rounded-full hover:bg-brand-charcoal transition-colors">
+            諮詢類似孵化專案 →
           </a>
+          <button onclick="closeCaseModal()" class="text-xs font-mono text-brand-charcoal/50 hover:underline">關閉視窗</button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</main>
 
-    <section class="py-20 bg-brand-cream">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <!-- Case 1 -->
-        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-brand-gold/30 shadow-sm flex flex-col md:flex-row gap-8 items-center">
-          <div class="w-full md:w-1/2 space-y-4">
-            <span class="text-xs font-bold text-brand-red bg-brand-cream px-3 py-1 rounded-full border border-brand-gold/30">醫美診所全案操盤</span>
-            <h2 class="text-2xl sm:text-3xl font-black text-stone-900">台中微整抗老診所：3 個月門診預約破新高</h2>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              <strong>挑戰痛點：</strong> 剛開幕缺乏知名度，投放廣告點擊成本高且諮詢轉換率低。<br />
-              <strong>心想解法：</strong> 為院長打造幽默專業的短影音知識 IP，並透過官方 LINE 建立「微整需求自動評估工具」，導流至門市諮詢。
-            </p>
-            <div class="grid grid-cols-2 gap-4 pt-2">
-              <div class="p-4 bg-brand-cream rounded-xl">
-                <div class="text-2xl font-black text-brand-red">+280%</div>
-                <div class="text-xs text-stone-600">門診預約諮詢量提升</div>
-              </div>
-              <div class="p-4 bg-brand-cream rounded-xl">
-                <div class="text-2xl font-black text-brand-gold-dark">-42%</div>
-                <div class="text-xs text-stone-600">單次諮詢名單成本下降</div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 bg-stone-950 p-8 rounded-2xl text-stone-300 text-xs space-y-3 font-mono border border-stone-800">
-            <div class="text-brand-gold font-bold">CASE METRICS SUMMARY</div>
-            <div>產業類別：微整 / 光電雷射 / 醫美</div>
-            <div>孵化模組：CIS視覺 ✕ 醫師IP短影音 ✕ LINE自動化</div>
-            <div>短影音總播放量：突破 1,800,000+ 次</div>
-            <div>私域好友數沉澱：3 個月突破 6,500+ 人</div>
-          </div>
-        </div>
+<!-- ==================== WORKS 篩選與彈窗控制腳本 ==================== -->
+<script>
+  // 1. 標籤篩選邏輯
+  function filterWorks(category) {
+    // 切換按鈕樣式
+    const buttons = document.querySelectorAll('.work-tab-btn');
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-category') === category) {
+        btn.classList.add('bg-brand-red', 'text-white');
+        btn.classList.remove('text-brand-charcoal/70');
+      } else {
+        btn.classList.remove('bg-brand-red', 'text-white');
+        btn.classList.add('text-brand-charcoal/70');
+      }
+    });
 
-        <!-- Case 2 -->
-        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-brand-gold/30 shadow-sm flex flex-col md:flex-row gap-8 items-center">
-          <div class="w-full md:w-1/2 space-y-4">
-            <span class="text-xs font-bold text-brand-red bg-brand-cream px-3 py-1 rounded-full border border-brand-gold/30">生技保養電商</span>
-            <h2 class="text-2xl sm:text-3xl font-black text-stone-900">敏感肌修護精華液：新品牌上市首季破 850 萬</h2>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              <strong>挑戰痛點：</strong> 台灣保養品市場競爭極度白熱化，缺乏信任基礎的新品牌難以說服消費者下單。<br />
-              <strong>心想解法：</strong> 打造極簡冷淡風高質感包裝，重塑高轉換詳情頁 (LP) 與臨床實測數據視覺化，搭配精準再行銷廣告。
-            </p>
-            <div class="grid grid-cols-2 gap-4 pt-2">
-              <div class="p-4 bg-brand-cream rounded-xl">
-                <div class="text-2xl font-black text-brand-red">4.2x</div>
-                <div class="text-xs text-stone-600">廣告平均投報率 (ROAS)</div>
-              </div>
-              <div class="p-4 bg-brand-cream rounded-xl">
-                <div class="text-2xl font-black text-brand-gold-dark">36.5%</div>
-                <div class="text-xs text-stone-600">首月顧客回購率</div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 bg-stone-950 p-8 rounded-2xl text-stone-300 text-xs space-y-3 font-mono border border-stone-800">
-            <div class="text-brand-gold font-bold">CASE METRICS SUMMARY</div>
-            <div>產業類別：生技萃取 / 敏感肌修護</div>
-            <div>孵化模組：包裝結構 ✕ 官網UI/UX ✕ Meta漏斗投放</div>
-            <div>首季總營業額：NT$ 8,500,000+</div>
-            <div>客單價成長：由 NT$ 980 提升至 NT$ 2,350</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    // 篩選卡片
+    const cards = document.querySelectorAll('.work-card');
+    cards.forEach(card => {
+      const cardCats = card.getAttribute('data-category') || '';
+      if (category === 'all' || cardCats.includes(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // 2. 案例資料庫 (可隨時擴充)
+  const caseData = {
+    case1: {
+      category: "醫美診所全案操盤",
+      title: "台中微整抗老診所：3 個月門診預約破新高",
+      subtitle: "微整 / 光電雷射 / 醫師IP / 官方LINE",
+      m1: "+280%",
+      m2: "-42%",
+      m3: "6,500+ 人",
+      desc: "<strong>挑戰痛點：</strong>剛開幕缺乏知名度，投放廣告點擊成本高且諮詢轉換率低。<br /><br /><strong>心想解法：</strong>為院長打造幽默專業的短影音知識 IP，並透過官方 LINE 建立「微整需求自動評估工具」，導流至門市諮詢。短影音總播放量突破 180 萬次，單次預約名單成本下降 42%。"
+    },
+    case2: {
+      category: "生技保養電商",
+      title: "敏感肌修護精華液：新品牌上市首季破 850 萬",
+      subtitle: "生技萃取 / 容器包裝 / 官網UI / Meta廣告",
+      m1: "4.2x ROAS",
+      m2: "NT$ 8.5M",
+      m3: "36.5% 回購",
+      desc: "<strong>挑戰痛點：</strong>台灣保養品市場競爭白熱化，缺乏信任基礎的新品牌難以說服消費者下單。<br /><br /><strong>心想解法：</strong>打造極簡冷淡風高質感包裝，重塑高轉換詳情頁 (LP) 與臨床實測數據視覺化，搭配精準再行銷廣告，首月回購率達到 36.5%，客單價由 980 提升至 2,350 元。"
+    },
+    case3: {
+      category: "官方 LINE @ 私域建置",
+      title: "高訂美甲沙龍：會員自動化預約與喚醒系統",
+      subtitle: "專業美業 / 私域營運 / LINE API 自動化",
+      m1: "48% 複購",
+      m2: "-70% 溝通",
+      m3: "2,200+ 會員",
+      desc: "<strong>心想解法：</strong>建立高階美學圖文選單，導入無痛在線預約、客製化美甲師排班，並依消費頻率自動打上標籤。針對 45 天未回訪顧客自動觸發專屬保養折價券，喚醒率高達 24%。"
+    },
+    case4: {
+      category: "企業視覺識別 CIS",
+      title: "植萃香氛保養品牌：東方現代美學識別重構",
+      subtitle: "美妝保養 / 品牌重塑 / 包裝視覺規範",
+      m1: "100% 原創",
+      m2: "45 頁規範",
+      m3: "全品項落地",
+      desc: "<strong>心想解法：</strong>將品牌中式哲思提煉為現代幾何線條，打造東方極簡印記標誌。規範全系列 12 款產品包裝材質、燙金工藝與官方網站視覺規範手冊。"
+    },
+    case5: {
+      category: "短影音 IP 孵化",
+      title: "皮秒雷射權威醫師：知識型短影音 IP 矩陣",
+      subtitle: "醫美衛教 / 醫師 IP / Reels / TikTok",
+      m1: "350萬+ 總放",
+      m2: "48萬 單支最高",
+      m3: "15 支腳本",
+      desc: "<strong>心想解法：</strong>嚴格遵守衛福部醫療廣告法規，以生活情境闢謠、術後避坑指南切入。策劃短劇本並由專業團隊到院指導運鏡，建立兼具幽默與權威的專業名醫形象。"
+    },
+    case6: {
+      category: "UI / UX 體驗設計",
+      title: "醫學美容保養 D2C：沉浸式電商官網重構",
+      subtitle: "D2C 電商 / UIUX / 轉換率最佳化",
+      m1: "+3.4% 轉化",
+      m2: "-28% 流失",
+      m3: "1.2 秒加載",
+      desc: "<strong>心想解法：</strong>擺脫傳統冗長雜亂的電商排版，改採先鋒雜誌級字體排印與沉浸式微互動，讓消費者在探索成分故事的同時順暢下單。"
+    }
+  };
+
+  function openCaseModal(caseId) {
+    const data = caseData[caseId];
+    if (!data) return;
+
+    document.getElementById('modal-category').innerText = data.category;
+    document.getElementById('modal-title').innerText = data.title;
+    document.getElementById('modal-subtitle').innerText = data.subtitle;
+    document.getElementById('modal-metric-1').innerText = data.m1;
+    document.getElementById('modal-metric-2').innerText = data.m2;
+    document.getElementById('modal-metric-3').innerText = data.m3;
+    document.getElementById('modal-body-desc').innerHTML = data.desc;
+
+    const modal = document.getElementById('case-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeCaseModal() {
+    const modal = document.getElementById('case-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // 點擊遮罩關閉
+  document.getElementById('case-modal')?.addEventListener('click', function(e) {
+    if (e.target === this) closeCaseModal();
+  });
+</script>
 
   <!-- ==================== PAGE 5: INSIGHTS (行銷觀點專欄) ==================== -->
   <main id="page-insights" class="page-section flex-1">
