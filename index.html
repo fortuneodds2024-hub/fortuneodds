@@ -51,6 +51,26 @@
       color: #181615;
       font-family: 'Noto Sans TC', sans-serif;
     }
+    keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fef6e8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d03c21;
+      border-radius: 9999px;
+    }
     .gold-gradient-text {
       background: linear-gradient(135deg, #d03c21 0%, #edac7b 50%, #ad2b14 100%);
       -webkit-background-clip: text;
