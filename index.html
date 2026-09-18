@@ -219,28 +219,53 @@
   </section>
 
     <!-- Value Grid / Numbers -->
-    <section class="py-16 bg-red-dark border-y border-stone-200">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="p-6 bg-brand-cream rounded-2xl border border-brand-gold/30">
-            <div class="text-3xl sm:text-5xl font-black text-brand-red font-display">98.6%</div>
-            <div class="text-xs sm:text-sm text-stone-600 mt-2 font-medium">合作品牌滿意續約率</div>
-          </div>
-          <div class="p-6 bg-brand-cream rounded-2xl border border-brand-gold/30">
-            <div class="text-3xl sm:text-5xl font-black text-brand-red font-display">50+</div>
-            <div class="text-xs sm:text-sm text-stone-600 mt-2 font-medium">累計服務客戶數</div>
-          </div>
-          <div class="p-6 bg-brand-cream rounded-2xl border border-brand-gold/30">
-            <div class="text-3xl sm:text-5xl font-black text-brand-red font-display">100k+</div>
-            <div class="text-xs sm:text-sm text-stone-600 mt-2 font-medium">私域有效名單沉澱</div>
-          </div>
-          <div class="p-6 bg-brand-cream rounded-2xl border border-brand-gold/30">
-            <div class="text-3xl sm:text-5xl font-black text-brand-red font-display">100%</div>
-            <div class="text-xs sm:text-sm text-stone-600 mt-2 font-medium">訂製全案行銷</div>
-          </div>
+   <section id="numbers-section" class="py-16 bg-brand-red-dark border-y border-black/20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      
+      <!-- Item 1: 98.6% (帶小數點) -->
+      <div class="p-6 bg-black/15 backdrop-blur-xs rounded-2xl border border-brand-gold/30 hover:border-brand-gold/60 transition-colors shadow-inner">
+        <div class="text-3xl sm:text-5xl font-black text-brand-gold font-display tracking-tight drop-shadow-sm">
+          <span class="counter-item" data-target="98.6" data-decimals="1" data-suffix="%">0</span>
+        </div>
+        <div class="text-xs sm:text-sm text-brand-cream/85 mt-2 font-medium">
+          合作品牌滿意續約率
         </div>
       </div>
-    </section>
+
+      <!-- Item 2: 50+ -->
+      <div class="p-6 bg-black/15 backdrop-blur-xs rounded-2xl border border-brand-gold/30 hover:border-brand-gold/60 transition-colors shadow-inner">
+        <div class="text-3xl sm:text-5xl font-black text-brand-gold font-display tracking-tight drop-shadow-sm">
+          <span class="counter-item" data-target="50" data-suffix="+">0</span>
+        </div>
+        <div class="text-xs sm:text-sm text-brand-cream/85 mt-2 font-medium">
+          累計服務客戶數
+        </div>
+      </div>
+
+      <!-- Item 3: 100k+ -->
+      <div class="p-6 bg-black/15 backdrop-blur-xs rounded-2xl border border-brand-gold/30 hover:border-brand-gold/60 transition-colors shadow-inner">
+        <div class="text-3xl sm:text-5xl font-black text-brand-gold font-display tracking-tight drop-shadow-sm">
+          <span class="counter-item" data-target="100" data-suffix="k+">0</span>
+        </div>
+        <div class="text-xs sm:text-sm text-brand-cream/85 mt-2 font-medium">
+          私域有效名單沉澱
+        </div>
+      </div>
+
+      <!-- Item 4: 100% -->
+      <div class="p-6 bg-black/15 backdrop-blur-xs rounded-2xl border border-brand-gold/30 hover:border-brand-gold/60 transition-colors shadow-inner">
+        <div class="text-3xl sm:text-5xl font-black text-brand-gold font-display tracking-tight drop-shadow-sm">
+          <span class="counter-item" data-target="100" data-suffix="%">0</span>
+        </div>
+        <div class="text-xs sm:text-sm text-brand-cream/85 mt-2 font-medium">
+          訂製全案行銷
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- Services Overview Teaser -->
     <section class="py-24 bg-brand-cream">
@@ -1154,6 +1179,55 @@
     // Initialize Icons
     lucide.createIcons();
 
+    function runNumberCounters() {
+      const counters = document.querySelectorAll('.counter-item');
+      const duration = 1800; // 總時長 1.8 秒，數字越小跳越快
+
+      counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const decimals = parseInt(counter.getAttribute('data-decimals')) || 0;
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          // 先快後慢緩動效果 (easeOutExpo)
+          const easeOutProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          const currentVal = target * easeOutProgress;
+
+          counter.textContent = currentVal.toFixed(decimals) + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target.toFixed(decimals) + suffix;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    // 初次載入或滾動到可視範圍時啟動監聽
+    let counterHasRun = false;
+    const numberSection = document.getElementById('numbers-section');
+    if (numberSection) {
+      const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !counterHasRun) {
+            runNumberCounters();
+            counterHasRun = true;
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(numberSection);
+    }
+    // ==========================================
+
     // Multi-page Router Simulator
     function navigateTo(pageId) {
       // Hide all page sections
@@ -1164,6 +1238,11 @@
       const target = document.getElementById('page-' + pageId);
       if (target) {
         target.classList.add('active');
+      }
+
+      // 當點擊導航切換回首頁時，自動重新觸發一次數字跳轉
+      if (pageId === 'home') {
+        runNumberCounters();
       }
 
       // Update Nav active classes
