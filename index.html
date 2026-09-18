@@ -312,105 +312,128 @@
     </section>
 
     <!-- Quick CTA Banner -->
-   <!-- Quick CTA Banner (暗紅旗艦質感，非全黑) -->
-<section class="py-24 bg-brand-red-dark text-white relative overflow-hidden border-t border-black/10">
-  <!-- 背景暖金光暈氛圍 -->
-  <div class="absolute -right-24 -top-24 w-96 h-96 bg-brand-gold/20 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute -left-24 -bottom-24 w-96 h-96 bg-brand-red/30 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- Quick CTA Section: Frameless Editorial Edition (無框線旗艦版) -->
+<section class="py-28 bg-brand-red-dark text-white relative overflow-hidden">
+  <!-- 背景柔和光暈氛圍 (無邊界漫射) -->
+  <div class="absolute -right-32 -top-32 w-[32rem] h-[32rem] bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-32 -bottom-32 w-[32rem] h-[32rem] bg-black/25 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 relative z-10">
     
-    <!-- Big Statement Headline -->
-    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-      <span class="text-brand-gold font-mono text-xs uppercase tracking-[0.3em] font-bold">READY TO SCALE?</span>
-      <!-- 標題調整：白字配金字，在暗紅底上清晰顯眼 -->
-      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-black text-white leading-tight tracking-tight">
-        願機會，<br/><span class="text-brand-gold">永遠對你有利</span>。
-      </h2>
-      <p class="text-brand-cream/80 text-sm sm:text-base pt-2 font-normal">
-        您只需要一個對的孵化起點。無需填寫繁複的表格，直接點擊下方官方管道與我們創辦團隊即時對話！
+    <!-- 頂部宣告：雜誌風格大標題 -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+      <div class="space-y-3">
+        <span class="text-brand-gold font-mono text-xs uppercase tracking-[0.3em] font-bold block">
+          READY TO SCALE?
+        </span>
+        <h2 class="text-4xl sm:text-6xl font-serif font-black tracking-tight leading-tight">
+          願機會，<span class="text-brand-gold italic">永遠對你有利</span>。
+        </h2>
+      </div>
+      <p class="text-brand-cream/80 text-sm sm:text-base max-w-md font-normal leading-relaxed">
+        無需填寫繁複表格，選取下方最適合您的對話管道，直接與心想事成創辦操盤團隊展開 1 對 1 增長對話。
       </p>
     </div>
 
-    <!-- 3 Major Direct Contact Cards (暖白卡片底，跳脫黑色) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+    <!-- 核心聯絡管道：無卡片框線，改為互動清單列 (List Row) -->
+    <div class="border-t border-white/20">
       
-      <!-- 1. LINE Official Card -->
+      <!-- 01. LINE 官方諮詢 -->
       <a href="https://lin.ee/rRWdlRi" target="_blank" rel="noopener noreferrer"
-         class="group p-8 rounded-3xl bg-brand-cream border-2 border-transparent hover:border-[#06C755] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xl shadow-black/15">
-        <div>
-          <div class="w-14 h-14 rounded-2xl bg-[#06C755]/15 text-[#06C755] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <i data-lucide="message-circle" class="w-8 h-8"></i>
+         class="group flex flex-col md:flex-row md:items-center justify-between py-8 sm:py-10 border-b border-white/15 hover:border-brand-gold transition-colors duration-300 gap-6">
+        <div class="flex items-start sm:items-center gap-6 sm:gap-8">
+          <span class="font-mono text-xs text-brand-gold/70 group-hover:text-brand-gold transition-colors">01</span>
+          <div class="w-12 h-12 rounded-full bg-white/10 group-hover:bg-[#06C755] text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
           </div>
-          <div class="text-[11px] font-mono font-bold text-[#06C755] uppercase tracking-widest mb-1">RECOMMENDED • 最快回覆</div>
-          <h3 class="text-2xl font-serif font-bold text-brand-charcoal mb-2 group-hover:text-[#06C755] transition-colors">官方 LINE 諮詢</h3>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            專人一對一初步品牌診斷，預約台中工作室面對面深度會談。
-          </p>
+          <div>
+            <div class="flex items-center gap-3">
+              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white group-hover:text-brand-gold transition-colors">
+                LINE 官方客服諮詢
+              </h3>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-[#06C755]/20 text-[#06C755] border border-[#06C755]/30">
+                最快回覆
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-cream/70 mt-1">
+              專人 1 對 1 初步品牌診斷，預約台中工作室面對面深度會談。
+            </p>
+          </div>
         </div>
-        <div class="pt-6 mt-6 border-t border-stone-200/80 flex items-center justify-between text-xs font-bold text-[#06C755]">
-          <span>立即加入好友 @fortune.odds</span>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        <div class="flex items-center gap-3 text-sm font-semibold text-brand-gold group-hover:text-white transition-colors pl-14 md:pl-0">
+          <span class="tracking-wide">立即加入好友 @fortune.odds</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"></i>
         </div>
       </a>
 
-      <!-- 2. Instagram Card -->
+      <!-- 02. Instagram 專頁 -->
       <a href="https://www.instagram.com/fortune.odds/" target="_blank" rel="noopener noreferrer"
-         class="group p-8 rounded-3xl bg-brand-cream border-2 border-transparent hover:border-brand-gold-dark hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xl shadow-black/15">
-        <div>
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500/20 via-rose-500/20 to-purple-500/20 text-brand-red flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <i data-lucide="instagram" class="w-8 h-8"></i>
+         class="group flex flex-col md:flex-row md:items-center justify-between py-8 sm:py-10 border-b border-white/15 hover:border-brand-gold transition-colors duration-300 gap-6">
+        <div class="flex items-start sm:items-center gap-6 sm:gap-8">
+          <span class="font-mono text-xs text-brand-gold/70 group-hover:text-brand-gold transition-colors">02</span>
+          <div class="w-12 h-12 rounded-full bg-white/10 group-hover:bg-brand-red text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
           </div>
-          <div class="text-[11px] font-mono font-bold text-brand-gold-dark uppercase tracking-widest mb-1">DAILY REELS & CASES</div>
-          <h3 class="text-2xl font-serif font-bold text-brand-charcoal mb-2 group-hover:text-brand-red transition-colors">Instagram 專頁</h3>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            追蹤我們的日常行銷思維、美業短影音技巧與即時案例拆解。
-          </p>
+          <div>
+            <div class="flex items-center gap-3">
+              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white group-hover:text-brand-gold transition-colors">
+                Instagram 專頁
+              </h3>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/10 text-brand-cream/80 border border-white/15">
+                Reels & 案例拆解
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-cream/70 mt-1">
+              追蹤我們的日常行銷思維、美業短影音技巧與即時案例剖析。
+            </p>
+          </div>
         </div>
-        <div class="pt-6 mt-6 border-t border-stone-200/80 flex items-center justify-between text-xs font-bold text-brand-red">
-          <span>@fortune.odds</span>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        <div class="flex items-center gap-3 text-sm font-semibold text-brand-gold group-hover:text-white transition-colors pl-14 md:pl-0">
+          <span class="tracking-wide">追蹤 @fortune.odds</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"></i>
         </div>
       </a>
 
-      <!-- 3. Email Card -->
-      <a href="mailto:contact@fortuneodds.com" 
-         class="group p-8 rounded-3xl bg-brand-cream border-2 border-transparent hover:border-brand-red hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between shadow-xl shadow-black/15">
-        <div>
-          <div class="w-14 h-14 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <i data-lucide="mail" class="w-8 h-8"></i>
+      <!-- 03. 專案諮詢信箱 -->
+      <a href="mailto:contact@fortuneodds.com"
+         class="group flex flex-col md:flex-row md:items-center justify-between py-8 sm:py-10 border-b border-white/15 hover:border-brand-gold transition-colors duration-300 gap-6">
+        <div class="flex items-start sm:items-center gap-6 sm:gap-8">
+          <span class="font-mono text-xs text-brand-gold/70 group-hover:text-brand-gold transition-colors">03</span>
+          <div class="w-12 h-12 rounded-full bg-white/10 group-hover:bg-brand-gold-dark text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110">
+            <i data-lucide="mail" class="w-6 h-6"></i>
           </div>
-          <div class="text-[11px] font-mono font-bold text-stone-500 uppercase tracking-widest mb-1">OFFICIAL EMAIL</div>
-          <h3 class="text-2xl font-serif font-bold text-brand-charcoal mb-2 group-hover:text-brand-red transition-colors">專案諮詢與合作信箱</h3>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            適合附帶企劃書或 RFP 規格文件之企業品牌方正式來信洽詢。
-          </p>
+          <div>
+            <div class="flex items-center gap-3">
+              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white group-hover:text-brand-gold transition-colors">
+                專案合作信箱
+              </h3>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-white/10 text-brand-cream/80 border border-white/15">
+                RFP 招標需求
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-cream/70 mt-1">
+              適合附帶品牌企劃書或規格文件之企業方正式來信洽談。
+            </p>
+          </div>
         </div>
-        <div class="pt-6 mt-6 border-t border-stone-200/80 flex items-center justify-between text-xs font-bold text-stone-800 group-hover:text-brand-red transition-colors">
-          <span>發送合作需求信件</span>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        <div class="flex items-center gap-3 text-sm font-semibold text-brand-gold group-hover:text-white transition-colors pl-14 md:pl-0">
+          <span class="tracking-wide">發送合作信件</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2"></i>
         </div>
       </a>
 
     </div>
 
-    <!-- Physical Studio Address & Map Anchor (半透明暗紅深層底，非全黑) -->
-    <div class="p-8 rounded-3xl bg-black/20 border border-brand-gold/30 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-xs">
-      <div class="flex items-start gap-4">
-        <div class="w-10 h-10 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center shrink-0 mt-1">
-          <i data-lucide="map-pin" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-brand-gold uppercase tracking-widest font-semibold">STUDIO LOCATION / 總部據點</div>
-          <div class="text-lg font-serif font-bold text-white mt-1">台中市南屯區大業路131號</div>
-          <div class="text-xs text-brand-cream/70 mt-0.5">歡迎預約蒞臨聊聊您的品牌計畫</div>
-        </div>
+    <!-- 底部據點：純文字流線導航，徹底拿掉小黑框 -->
+    <div class="mt-14 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-sm text-brand-cream/80">
+      <div class="flex items-center gap-3">
+        <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0"></i>
+        <span>總部據點：台中市南屯區大業路131號（歡迎預約實體策略會談）</span>
       </div>
-
       <a href="https://maps.google.com/?q=台中市南屯區大業路131號" target="_blank" rel="noopener noreferrer"
-         class="px-6 py-3 rounded-full bg-brand-gold hover:bg-white text-brand-charcoal hover:text-brand-red text-xs font-bold tracking-wider transition-all duration-300 shrink-0 flex items-center gap-2 shadow-lg">
-        <span>Google 地圖導航</span>
-        <i data-lucide="compass" class="w-4 h-4"></i>
+         class="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider text-brand-gold hover:text-white transition-colors border-b border-brand-gold/40 hover:border-white pb-0.5">
+        <span>GOOGLE MAPS NAVIGATION</span>
+        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
       </a>
     </div>
 
