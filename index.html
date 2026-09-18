@@ -934,10 +934,10 @@
     </section>
   </main>
 
-<!-- ==================== PAGE 4: PORTFOLIO (支援點擊進入獨立專案大頁面) ==================== -->
+<!-- ==================== PAGE 4: PORTFOLIO  ==================== -->
 <main id="page-portfolio" class="page-view flex-1 bg-[#fef6e8]">
 
-  <!-- ==================== 視圖 A：作品總覽列表 (Works Index) ==================== -->
+  <!-- ==================== 作品總覽列表 (Works Index) ==================== -->
   <div id="works-list-view">
     <!-- 頁頭標題區 -->
     <section class="pt-24 pb-14 px-6 md:px-16 border-b border-brand-charcoal/10">
@@ -949,7 +949,7 @@
           </div>
           <h1 class="text-4xl sm:text-6xl font-serif text-brand-charcoal leading-tight">
             實戰實績，<br class="hidden sm:inline" />
-            <span class="italic text-brand-red font-normal">以美學與數據代言。</span>
+            <span class="text-brand-red font-normal">以美學與數據代言。</span>
           </h1>
         </div>
         <div class="flex flex-col items-start md:items-end gap-3">
@@ -969,7 +969,10 @@
           全部 / All
         </button>
         <button onclick="filterWorks('cis')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="cis">
-          品牌識別與包裝 / CIS & Pack
+          品牌企業識別 / CIS & Design
+        </button>
+        <button onclick="filterWorks('cis')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="design">
+          視覺整合設計 / Design
         </button>
         <button onclick="filterWorks('web')" class="work-tab-btn px-4 py-2 rounded-full transition-all duration-300 text-brand-charcoal/70 hover:text-brand-red" data-category="web">
           網站 UIUX / Live Site
@@ -987,7 +990,7 @@
     <section class="py-20 px-6 md:px-16 max-w-7xl mx-auto">
       <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
 
-        <!-- 卡片 1: CIS 與包裝 (點擊直接切換進獨立專案大頁面) -->
+        <!-- 案例 1: CIS 與包裝  -->
         <article class="work-card group cursor-pointer" data-category="cis" onclick="openProjectDetail('case_cis_packaging')">
           <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
             <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop" alt="植萃保養 CIS 與包裝" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
@@ -1014,7 +1017,7 @@
           </div>
         </article>
 
-        <!-- 卡片 2: 網站案例 (點擊進入專案頁，也可直達客戶官網) -->
+        <!-- 案例 2: 網站案例  -->
         <article class="work-card group cursor-pointer" data-category="web" onclick="openProjectDetail('case_web_client')">
           <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="D2C 官網建置" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
@@ -1045,7 +1048,7 @@
           </div>
         </article>
 
-        <!-- 卡片 3: LINE 私域案例 -->
+        <!-- 案例 3: LINE 私域案例 -->
         <article class="work-card group cursor-pointer" data-category="line" onclick="openProjectDetail('case_line_crm')">
           <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
             <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop" alt="高端沙龍 LINE 私域" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
@@ -1072,7 +1075,7 @@
           </div>
         </article>
 
-        <!-- 卡片 4: 顧問全案操盤 -->
+        <!-- 案例 4: 顧問全案操盤 -->
         <article class="work-card group cursor-pointer" data-category="consulting" onclick="openProjectDetail('case_clinic_consulting')">
           <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-stone-200 mb-6">
             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1000&auto=format&fit=crop" alt="醫美診所全案操盤" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95">
