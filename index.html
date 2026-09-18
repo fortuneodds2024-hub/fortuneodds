@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>心想事成品牌孵化 FORTUNE ODDS — Brand Studio & Marketing</title>
+  <title>心想事成品牌孵化 FORTUNE ODDS — Brand Studio</title>
   <meta name="description" content="心想事成品牌孵化 FORTUNE ODDS。專注醫美診所、沙龍美業、生技保健與美妝電商的高維度品牌定位、當代視覺美學與實戰行銷操盤。" />
 
-  <!-- Fonts & Libraries -->
+  <!-- Google Fonts: Plus Jakarta Sans, Noto Sans TC, Cinzel -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -20,13 +20,14 @@
           colors: {{
             brand: {{
               red: '#d03c21',
-              'red-dark': '#ad2812',
+              'red-dark': '#b32810',
               cream: '#fef6e8',
-              'cream-muted': '#f8ebd5',
+              'cream-light': '#fffaf2',
+              'cream-dark': '#f5ebd8',
               gold: '#edac7b',
-              'gold-dark': '#c87c44',
-              charcoal: '#121110',
-              black: '#0c0a09'
+              'gold-dark': '#c87a3d',
+              charcoal: '#161413',
+              black: '#0d0c0b'
             }}
           }},
           fontFamily: {{
@@ -42,100 +43,100 @@
   <style>
     body {{
       background-color: #fef6e8;
-      color: #121110;
+      color: #161413;
       font-family: "Plus Jakarta Sans", "Noto Sans TC", sans-serif;
       overflow-x: hidden;
     }}
-    .hairline-border {{
-      border-color: rgba(18, 17, 16, 0.12);
+    .hairline {{
+      border-color: rgba(22, 20, 19, 0.12);
     }}
-    .hairline-border-dark {{
-      border-color: rgba(254, 246, 232, 0.15);
+    .hairline-dark {{
+      border-color: rgba(254, 246, 232, 0.14);
     }}
     .nav-tab.active {{
       color: #d03c21;
       font-weight: 700;
-      border-bottom: 1.5px solid #d03c21;
+      position: relative;
+    }}
+    .nav-tab.active::after {{
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background-color: #d03c21;
     }}
     .page-view {{
       display: none;
-      animation: pageFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: viewTransition 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }}
     .page-view.active {{
       display: block;
     }}
-    @keyframes pageFadeIn {{
-      from {{ opacity: 0; transform: translateY(6px); }}
+    @keyframes viewTransition {{
+      from {{ opacity: 0; transform: translateY(8px); }}
       to {{ opacity: 1; transform: translateY(0); }}
-    }}
-    .marquee-track {{
-      display: flex;
-      width: max-content;
-      animation: marquee 26s linear infinite;
-    }}
-    @keyframes marquee {{
-      0% {{ transform: translateX(0); }}
-      100% {{ transform: translateX(-50%); }}
     }}
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-red selection:text-white">
 
-  <!-- ==================== HEADER / MULTI-PAGE NAV (OR DESIGN STUDIO STYLE) ==================== -->
-  <header class="sticky top-0 z-50 bg-[#fef6e8]/90 backdrop-blur-md border-b hairline-border transition-all duration-300">
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 bg-[#fef6e8]/90 backdrop-blur-md border-b hairline">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 h-24 flex items-center justify-between">
-      <!-- Logo Brand -->
-      <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center gap-4 group">
+      <!-- Studio Logo -->
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-3.5 group">
         <img src="data:image/png;base64,{b64_logo_red}" alt="FORTUNE ODDS" class="h-11 w-auto transition-transform duration-300 group-hover:scale-105" />
-        <div class="hidden sm:block leading-none">
-          <span class="block text-[11px] font-mono tracking-[0.25em] text-brand-gold-dark uppercase font-semibold">FORTUNE ODDS</span>
-          <span class="text-sm font-bold tracking-tight text-stone-900 mt-1 block">心想事成品牌孵化</span>
+        <div class="hidden sm:block">
+          <span class="block text-[10px] font-mono tracking-[0.28em] text-brand-gold-dark uppercase font-semibold">FORTUNE ODDS</span>
+          <span class="text-sm font-bold tracking-tight text-brand-charcoal block mt-0.5">心想事成品牌孵化</span>
         </div>
       </a>
 
       <!-- Desktop Multi-Page Nav Tabs -->
-      <nav class="hidden md:flex items-center space-x-8 text-xs font-mono uppercase tracking-[0.2em] font-medium text-stone-600">
-        <a href="javascript:void(0)" onclick="switchPage('home')" id="tab-home" class="nav-tab active py-2 transition-colors hover:text-brand-red">00 / 首頁</a>
-        <a href="javascript:void(0)" onclick="switchPage('about')" id="tab-about" class="nav-tab py-2 transition-colors hover:text-brand-red">01 / 品牌理念</a>
-        <a href="javascript:void(0)" onclick="switchPage('services')" id="tab-services" class="nav-tab py-2 transition-colors hover:text-brand-red">02 / 孵化領域</a>
-        <a href="javascript:void(0)" onclick="switchPage('cases')" id="tab-cases" class="nav-tab py-2 transition-colors hover:text-brand-red">03 / 實戰案例</a>
-        <a href="javascript:void(0)" onclick="switchPage('contact')" id="tab-contact" class="nav-tab py-2 transition-colors hover:text-brand-red">04 / 預約健檢</a>
+      <nav class="hidden md:flex items-center space-x-9 text-xs font-mono uppercase tracking-[0.2em] text-stone-600">
+        <a href="javascript:void(0)" onclick="navigateTo('home')" id="tab-home" class="nav-tab active transition-colors hover:text-brand-red">首頁</a>
+        <a href="javascript:void(0)" onclick="navigateTo('about')" id="tab-about" class="nav-tab transition-colors hover:text-brand-red">品牌理念</a>
+        <a href="javascript:void(0)" onclick="navigateTo('services')" id="tab-services" class="nav-tab transition-colors hover:text-brand-red">孵化領域</a>
+        <a href="javascript:void(0)" onclick="navigateTo('works')" id="tab-works" class="nav-tab transition-colors hover:text-brand-red">實戰案例</a>
+        <a href="javascript:void(0)" onclick="navigateTo('contact')" id="tab-contact" class="nav-tab transition-colors hover:text-brand-red">聯絡健檢</a>
       </nav>
 
-      <!-- Action Button & Mobile Toggle -->
-      <div class="flex items-center gap-4">
-        <a href="https://lin.ee/rRWdlRi" target="_blank" rel="noopener noreferrer" class="group hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border hairline-border text-xs font-mono uppercase tracking-widest text-stone-900 hover:border-brand-red hover:bg-brand-red hover:text-white transition-all duration-300">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-red group-hover:bg-white transition-colors"></span>
-          <span>LINE 諮詢</span>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+      <!-- Top CTA -->
+      <div class="flex items-center gap-3">
+        <a href="https://lin.ee/rRWdlRi" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border hairline text-xs font-mono uppercase tracking-widest text-brand-charcoal hover:border-brand-red hover:bg-brand-red hover:text-white transition-all duration-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-red group-hover:bg-white"></span>
+          <span>LINE 預約</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
         </a>
-        <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-900 focus:outline-none" aria-label="Toggle navigation menu">
+        <button onclick="toggleMobileNav()" class="md:hidden p-2 text-brand-charcoal focus:outline-none" aria-label="切換選單">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Dropdown Accordion -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#fef6e8] border-b hairline-border px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest">
-      <a href="javascript:void(0)" onclick="switchPage('home')" class="block py-2 text-stone-900 border-b hairline-border">00 / 首頁 (Home)</a>
-      <a href="javascript:void(0)" onclick="switchPage('about')" class="block py-2 text-stone-900 border-b hairline-border">01 / 品牌理念 (Philosophy)</a>
-      <a href="javascript:void(0)" onclick="switchPage('services')" class="block py-2 text-stone-900 border-b hairline-border">02 / 孵化領域 (Capabilities)</a>
-      <a href="javascript:void(0)" onclick="switchPage('cases')" class="block py-2 text-stone-900 border-b hairline-border">03 / 實戰案例 (Case Studies)</a>
-      <a href="javascript:void(0)" onclick="switchPage('contact')" class="block py-2 text-stone-900">04 / 預約健檢 (Direct Contact)</a>
+    <!-- Mobile Dropdown -->
+    <div id="mobile-nav" class="hidden md:hidden bg-[#fef6e8] border-b hairline px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest">
+      <a href="javascript:void(0)" onclick="navigateTo('home')" class="block py-2 text-stone-900 border-b hairline">首頁 (Home)</a>
+      <a href="javascript:void(0)" onclick="navigateTo('about')" class="block py-2 text-stone-900 border-b hairline">品牌理念 (Philosophy)</a>
+      <a href="javascript:void(0)" onclick="navigateTo('services')" class="block py-2 text-stone-900 border-b hairline">孵化領域 (Capabilities)</a>
+      <a href="javascript:void(0)" onclick="navigateTo('works')" class="block py-2 text-stone-900 border-b hairline">實戰案例 (Works)</a>
+      <a href="javascript:void(0)" onclick="navigateTo('contact')" class="block py-2 text-stone-900">聯絡健檢 (Contact)</a>
     </div>
   </header>
 
-  <!-- ==================== PAGE 0: HOME (首頁) ==================== -->
-  <main id="view-home" class="page-view active flex-1">
-    <!-- Hero Banner -->
-    <section class="pt-20 pb-24 md:pt-28 md:pb-36 px-6 sm:px-10 max-w-7xl mx-auto space-y-8">
-      <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.3em] text-brand-gold-dark font-semibold">
-        <span>00 / STUDIO STATEMENT</span>
-        <span class="w-12 h-px bg-brand-gold-dark/40"></span>
+  <!-- ==================== PAGE 1: HOME (首頁) ==================== -->
+  <main id="page-home" class="page-view active flex-1">
+    <!-- Hero / Statement -->
+    <section class="pt-20 pb-28 md:pt-32 md:pb-40 px-6 sm:px-10 max-w-7xl mx-auto space-y-8">
+      <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-brand-gold-dark font-semibold">
+        <span>FORTUNE ODDS BRAND STUDIO</span>
+        <span class="w-10 h-px bg-brand-gold-dark/40"></span>
         <span>TAICHUNG, TAIWAN</span>
       </div>
 
-      <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-[5.75rem] font-black tracking-tighter text-stone-900 leading-[1.05]">
+      <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-[5.5rem] font-black tracking-tighter text-brand-charcoal leading-[1.06]">
         玩行銷找心想<br />
         <span class="text-brand-red font-serif italic font-normal">事成不同凡響</span>
       </h1>
@@ -144,152 +145,138 @@
         “ May the odds be ever in your favor. ”
       </p>
 
-      <div class="grid md:grid-cols-12 gap-8 pt-8 border-t hairline-border">
-        <div class="md:col-span-4 text-xs font-mono uppercase tracking-widest text-stone-500">
-          [ 聚焦領域 ]<br />
-          醫美診所 ✕ 美學沙龍 ✕ 生技保健 ✕ 保養品電商
+      <div class="grid md:grid-cols-12 gap-8 pt-10 border-t hairline items-start">
+        <div class="md:col-span-4 text-xs font-mono uppercase tracking-widest text-stone-500 leading-relaxed">
+          [ 專注垂直美學產業 ]<br />
+          醫美診所 ✕ 美學沙龍<br />
+          生技保健 ✕ 保養品電商
         </div>
         <div class="md:col-span-8 space-y-6">
-          <p class="text-base sm:text-xl text-stone-700 font-normal leading-relaxed max-w-3xl">
-            願機會永遠對你有利！我們將「高維心智定位」、「當代視覺美學」與「精準私域轉單策略」一體化融合，專為高客單價美學與生技品牌構築無可替代的商業護城河。
+          <p class="text-base sm:text-lg text-stone-700 font-normal leading-relaxed max-w-3xl">
+            願機會永遠對你有利！我們將「高維心智定位」、「當代空間與視覺美學」與「精準私域轉單策略」一體化融合，專為美學與生技品牌構築不可撼動的商業溢價壁壘。
           </p>
           <div class="pt-2 flex flex-wrap items-center gap-4">
-            <a href="javascript:void(0)" onclick="switchPage('contact')" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-brand-charcoal hover:bg-brand-red text-white text-xs font-mono uppercase tracking-widest transition-all duration-300 shadow-md">
+            <a href="javascript:void(0)" onclick="navigateTo('contact')" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-brand-charcoal hover:bg-brand-red text-white text-xs font-mono uppercase tracking-widest transition-all duration-300">
               <span>預約品牌增長診斷</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-            <a href="javascript:void(0)" onclick="switchPage('services')" class="inline-flex items-center gap-2 px-8 py-4 rounded-full border hairline-border text-stone-800 text-xs font-mono uppercase tracking-widest hover:bg-white transition-all">
-              <span>瀏覽 6 大能力維度</span>
+            <a href="javascript:void(0)" onclick="navigateTo('about')" class="inline-flex items-center gap-2 px-8 py-4 rounded-full border hairline text-stone-800 text-xs font-mono uppercase tracking-widest hover:bg-white transition-all">
+              <span>深入了解品牌理念</span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Marquee Banner -->
-    <aside aria-label="核心專長滾動橫幅" class="py-5 bg-brand-charcoal text-[#fef6e8] overflow-hidden border-y hairline-border">
-      <div class="marquee-track flex items-center gap-12 text-xs font-mono uppercase tracking-[0.3em]">
-        <span>BRAND IDENTITY (CIS)</span>
-        <span class="text-brand-gold">✦</span>
-        <span>DIGITAL ADS & FUNNEL</span>
-        <span class="text-brand-gold">✦</span>
-        <span>SHORT VIDEO IP</span>
-        <span class="text-brand-gold">✦</span>
-        <span>UI / UX EXPERIENCE</span>
-        <span class="text-brand-gold">✦</span>
-        <span>LINE CRM AUTOMATION</span>
-        <span class="text-brand-gold">✦</span>
-        <span>PACKAGING ARCHITECTURE</span>
-        <span class="text-brand-gold">✦</span>
-        <span>BRAND IDENTITY (CIS)</span>
-        <span class="text-brand-gold">✦</span>
-        <span>DIGITAL ADS & FUNNEL</span>
-        <span class="text-brand-gold">✦</span>
-        <span>SHORT VIDEO IP</span>
-        <span class="text-brand-gold">✦</span>
-        <span>UI / UX EXPERIENCE</span>
-        <span class="text-brand-gold">✦</span>
-      </div>
-    </aside>
-
-    <!-- Home Metric Grid -->
-    <section class="py-24 px-6 sm:px-10 max-w-7xl mx-auto border-b hairline-border">
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-        <div>
-          <div class="text-3xl sm:text-5xl font-black text-stone-900 font-mono">98.6<span class="text-base text-brand-red">%</span></div>
-          <div class="text-[11px] font-mono text-stone-500 uppercase mt-2 tracking-widest">合作品牌滿意續約率</div>
+    <!-- Editorial Stats Bar (Or Design style) -->
+    <section class="border-y hairline bg-brand-cream-light py-16 px-6 sm:px-10">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div class="space-y-1">
+          <span class="text-3xl sm:text-5xl font-black font-mono text-brand-charcoal">98.6<span class="text-base text-brand-red font-sans">%</span></span>
+          <div class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">合作品牌滿意續約率</div>
         </div>
-        <div>
-          <div class="text-3xl sm:text-5xl font-black text-stone-900 font-mono">3.8<span class="text-base text-brand-red">X+</span></div>
-          <div class="text-[11px] font-mono text-stone-500 uppercase mt-2 tracking-widest">廣告平均投報 ROAS</div>
+        <div class="space-y-1">
+          <span class="text-3xl sm:text-5xl font-black font-mono text-brand-charcoal">3.8<span class="text-base text-brand-red font-sans">X+</span></span>
+          <div class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">廣告平均投報 ROAS</div>
         </div>
-        <div>
-          <div class="text-3xl sm:text-5xl font-black text-stone-900 font-mono">100<span class="text-base text-brand-red">K+</span></div>
-          <div class="text-[11px] font-mono text-stone-500 uppercase mt-2 tracking-widest">私域有效名單沉澱</div>
+        <div class="space-y-1">
+          <span class="text-3xl sm:text-5xl font-black font-mono text-brand-charcoal">100<span class="text-base text-brand-red font-sans">K+</span></span>
+          <div class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">私域有效名單沉澱</div>
         </div>
-        <div>
-          <div class="text-3xl sm:text-5xl font-black text-stone-900 font-mono">100<span class="text-base text-brand-red">%</span></div>
-          <div class="text-[11px] font-mono text-stone-500 uppercase mt-2 tracking-widest">全案客製一站式操盤</div>
+        <div class="space-y-1">
+          <span class="text-3xl sm:text-5xl font-black font-mono text-brand-charcoal">100<span class="text-base text-brand-red font-sans">%</span></span>
+          <div class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">全案客製一站式操盤</div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ==================== PAGE 1: PHILOSOPHY (品牌理念) ==================== -->
-  <main id="view-about" class="page-view flex-1">
-    <section class="py-20 bg-stone-900 text-white text-center border-b hairline-border-dark">
-      <div class="max-w-4xl mx-auto px-6">
-        <span class="text-xs font-mono uppercase tracking-[0.3em] text-brand-gold font-semibold">01 / PHILOSOPHY</span>
-        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-3 tracking-tight">品牌定位與哲學</h1>
-        <p class="text-stone-400 text-sm sm:text-base font-serif italic max-w-xl mx-auto">
-          “ May the odds be ever in your favor. ” ── 願機會永遠對你有利！
-        </p>
+  <!-- ==================== PAGE 2: ABOUT / PHILOSOPHY (Or Design #s2 核心介面排版) ==================== -->
+  <main id="page-about" class="page-view flex-1">
+    <!-- Header Banner -->
+    <section class="py-20 bg-stone-900 text-[#fef6e8] border-b hairline-dark">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10">
+        <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-brand-gold">
+          <span>(01) PHILOSOPHY</span>
+          <span class="w-8 h-px bg-brand-gold/40"></span>
+          <span>THE ESSENCE OF FORTUNE ODDS</span>
+        </div>
+        <h1 class="text-3xl sm:text-6xl font-black tracking-tight text-white mt-4">品牌哲學與操盤維度</h1>
       </div>
     </section>
 
-    <section class="py-28 px-6 sm:px-10 max-w-7xl mx-auto space-y-20">
+    <!-- Or Design #s2 Iconic Editorial Split Layout -->
+    <section class="py-28 px-6 sm:px-10 max-w-7xl mx-auto space-y-24">
       <div class="grid md:grid-cols-12 gap-12 items-start">
+        <!-- Left Statement -->
         <div class="md:col-span-5 space-y-4">
-          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-stone-900 leading-tight">
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-brand-red font-bold">ABOUT STUDIO</span>
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-brand-charcoal leading-[1.12]">
             行銷不是碰運氣，<br />
             是精密佈局後的<br />
             <span class="text-brand-red">必然成果。</span>
           </h2>
+          <div class="pt-4 text-xs font-mono text-stone-500">
+            LOCATED IN TAICHUNG / SERVING NATIONWIDE
+          </div>
         </div>
+
+        <!-- Right Editorial Narrative -->
         <div class="md:col-span-7 space-y-6 text-stone-700 text-sm sm:text-base leading-relaxed">
           <p>
-            美業與生技市場早已跨入「審美與信任門檻極高」的成熟期。多數品牌的瓶頸並不在於技術或研發，而在於拼裝式的零碎外包──設計只管好看、投手只管花錢、拍片不懂轉單，最終品牌調性被低價促銷稀釋殆盡。
+            美業與生技保養市場早已跨入「審美與信任門檻極高」的成熟期。多數品牌的瓶頸並不在於產品或技術，而在於碎片化的零散外包──設計只管做圖、廣告投手只管燒預算、拍片不懂轉單，最終品牌調性被迫淪落至價格割喉戰。
           </p>
           <p>
-            心想事成（FORTUNE ODDS）創立的核心初衷，就是成為美學與健康產業的「總操盤手」。我們以嚴謹的商業策略為骨架，融合東方典雅與現代極簡美學，讓每一個品牌的誕生都自帶高溢價的說服力。
+            心想事成（FORTUNE ODDS）創立的核心初衷，就是成為美學與生技產業的「總指揮官」。我們以清晰的商業策略為骨架，將現代極簡美學注入空間與包裝，並貫通短影音傳播與官方 LINE 私域留存，讓每一筆行銷預算都能沉澱為品牌的長久資產。
           </p>
         </div>
       </div>
 
-      <!-- 3 Studio Pillars in Or Design clean lines -->
-      <div class="grid md:grid-cols-3 gap-8 pt-12 border-t hairline-border">
-        <div class="space-y-3">
-          <div class="text-xs font-mono text-brand-red font-semibold">[ PILLAR 01 ]</div>
-          <h3 class="text-xl font-bold text-stone-900">專注高審美與高客單行業</h3>
+      <!-- Or Design 3-Column Manifesto List -->
+      <div class="grid md:grid-cols-3 gap-10 pt-16 border-t hairline">
+        <div class="space-y-4">
+          <span class="text-xs font-mono text-brand-red font-bold tracking-widest">01 / NICHE FOCUS</span>
+          <h3 class="text-xl font-bold text-brand-charcoal">專注高客單美感產業</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
-            深耕微整抗老、精品沙龍美業、生技機能食品與純淨保養品電商，深刻理解客群心理與消費決策動線。
+            深耕微整抗老、精品沙龍美學、生技機能食品與頂級保養品電商，深刻洞察高端受眾的心理決策動線。
           </p>
         </div>
-        <div class="space-y-3">
-          <div class="text-xs font-mono text-brand-red font-semibold">[ PILLAR 02 ]</div>
-          <h3 class="text-xl font-bold text-stone-900">精通法規避雷紅線</h3>
+        <div class="space-y-4">
+          <span class="text-xs font-mono text-brand-red font-bold tracking-widest">02 / LEGAL PRECISION</span>
+          <h3 class="text-xl font-bold text-brand-charcoal">精準駕馭醫療衛福法規</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
-            衛福部醫療廣告法規與化妝品標示邊界日趨嚴格。我們熟悉合規操作路徑，在安全邊界內最大化傳播爆發力。
+            熟悉衛福部醫療廣告法規與化妝品法規邊界，避開處罰紅線，在合規框架下創造極具說服力的商業內容。
           </p>
         </div>
-        <div class="space-y-3">
-          <div class="text-xs font-mono text-brand-red font-semibold">[ PILLAR 03 ]</div>
-          <h3 class="text-xl font-bold text-stone-900">建立私域複購閉環</h3>
+        <div class="space-y-4">
+          <span class="text-xs font-mono text-brand-red font-bold tracking-widest">03 / CRM RETENTION</span>
+          <h3 class="text-xl font-bold text-brand-charcoal">私域複購獲利閉環</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
-            不追求虛浮的單次流量，而是把花廣告費引流的每位訪客，沉澱至官方 LINE 形成終身可持續變現的私域池。
+            不盲目追求虛浮的單次點擊，透過官方 LINE 自動化旅程深度沉澱名單，大幅提高單客終身價值 (LTV)。
           </p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ==================== PAGE 2: CAPABILITIES (孵化領域) ==================== -->
-  <main id="view-services" class="page-view flex-1">
-    <section class="py-20 bg-stone-900 text-white text-center border-b hairline-border-dark">
-      <div class="max-w-4xl mx-auto px-6">
-        <span class="text-xs font-mono uppercase tracking-[0.3em] text-brand-gold font-semibold">02 / CAPABILITIES</span>
-        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-3 tracking-tight">6 大維度孵化能力</h1>
-        <p class="text-stone-400 text-sm sm:text-base font-mono max-w-xl mx-auto">
-          [ 拒絕套版與拼裝，從根本架構高轉換商業美學 ]
-        </p>
+  <!-- ==================== PAGE 3: SERVICES (孵化領域) ==================== -->
+  <main id="page-services" class="page-view flex-1">
+    <section class="py-20 bg-stone-900 text-[#fef6e8] border-b hairline-dark">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10">
+        <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-brand-gold">
+          <span>(02) CAPABILITIES</span>
+          <span class="w-8 h-px bg-brand-gold/40"></span>
+          <span>FULL-STACK BRAND INCUBATION</span>
+        </div>
+        <h1 class="text-3xl sm:text-6xl font-black tracking-tight text-white mt-4">6 大維度孵化能力</h1>
       </div>
     </section>
 
+    <!-- Or Design Hairline Minimalist Drawer Table -->
     <section class="py-24 bg-brand-charcoal text-[#fef6e8]">
       <div class="max-w-7xl mx-auto px-6 sm:px-10">
-        <!-- Or Design Studio Drawer / Index List -->
-        <div class="divide-y hairline-border-dark border-y hairline-border-dark">
-          <!-- Item 01 -->
+        <div class="divide-y hairline-dark border-y hairline-dark">
+          <!-- 01 -->
           <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-stone-900/40 transition-colors">
             <div class="md:col-span-2 text-xs font-mono text-brand-gold">01 / CIS & STRATEGY</div>
             <div class="md:col-span-4">
@@ -301,7 +288,7 @@
             </div>
           </div>
 
-          <!-- Item 02 -->
+          <!-- 02 -->
           <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-stone-900/40 transition-colors">
             <div class="md:col-span-2 text-xs font-mono text-brand-gold">02 / DIGITAL ADS</div>
             <div class="md:col-span-4">
@@ -313,7 +300,7 @@
             </div>
           </div>
 
-          <!-- Item 03 -->
+          <!-- 03 -->
           <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-stone-900/40 transition-colors">
             <div class="md:col-span-2 text-xs font-mono text-brand-gold">03 / SHORT VIDEO</div>
             <div class="md:col-span-4">
@@ -325,7 +312,7 @@
             </div>
           </div>
 
-          <!-- Item 04 -->
+          <!-- 04 -->
           <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-stone-900/40 transition-colors">
             <div class="md:col-span-2 text-xs font-mono text-brand-gold">04 / VISUAL DESIGN</div>
             <div class="md:col-span-4">
@@ -337,7 +324,7 @@
             </div>
           </div>
 
-          <!-- Item 05 -->
+          <!-- 05 -->
           <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-stone-900/40 transition-colors">
             <div class="md:col-span-2 text-xs font-mono text-brand-gold">05 / UI & UX DESIGN</div>
             <div class="md:col-span-4">
@@ -349,7 +336,7 @@
             </div>
           </div>
 
-          <!-- Item 06 -->
+          <!-- 06 -->
           <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-stone-900/40 transition-colors">
             <div class="md:col-span-2 text-xs font-mono text-brand-gold">06 / LINE CRM</div>
             <div class="md:col-span-4">
@@ -365,29 +352,31 @@
     </section>
   </main>
 
-  <!-- ==================== PAGE 3: CASE STUDIES (實戰案例) ==================== -->
-  <main id="view-cases" class="page-view flex-1">
-    <section class="py-20 bg-stone-900 text-white text-center border-b hairline-border-dark">
-      <div class="max-w-4xl mx-auto px-6">
-        <span class="text-xs font-mono uppercase tracking-[0.3em] text-brand-gold font-semibold">03 / CASE STUDIES</span>
-        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-3 tracking-tight">精選實績成果</h1>
-        <p class="text-stone-400 text-sm sm:text-base font-serif italic max-w-xl mx-auto">
-          數據會說話，用成效證明我們的孵化實力
-        </p>
-        <div class="pt-4">
-          <a href="https://www.canva.com/design/DAHESLv_x8M/4Oph9xwgYH065TSJqycxxQ/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border hairline-border-dark text-xs font-mono uppercase tracking-widest text-brand-gold hover:bg-white hover:text-stone-900 transition-all">
-            <span>開啟精選作品集簡報 (Portfolio PDF)</span>
-            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-          </a>
+  <!-- ==================== PAGE 4: WORKS (實戰案例) ==================== -->
+  <main id="page-works" class="page-view flex-1">
+    <section class="py-20 bg-stone-900 text-[#fef6e8] border-b hairline-dark">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-brand-gold">
+            <span>(03) CASE STUDIES</span>
+            <span class="w-8 h-px bg-brand-gold/40"></span>
+            <span>PROVEN PERFORMANCE</span>
+          </div>
+          <h1 class="text-3xl sm:text-6xl font-black tracking-tight text-white mt-4">精選實績成果</h1>
         </div>
+        <a href="https://www.canva.com/design/DAHESLv_x8M/4Oph9xwgYH065TSJqycxxQ/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border hairline-dark text-xs font-mono uppercase tracking-widest text-brand-gold hover:bg-white hover:text-stone-900 transition-all">
+          <span>開啟精選作品集簡報 (Portfolio PDF)</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
       </div>
     </section>
 
+    <!-- Case Studies Editorial Grid -->
     <section class="py-28 px-6 sm:px-10 max-w-7xl mx-auto">
       <div class="grid md:grid-cols-3 gap-10">
         <!-- Case 1 -->
         <div class="space-y-6 group">
-          <div class="aspect-[4/3] bg-stone-900 rounded-2xl p-8 flex flex-col justify-between text-white border hairline-border">
+          <div class="aspect-[4/3] bg-stone-900 rounded-2xl p-8 flex flex-col justify-between text-white border hairline">
             <span class="text-xs font-mono text-brand-gold uppercase tracking-widest">CLINIC / 醫美全案</span>
             <div>
               <div class="text-4xl font-black font-mono text-brand-red">+280%</div>
@@ -396,7 +385,7 @@
           </div>
           <div>
             <span class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">AESTHETIC CLINIC CASE</span>
-            <h3 class="text-xl font-bold text-stone-900 mt-1 group-hover:text-brand-red transition-colors">微整抗老診所：自費預約爆量計畫</h3>
+            <h3 class="text-xl font-bold text-brand-charcoal mt-1 group-hover:text-brand-red transition-colors">微整抗老診所：自費預約爆量計畫</h3>
             <p class="text-xs text-stone-600 mt-2 leading-relaxed">
               以醫師知識 IP 建立權威感，串接官方 LINE 預約諮詢機制，單次獲客成本 (CPA) 成功降低 42%。
             </p>
@@ -405,7 +394,7 @@
 
         <!-- Case 2 -->
         <div class="space-y-6 group">
-          <div class="aspect-[4/3] bg-stone-900 rounded-2xl p-8 flex flex-col justify-between text-white border hairline-border">
+          <div class="aspect-[4/3] bg-stone-900 rounded-2xl p-8 flex flex-col justify-between text-white border hairline">
             <span class="text-xs font-mono text-brand-gold uppercase tracking-widest">SKINCARE / 生技電商</span>
             <div>
               <div class="text-4xl font-black font-mono text-brand-gold">4.2X</div>
@@ -414,7 +403,7 @@
           </div>
           <div>
             <span class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">BIOTECH BEAUTY CASE</span>
-            <h3 class="text-xl font-bold text-stone-900 mt-1 group-hover:text-brand-red transition-colors">生技修護精華液：上市首季破 850 萬</h3>
+            <h3 class="text-xl font-bold text-brand-charcoal mt-1 group-hover:text-brand-red transition-colors">生技修護精華液：上市首季破 850 萬</h3>
             <p class="text-xs text-stone-600 mt-2 leading-relaxed">
               重構產品包裝結構與高說服力商品頁 (LP)，精準定向敏感肌族群，首月顧客複購率達 36.5%。
             </p>
@@ -423,7 +412,7 @@
 
         <!-- Case 3 -->
         <div class="space-y-6 group">
-          <div class="aspect-[4/3] bg-stone-900 rounded-2xl p-8 flex flex-col justify-between text-white border hairline-border">
+          <div class="aspect-[4/3] bg-stone-900 rounded-2xl p-8 flex flex-col justify-between text-white border hairline">
             <span class="text-xs font-mono text-brand-gold uppercase tracking-widest">SALON / 美業連鎖</span>
             <div>
               <div class="text-4xl font-black font-mono text-brand-red">+116%</div>
@@ -432,7 +421,7 @@
           </div>
           <div>
             <span class="text-[11px] font-mono text-stone-500 uppercase tracking-wider">BEAUTY SALON CHAIN</span>
-            <h3 class="text-xl font-bold text-stone-900 mt-1 group-hover:text-brand-red transition-colors">連鎖美學沙龍：形象重塑與私域沉澱</h3>
+            <h3 class="text-xl font-bold text-brand-charcoal mt-1 group-hover:text-brand-red transition-colors">連鎖美學沙龍：形象重塑與私域沉澱</h3>
             <p class="text-xs text-stone-600 mt-2 leading-relaxed">
               統一全台門市 CIS 識別手冊，導入官方 LINE 會員分級與定期自動推播，鎖定高忠誠熟客回流。
             </p>
@@ -442,19 +431,23 @@
     </section>
   </main>
 
-  <!-- ==================== PAGE 4: DIRECT CONTACT (預約健檢) ==================== -->
-  <main id="view-contact" class="page-view flex-1">
-    <section class="py-20 bg-stone-900 text-white text-center border-b hairline-border-dark">
-      <div class="max-w-4xl mx-auto px-6">
-        <span class="text-xs font-mono uppercase tracking-[0.3em] text-brand-gold font-semibold">04 / DIRECT CONTACT</span>
-        <h1 class="text-3xl sm:text-5xl font-black mt-2 mb-3 tracking-tight">預約 30 分鐘品牌增長健檢</h1>
-        <p class="text-stone-400 text-sm sm:text-base font-serif italic max-w-xl mx-auto">
+  <!-- ==================== PAGE 5: DIRECT CONTACT (完全無表單、無框中框、純粹LINE直通) ==================== -->
+  <main id="page-contact" class="page-view flex-1">
+    <section class="py-20 bg-stone-900 text-[#fef6e8] border-b hairline-dark">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 text-center">
+        <div class="flex items-center justify-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-brand-gold">
+          <span>(04) DIRECT CONTACT</span>
+          <span class="w-8 h-px bg-brand-gold/40"></span>
+          <span>GET IN TOUCH</span>
+        </div>
+        <h1 class="text-3xl sm:text-6xl font-black tracking-tight text-white mt-4">預約 30 分鐘品牌增長健檢</h1>
+        <p class="text-stone-400 text-sm sm:text-base font-serif italic max-w-xl mx-auto mt-3">
           “ May the odds be ever in your favor. ” ── 願機會永遠對你有利！
         </p>
       </div>
     </section>
 
-    <!-- Seamless Frameless Contact Area (No white card / no box) -->
+    <!-- Seamless Frameless Contact Area -->
     <section class="py-28 bg-brand-cream">
       <div class="max-w-3xl mx-auto px-6 text-center space-y-12">
         <div class="space-y-6">
@@ -462,7 +455,7 @@
             <i data-lucide="message-circle" class="w-9 h-9"></i>
           </div>
           <div class="space-y-3">
-            <h2 class="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight">LINE 官方線上諮詢</h2>
+            <h2 class="text-3xl sm:text-4xl font-black text-brand-charcoal tracking-tight">LINE 官方線上諮詢</h2>
             <p class="text-stone-600 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
               點擊加入心想事成官方 LINE，直接傳送您的品牌或診所名稱，資深顧問將在 24 小時內與您安排 30 分鐘 1 對 1 增長健檢。
             </p>
@@ -473,7 +466,7 @@
               <span>立即開啟 LINE 諮詢</span>
             </a>
           </div>
-          <div class="pt-4 text-xs text-stone-500 flex items-center justify-center gap-2">
+          <div class="pt-4 text-xs text-stone-500 flex items-center justify-center gap-2 font-mono">
             <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-gold-dark"></i>
             <span>總部地址：台中市南屯區大業路131號（亦可預約實體策略會議）</span>
           </div>
@@ -486,18 +479,18 @@
           <h3 class="text-xs font-mono uppercase tracking-[0.25em] text-brand-red font-bold">預約流程</h3>
           <div class="grid sm:grid-cols-3 gap-8 text-center">
             <div class="space-y-2">
-              <div class="w-9 h-9 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto text-xs">1</div>
-              <h4 class="font-bold text-stone-900 text-sm">加入官方 LINE</h4>
+              <div class="w-9 h-9 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto text-xs font-mono">1</div>
+              <h4 class="font-bold text-brand-charcoal text-sm">加入官方 LINE</h4>
               <p class="text-xs text-stone-500">點擊上方按鈕加入好友</p>
             </div>
             <div class="space-y-2">
-              <div class="w-9 h-9 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto text-xs">2</div>
-              <h4 class="font-bold text-stone-900 text-sm">傳送品牌現況</h4>
+              <div class="w-9 h-9 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto text-xs font-mono">2</div>
+              <h4 class="font-bold text-brand-charcoal text-sm">傳送品牌現況</h4>
               <p class="text-xs text-stone-500">告知您的品牌或診所目前需求</p>
             </div>
             <div class="space-y-2">
-              <div class="w-9 h-9 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto text-xs">3</div>
-              <h4 class="font-bold text-stone-900 text-sm">安排 1 對 1 健檢</h4>
+              <div class="w-9 h-9 rounded-full bg-brand-red text-white font-bold flex items-center justify-center mx-auto text-xs font-mono">3</div>
+              <h4 class="font-bold text-brand-charcoal text-sm">安排 1 對 1 健檢</h4>
               <p class="text-xs text-stone-500">顧問於 24 小時內敲定會議</p>
             </div>
           </div>
@@ -507,7 +500,7 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-brand-black text-stone-500 py-12 px-6 sm:px-10 border-t hairline-border-dark text-xs font-mono">
+  <footer class="bg-brand-black text-stone-500 py-12 px-6 sm:px-10 border-t hairline-dark text-xs font-mono">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
         <img src="data:image/png;base64,{b64_logo_dark}" alt="FORTUNE ODDS" class="h-8 w-auto brightness-150" />
@@ -526,14 +519,14 @@
     lucide.createIcons();
 
     // Multi-page Switcher
-    function switchPage(pageId) {{
+    function navigateTo(pageId) {{
       // Hide all pages
       document.querySelectorAll('.page-view').forEach(view => {{
         view.classList.remove('active');
       }});
 
       // Show target page
-      const targetView = document.getElementById('view-' + pageId);
+      const targetView = document.getElementById('page-' + pageId);
       if (targetView) {{
         targetView.classList.add('active');
       }}
@@ -548,14 +541,14 @@
       }}
 
       // Close mobile dropdown if open
-      document.getElementById('mobile-menu').classList.add('hidden');
+      document.getElementById('mobile-nav').classList.add('hidden');
 
       // Scroll to top
       window.scrollTo({{ top: 0, behavior: 'smooth' }});
     }}
 
-    function toggleMobileMenu() {{
-      const menu = document.getElementById('mobile-menu');
+    function toggleMobileNav() {{
+      const menu = document.getElementById('mobile-nav');
       menu.classList.toggle('hidden');
     }}
   </script>
@@ -564,9 +557,9 @@
 '''
 
 with open("index.html", "w", encoding="utf-8") as f:
-    f.write(multipage_ordesign_html)
+    f.write(html_code)
 
-with open("fortune_odds_multipage_ordesign.html", "w", encoding="utf-8") as f:
-    f.write(multipage_ordesign_html)
+with open("fortune_odds_ordesign_s2_multipage.html", "w", encoding="utf-8") as f:
+    f.write(html_code)
 
-print("Generated multi-page Or Design Studio layout successfully!")
+print("Saved perfectly.")
