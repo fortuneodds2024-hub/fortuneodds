@@ -34,6 +34,22 @@
             serif: ['"Cinzel"', 'serif'],
             display: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif']
             },
+          /* ====== 就是放在這裡 (keyframes) ====== */
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            'marquee-reverse': {
+              '0%': { transform: 'translateX(-50%)' },
+              '100%': { transform: 'translateX(0%)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          },
+          /* ====== 對應下方調用動畫名稱 ====== */
           animation: {
             'marquee': 'marquee 28s linear infinite',
             'marquee-reverse': 'marquee-reverse 32s linear infinite',
