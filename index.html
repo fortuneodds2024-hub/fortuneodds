@@ -34,7 +34,7 @@
             serif: ['"Cinzel"', 'serif'],
             display: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif']
             },
-          /* ====== 就是放在這裡 (keyframes) ====== */
+
           keyframes: {
             marquee: {
               '0%': { transform: 'translateX(0%)' },
@@ -330,12 +330,10 @@
       <!-- 左欄：雜誌風跨頁大圖 (佔 5 欄，桌機自動黏貼滾動 Sticky) -->
       <div class="lg:col-span-5 lg:sticky lg:top-28">
         <div class="relative overflow-hidden group">
-          <!-- 主圖：直接填入你的大圖網址 (建議 4:5 或 3:4 直式高質感美學圖) -->
           <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" 
                alt="Brand Aesthetics" 
                class="w-full h-auto max-h-[640px] object-cover filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 select-none block" />
           
-          <!-- 圖片右下角極簡標註 (如同攝影集批註) -->
           <div class="pt-3 flex justify-between items-center text-[10px] font-mono tracking-widest text-stone-500 uppercase">
             <span>FIGURE 01.0 / AESTHETIC BLUEPRINT</span>
             <span>2026 ARCHIVE</span>
@@ -427,14 +425,13 @@
       </div>
 
     </div>
-  </div>
-</section>
 
-    <!-- 底部行動導引 -->
-    <div class="mt-12 flex justify-between items-center">
-      <span class="font-mono text-xs text-stone-600">END-TO-END GROWTH SOLUTION</span>
-      <a href="javascript:void(0)" onclick="navigateTo('services')" class="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-red hover:text-brand-charcoal uppercase tracking-wider transition-colors">
-        <span>完整交付規範</span>
+    <!-- 底部行動導引：乾淨保留一組 -->
+    <div class="mt-14 pt-8 flex justify-between items-center border-t border-brand-charcoal/15">
+      <span class="font-mono text-xs text-stone-600 tracking-wider">END-TO-END GROWTH INCUBATION</span>
+      <a href="javascript:void(0)" onclick="navigateTo('services')" 
+         class="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-red hover:text-brand-charcoal uppercase tracking-wider transition-colors">
+        <span>完整交付規範與方案細節</span>
         <i data-lucide="arrow-right" class="w-4 h-4"></i>
       </a>
     </div>
@@ -442,25 +439,13 @@
   </div>
 </section>
 
-    <!-- 底部導流 -->
-    <div class="mt-14 pt-8 flex justify-center">
-      <a href="javascript:void(0)" onclick="navigateTo('services')"
-         class="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-brand-charcoal/30 hover:border-brand-charcoal bg-transparent hover:bg-brand-charcoal text-brand-charcoal hover:text-white text-xs font-mono tracking-widest uppercase transition-all duration-300">
-        <span>EXPLORE ALL SERVICES & SPECS</span>
-        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-    <!-- Quick CTA Banner -->
+<!-- Quick CTA Banner -->
 <section class="py-28 bg-brand-red-dark text-white relative overflow-hidden">
   <div class="absolute -right-32 -top-32 w-[32rem] h-[32rem] bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="max-w-6xl mx-auto px-6 sm:px-8 relative z-10">
     
- <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-20">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-20">
       <div class="space-y-3 shrink-0">
         <span class="text-brand-gold font-mono text-xs uppercase tracking-[0.3em] font-bold block">
           READY TO SCALE?
@@ -504,7 +489,7 @@
         </div>
       </a>
 
-      <!-- 02. Instagram  -->
+      <!-- 02. Instagram -->
       <a href="https://www.instagram.com/fortune.odds/" target="_blank" rel="noopener noreferrer"
          class="group flex flex-col md:flex-row md:items-center justify-between py-8 sm:py-10 border-b border-white/15 hover:border-brand-gold transition-colors duration-300 gap-6">
         <div class="flex items-start sm:items-center gap-6 sm:gap-8">
@@ -562,7 +547,7 @@
 
     </div>
 
-    <!-- 底部據點-->
+    <!-- 底部據點 -->
     <div class="mt-14 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-sm text-brand-cream/80">
       <div class="flex items-center gap-3">
         <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0"></i>
@@ -577,7 +562,7 @@
 
   </div>
 </section>
-  </main>
+</main>
 
   <!-- ==================== PAGE 2: ABOUT (關於心想事成) ==================== -->
   <main id="page-about" class="page-section flex-1">
