@@ -167,46 +167,56 @@
     </div>
   </header>
 
- <!-- Hero Banner: Visual Collage Editorial Edition -->
-<section class="relative min-h-[640px] lg:min-h-[800px] xl:min-h-[900px] flex items-center bg-[#f8f2ec] bg-no-repeat bg-cover bg-[center_right] overflow-hidden border-b border-brand-charcoal/10"
-         style="background-image: url('https://drive.google.com/file/d/1hE0PEpywpAvBTARtG5WSGnhJLT0-NFFD/view?usp=drive_link');">
+<!-- ==================== PAGE 1: HOME (首頁) ==================== -->
+<main id="page-home" class="page-section active flex-1">
+<section class="relative bg-[#eee3dc] overflow-hidden border-b border-brand-charcoal/10">
+  <div class="absolute right-0 top-0 w-96 h-96 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div class="absolute inset-0 bg-gradient-to-r from-[#f8f2ec] via-[#f8f2ec]/90 to-transparent lg:hidden pointer-events-none"></div>
-
-  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10 py-20 lg:py-28">
-    <div class="max-w-xl lg:max-w-2xl text-left space-y-6 sm:space-y-8">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
       
-      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 border border-brand-charcoal/20 bg-white/80 backdrop-blur-sm rounded-full text-xs font-mono tracking-widest text-brand-charcoal shadow-xs">
-        <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
-        <span class="font-bold">專為 醫美診所 ✕ 美業連鎖 ✕ 生技保健 打造</span>
-      </div>
+      <div class="lg:col-span-7 space-y-6 sm:space-y-8 z-10 text-left">
+        
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 border border-brand-charcoal/20 bg-white/80 backdrop-blur-sm rounded-full text-xs font-mono tracking-widest text-brand-charcoal shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+          <span class="font-bold">專為 醫美診所 ✕ 美業連鎖 ✕ 生技保健 打造</span>
+        </div>
 
-      <div class="space-y-3">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-black tracking-tight text-brand-charcoal leading-[1.12]">
-          玩行銷找心想，<br />
-          <span class="text-brand-red font-serif italic">事成不同凡響</span>。
-        </h1>
-        <p class="font-serif italic text-base sm:text-xl text-stone-600 tracking-wider font-semibold">
-          “ May the odds be ever in your favor. ”
+        <div class="space-y-3">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-black tracking-tight text-brand-charcoal leading-[1.12]">
+            玩行銷找心想，<br />
+            <span class="text-brand-red font-serif italic">事成不同凡響</span>。
+          </h1>
+          <p class="font-serif italic text-base sm:text-xl text-stone-600 tracking-wider font-semibold">
+            “ May the odds be ever in your favor. ”
+          </p>
+        </div>
+
+        <p class="text-stone-700 text-sm sm:text-base leading-relaxed font-normal max-w-xl">
+          願機會永遠對你有利。我們拒絕無效的拼裝式行銷，從商業定位、視覺暴力衝擊、爆款短影音到私域留存轉單，一站式孵化具備持續盈利能力的常勝品牌。
         </p>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="javascript:void(0)" onclick="navigateTo('contact')" 
+             class="px-8 py-4 rounded-full bg-brand-charcoal hover:bg-brand-red text-white font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-xl shadow-brand-charcoal/20 text-center flex items-center justify-center gap-2 group">
+            <span>預約 30 分鐘品牌診斷</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+          <a href="https://www.instagram.com/fortune.odds/" target="_blank" rel="noopener noreferrer"
+             class="px-7 py-4 rounded-full border border-brand-charcoal/30 hover:border-brand-charcoal bg-white/60 hover:bg-white text-brand-charcoal font-mono text-xs uppercase tracking-widest font-semibold transition-all text-center flex items-center justify-center gap-2 shadow-xs">
+            <i data-lucide="instagram" class="w-4 h-4 text-brand-red"></i>
+            <span>觀看 IG 即時實戰案例</span>
+          </a>
+        </div>
+
       </div>
 
-      <p class="text-stone-700 text-sm sm:text-base leading-relaxed font-normal max-w-lg">
-        願機會永遠對你有利。我們拒絕無效的拼裝式行銷，從商業定位、視覺暴力衝擊、爆款短影音到私域留存轉單，一站式孵化具備持續盈利能力的常勝品牌。
-      </p>
-
-      <!-- CTA 按鈕群組：深黑與白底紅邊 -->
-      <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-        <a href="javascript:void(0)" onclick="navigateTo('contact')" 
-           class="px-8 py-4 rounded-full bg-brand-charcoal hover:bg-brand-red text-white font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-xl shadow-brand-charcoal/20 text-center flex items-center justify-center gap-2 group">
-          <span>預約 30 分鐘品牌診斷</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-        </a>
-        <a href="https://www.instagram.com/fortune.odds/" target="_blank" rel="noopener noreferrer"
-           class="px-7 py-4 rounded-full border border-brand-charcoal/30 hover:border-brand-charcoal bg-white/60 hover:bg-white text-brand-charcoal font-mono text-xs uppercase tracking-widest font-semibold transition-all text-center flex items-center justify-center gap-2 shadow-xs">
-          <i data-lucide="instagram" class="w-4 h-4 text-brand-red"></i>
-          <span>觀看 IG 即時實戰案例</span>
-        </a>
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[420px] lg:max-w-[480px]">
+          <img src="https://lh3.googleusercontent.com/d/1hE0PEpywpAvBTARtG5WSGnhJLT0-NFFD" 
+               alt="Fortune Odds Brand Visual" 
+               class="w-full h-auto object-contain drop-shadow-sm select-none" />
+        </div>
       </div>
 
     </div>
