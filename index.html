@@ -304,17 +304,15 @@
   </div>
 
     <!-- Services Overview Teaser -->
-<!-- Services: Minimalist Interactive Drawer with Sticky Visual -->
-<section class="py-24 bg-brand-cream border-b border-brand-charcoal/10">
+<section class="py-16 sm:py-20 lg:py-24 bg-brand-cream border-b border-brand-charcoal/10">
   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
     
-    <!-- 頂部標題引言 -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between pb-12 mb-12 border-b border-brand-charcoal/15 gap-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 sm:pb-12 mb-8 sm:mb-12 border-b border-brand-charcoal/15 gap-4 sm:gap-6">
       <div>
         <span class="text-xs font-mono tracking-[0.3em] uppercase text-brand-red font-bold block mb-2">
           // INCUBATION CAPABILITIES
         </span>
-        <h2 class="text-3xl sm:text-5xl font-serif font-black text-brand-charcoal tracking-tight">
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-serif font-black text-brand-charcoal tracking-tight">
           6 大品牌全案孵化矩陣
         </h2>
       </div>
@@ -325,152 +323,135 @@
       </a>
     </div>
 
-    <!-- 左右雙欄對開結構 -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
       
-      <!-- 左欄：雜誌風跨頁大圖 (佔 5 欄，滾動時鎖定在側邊) -->
       <div class="lg:col-span-5 lg:sticky lg:top-28">
         <div class="relative overflow-hidden group">
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" 
+          <img src="https://lh3.googleusercontent.com/d/1YZG4O76u3_UZwuGSXKtQaDavMV5O4mRk" 
                alt="Brand Aesthetics Blueprint" 
-               class="w-full h-auto max-h-[640px] object-cover filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 select-none block" />
+               class="w-full aspect-[3/4] lg:aspect-[9/16] max-h-[720px] object-cover filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 select-none block" />
           
-          <div class="pt-3 flex justify-between items-center text-[10px] font-mono tracking-widest text-stone-500 uppercase">
+          <div class="pt-2.5 flex justify-between items-center text-[10px] font-mono tracking-widest text-stone-500 uppercase">
             <span>FIGURE 01.0 / AESTHETIC BLUEPRINT</span>
             <span>2026 ARCHIVE</span>
           </div>
         </div>
       </div>
 
-      <!-- 右欄：無框抽屜清單 (佔 7 欄) -->
       <div class="lg:col-span-7 divide-y divide-brand-charcoal/15 border-b border-brand-charcoal/15">
         
         <!-- 01 -->
-        <div class="group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]">
-          <div class="flex items-baseline justify-between gap-4">
-            <div class="flex items-baseline gap-4 sm:gap-6">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold">[ 01 ]</span>
-              <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
+          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
+            <div class="flex items-center gap-3.5 sm:gap-5">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 01 ]</span>
+              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
                 品牌心智定位與 CIS 視覺策略
               </h3>
             </div>
-            <span class="font-mono text-xs text-stone-400 group-hover:text-brand-charcoal group-hover:translate-x-1 transition-all shrink-0">
-              EXPLORE →
-            </span>
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </summary>
+          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
+            CIS 企業識別體系、空間場域語彙及高端產品包裝。拒絕低價內耗，為診所與品牌建構高溢價尊榮感。
           </div>
-          <!-- 展開文字 -->
-          <div class="max-h-0 overflow-hidden group-hover:max-h-36 transition-all duration-500 ease-out pl-10 sm:pl-12">
-            <p class="text-stone-600 text-xs sm:text-sm pt-3 font-normal leading-relaxed">
-              CIS 企業識別體系、空間場域語彙及高端產品包裝。拒絕低價內耗，為診所與品牌建構高溢價尊榮感。
-            </p>
-          </div>
-        </div>
+        </details>
 
         <!-- 02 -->
-        <div class="group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]">
-          <div class="flex items-baseline justify-between gap-4">
-            <div class="flex items-baseline gap-4 sm:gap-6">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold">[ 02 ]</span>
-              <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
+          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
+            <div class="flex items-center gap-3.5 sm:gap-5">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 02 ]</span>
+              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
                 短影音 IP 矩陣與破億流量策劃
               </h3>
             </div>
-            <span class="font-mono text-xs text-stone-400 group-hover:text-brand-charcoal group-hover:translate-x-1 transition-all shrink-0">
-              EXPLORE →
-            </span>
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </summary>
+          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
+            Reels / TikTok 全案腳本與實景操刀，打造醫師與主理人自帶權威的超級 IP，實現流量即時轉化。
           </div>
-          <div class="max-h-0 overflow-hidden group-hover:max-h-36 transition-all duration-500 ease-out pl-10 sm:pl-12">
-            <p class="text-stone-600 text-xs sm:text-sm pt-3 font-normal leading-relaxed">
-              Reels / TikTok 全案腳本與實景操刀，打造醫師與主理人自帶權威的超級 IP，實現流量即時轉化。
-            </p>
-          </div>
-        </div>
+        </details>
 
         <!-- 03 -->
-        <div class="group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]">
-          <div class="flex items-baseline justify-between gap-4">
-            <div class="flex items-baseline gap-4 sm:gap-6">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold">[ 03 ]</span>
-              <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
+          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
+            <div class="flex items-center gap-3.5 sm:gap-5">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 03 ]</span>
+              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
                 醫美生技合規精準廣告投放
               </h3>
             </div>
-            <span class="font-mono text-xs text-stone-400 group-hover:text-brand-charcoal group-hover:translate-x-1 transition-all shrink-0">
-              EXPLORE →
-            </span>
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </summary>
+          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
+            深諳醫事法與生技法規邊界，運用 Meta / Google 全漏斗廣告策略，避開違規紅線精準獲取高客單新客。
           </div>
-          <div class="max-h-0 overflow-hidden group-hover:max-h-36 transition-all duration-500 ease-out pl-10 sm:pl-12">
-            <p class="text-stone-600 text-xs sm:text-sm pt-3 font-normal leading-relaxed">
-              深諳醫事法與生技法規邊界，運用 Meta / Google 全漏斗廣告策略，避開違規紅線精準獲取高客單新客。
-            </p>
-          </div>
-        </div>
+        </details>
 
         <!-- 04 -->
-        <div class="group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]">
-          <div class="flex items-baseline justify-between gap-4">
-            <div class="flex items-baseline gap-4 sm:gap-6">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold">[ 04 ]</span>
-              <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
+          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
+            <div class="flex items-center gap-3.5 sm:gap-5">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 04 ]</span>
+              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
                 LINE 私域流量沉澱與自動轉單系統
               </h3>
             </div>
-            <span class="font-mono text-xs text-stone-400 group-hover:text-brand-charcoal group-hover:translate-x-1 transition-all shrink-0">
-              EXPLORE →
-            </span>
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </summary>
+          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
+            客製化分群標籤、諮詢預約自動旅程與高客單喚醒機制，告別一次性獲客，打造終身複購的私域資產。
           </div>
-          <div class="max-h-0 overflow-hidden group-hover:max-h-36 transition-all duration-500 ease-out pl-10 sm:pl-12">
-            <p class="text-stone-600 text-xs sm:text-sm pt-3 font-normal leading-relaxed">
-              客製化分群標籤、諮詢預約自動旅程與高客單喚醒機制，告別一次性獲客，打造終身複購的私域資產。
-            </p>
-          </div>
-        </div>
+        </details>
 
         <!-- 05 -->
-        <div class="group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]">
-          <div class="flex items-baseline justify-between gap-4">
-            <div class="flex items-baseline gap-4 sm:gap-6">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold">[ 05 ]</span>
-              <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
+          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
+            <div class="flex items-center gap-3.5 sm:gap-5">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 05 ]</span>
+              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
                 高階形象官網訂製與數位體驗
               </h3>
             </div>
-            <span class="font-mono text-xs text-stone-400 group-hover:text-brand-charcoal group-hover:translate-x-1 transition-all shrink-0">
-              EXPLORE →
-            </span>
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </summary>
+          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
+            告別模板化公版。打造具備雜誌感排版與流暢微交互的專屬官方網站，大幅提升停留時長與品牌信賴感。
           </div>
-          <div class="max-h-0 overflow-hidden group-hover:max-h-36 transition-all duration-500 ease-out pl-10 sm:pl-12">
-            <p class="text-stone-600 text-xs sm:text-sm pt-3 font-normal leading-relaxed">
-              告別模板化公版。打造具備雜誌感排版與流暢微交互的專屬官方網站，大幅提升停留時長與品牌信賴感。
-            </p>
-          </div>
-        </div>
+        </details>
 
         <!-- 06 -->
-        <div class="group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]">
-          <div class="flex items-baseline justify-between gap-4">
-            <div class="flex items-baseline gap-4 sm:gap-6">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold">[ 06 ]</span>
-              <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal group-hover:text-brand-red transition-colors">
+        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
+          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
+            <div class="flex items-center gap-3.5 sm:gap-5">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 06 ]</span>
+              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
                 全年度品牌增長戰略顧問
               </h3>
             </div>
-            <span class="font-mono text-xs text-stone-400 group-hover:text-brand-charcoal group-hover:translate-x-1 transition-all shrink-0">
-              EXPLORE →
-            </span>
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </div>
+          </summary>
+          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
+            品牌操盤手深入營運核心，從項目定價階梯、檔期大促節奏到前線團隊話術培訓，全方位護航穩健獲利。
           </div>
-          <div class="max-h-0 overflow-hidden group-hover:max-h-36 transition-all duration-500 ease-out pl-10 sm:pl-12">
-            <p class="text-stone-600 text-xs sm:text-sm pt-3 font-normal leading-relaxed">
-              品牌操盤手深入營運核心，從項目定價階梯、檔期大促節奏到前線團隊話術培訓，全方位護航穩健獲利。
-            </p>
-          </div>
-        </div>
+        </details>
 
       </div>
 
     </div>
 
-    <!-- 底部行動導引：乾淨保留一組 -->
     <div class="mt-14 pt-8 flex justify-between items-center border-t border-brand-charcoal/15">
       <span class="font-mono text-xs text-stone-600 tracking-wider">END-TO-END GROWTH INCUBATION</span>
       <a href="javascript:void(0)" onclick="navigateTo('services')" 
