@@ -301,10 +301,11 @@
     </div>
   </div>
 
-    <!-- Services Overview Teaser -->
+<!-- Services: High-End Editorial Accordion (6 大品牌全案孵化矩陣) -->
 <section class="py-16 sm:py-20 lg:py-24 bg-brand-cream border-b border-brand-charcoal/10">
   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
     
+    <!-- 頂部標題引言 -->
     <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 sm:pb-12 mb-8 sm:mb-12 border-b border-brand-charcoal/15 gap-4 sm:gap-6">
       <div>
         <span class="text-xs font-mono tracking-[0.3em] uppercase text-brand-red font-bold block mb-2">
@@ -321,13 +322,15 @@
       </a>
     </div>
 
+    <!-- 左右雙欄對開結構 -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
       
+      <!-- 左欄：長條直式美學大圖 (手機 3:4 ✕ 電腦修長長條 ✕ 滾動時 Sticky 鎖定) -->
       <div class="lg:col-span-5 lg:sticky lg:top-28">
         <div class="relative overflow-hidden group">
-          <img src="https://lh3.googleusercontent.com/d/18j-tU5a3QI3mliOPsIgE6UEdyroMb9-0" 
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" 
                alt="Brand Aesthetics Blueprint" 
-               class="w-full aspect-[3/4] lg:aspect-[9/16] max-h-[720px] object-cover filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 select-none block" />
+               class="w-full aspect-[3/4] lg:aspect-[9/16] max-h-[760px] object-cover filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 select-none block" />
           
           <div class="pt-2.5 flex justify-between items-center text-[10px] font-mono tracking-widest text-stone-500 uppercase">
             <span>FIGURE 01.0 / AESTHETIC BLUEPRINT</span>
@@ -336,120 +339,297 @@
         </div>
       </div>
 
+      <!-- 右欄：無框手風琴清單 (電腦版 Hover 展開 ✕ 手機版點擊展開) -->
       <div class="lg:col-span-7 divide-y divide-brand-charcoal/15 border-b border-brand-charcoal/15">
         
-        <!-- 01 -->
-        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
-          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
-            <div class="flex items-center gap-3.5 sm:gap-5">
-              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
-                品牌美學｜品牌定位與企業識別
-              </h3>
+        <!-- 01. 品牌定位與商業策略規劃 -->
+        <div class="drawer-item group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]" onclick="toggleMobileDrawer(this)">
+          <div class="flex items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0 mt-1 sm:mt-0">[ 01 ]</span>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal lg:group-hover:text-brand-red transition-colors text-left title-text">
+                  頂層戰略｜品牌定位與商業策略規劃
+                </h3>
+                <span class="font-mono text-[11px] sm:text-xs text-stone-500 tracking-wider uppercase block mt-0.5">
+                  Brand Positioning & Strategic Consulting
+                </span>
+              </div>
             </div>
-            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 lg:group-hover:text-brand-red lg:group-hover:rotate-90 transition-transform duration-300 chevron-icon mt-1 sm:mt-0">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </div>
-          </summary>
-          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
-            從第一眼印象，建立不可取代的品牌信任資產。VI 企業識別系統、品牌輔銷物、商業攝影與形象拍攝
           </div>
-        </details>
+          
+          <div class="drawer-content max-h-0 overflow-hidden lg:group-hover:max-h-[500px] transition-all duration-700 ease-in-out pl-9 sm:pl-12 pr-2">
+            <div class="pt-5 space-y-4 border-t border-brand-charcoal/10 mt-5">
+              <blockquote class="font-serif italic text-sm sm:text-base font-semibold text-brand-charcoal leading-snug">
+                “ 在同質化紅海中突圍，確立不可被複製的品牌定價權。 ”
+              </blockquote>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                行銷的本質是佔領心智。我們從市場競品缺口、目標客群痛點與法規邊界出發，梳理出品牌的獨特價值主張（UVP），讓你的品牌不只被看見，更能被記住、被偏愛。
+              </p>
+              <div class="pt-1">
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-brand-red font-bold block mb-2">
+                  // SCOPE OF DELIVERY
+                </span>
+                <div class="flex flex-wrap items-center gap-y-2 text-xs font-mono text-stone-700">
+                  <span>品牌核心價值與論述梳理</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>目標受眾輪廓描繪</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>市場差異化定位分析</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>年度營運與行銷檔期規劃</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>合規溝通語法設定</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- 02 -->
-        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
-          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
-            <div class="flex items-center gap-3.5 sm:gap-5">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 02 ]</span>
-              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
-                內容矩陣與個人 IP 打造
-              </h3>
+        <!-- 02. CIS企業識別與視覺美學重構 -->
+        <div class="drawer-item group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]" onclick="toggleMobileDrawer(this)">
+          <div class="flex items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0 mt-1 sm:mt-0">[ 02 ]</span>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal lg:group-hover:text-brand-red transition-colors text-left title-text">
+                  視覺暴力｜CIS 企業識別與場域美學
+                </h3>
+                <span class="font-mono text-[11px] sm:text-xs text-stone-500 tracking-wider uppercase block mt-0.5">
+                  Visual Identity & Spatial Aesthetic System
+                </span>
+              </div>
             </div>
-            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 lg:group-hover:text-brand-red lg:group-hover:rotate-90 transition-transform duration-300 chevron-icon mt-1 sm:mt-0">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </div>
-          </summary>
-          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
-            Reels / 把專業知識變成精準流量，打造自帶信任的權威形象。短影音全案經營、專家 IP 孵化、社群內容矩陣代操
           </div>
-        </details>
+          
+          <div class="drawer-content max-h-0 overflow-hidden lg:group-hover:max-h-[500px] transition-all duration-700 ease-in-out pl-9 sm:pl-12 pr-2">
+            <div class="pt-5 space-y-4 border-t border-brand-charcoal/10 mt-5">
+              <blockquote class="font-serif italic text-sm sm:text-base font-semibold text-brand-charcoal leading-snug">
+                “ 審美即是商業壁壘，第一眼就定義你的溢價能力。 ”
+              </blockquote>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                拒絕扁平廉價的拼貼設計。我們將頂級時尚雜誌與先鋒建築思維導入美業與醫美空間，從品牌 Logo、標準字體、奢華包裝到診所空間動線，打造具備強烈辨識度的美學資產。
+              </p>
+              <div class="pt-1">
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-brand-red font-bold block mb-2">
+                  // SCOPE OF DELIVERY
+                </span>
+                <div class="flex flex-wrap items-center gap-y-2 text-xs font-mono text-stone-700">
+                  <span>全套 CIS 企業識別規範</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>高端包裝與禮盒結構設計</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>診所門面與空間視覺指引</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>品牌宣傳品與印刷工藝監督</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>社群模版規範庫</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- 03 -->
-        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
-          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
-            <div class="flex items-center gap-3.5 sm:gap-5">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 03 ]</span>
-              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
-                醫美生技合規精準廣告投放
-              </h3>
+        <!-- 03. 短影音IP矩陣與爆款內容打造 -->
+        <div class="drawer-item group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]" onclick="toggleMobileDrawer(this)">
+          <div class="flex items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0 mt-1 sm:mt-0">[ 03 ]</span>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal lg:group-hover:text-brand-red transition-colors text-left title-text">
+                  爆款引流｜短影音 IP 矩陣與全案拍攝
+                </h3>
+                <span class="font-mono text-[11px] sm:text-xs text-stone-500 tracking-wider uppercase block mt-0.5">
+                  Viral Short-Form Content & Authority IP
+                </span>
+              </div>
             </div>
-            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 lg:group-hover:text-brand-red lg:group-hover:rotate-90 transition-transform duration-300 chevron-icon mt-1 sm:mt-0">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </div>
-          </summary>
-          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
-            深諳醫事法與生技法規邊界，運用 Meta / Google 全漏斗廣告策略，避開違規紅線精準獲取高客單新客。
           </div>
-        </details>
+          
+          <div class="drawer-content max-h-0 overflow-hidden lg:group-hover:max-h-[500px] transition-all duration-700 ease-in-out pl-9 sm:pl-12 pr-2">
+            <div class="pt-5 space-y-4 border-t border-brand-charcoal/10 mt-5">
+              <blockquote class="font-serif italic text-sm sm:text-base font-semibold text-brand-charcoal leading-snug">
+                “ 醫師與創辦人的個人 IP，是全網獲客成本最低的流量金礦。 ”
+              </blockquote>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                擺脫枯燥衛教。我們深諳演算法底層邏輯與前 3 秒留存黃金法則，從人設定位、吸睛腳本撰寫、導演級現場運鏡到快節奏剪輯，一站式打造自帶權威與信任感的破億播放矩陣。
+              </p>
+              <div class="pt-1">
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-brand-red font-bold block mb-2">
+                  // SCOPE OF DELIVERY
+                </span>
+                <div class="flex flex-wrap items-center gap-y-2 text-xs font-mono text-stone-700">
+                  <span>主理人/醫師個人 IP 定位</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>月度短影音腳本批次創作</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>專業團隊進駐實景執導拍錄</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>高完播率剪輯與動態字卡</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>Reels/TikTok/Shorts 多平臺分發</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- 04 -->
-        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
-          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
-            <div class="flex items-center gap-3.5 sm:gap-5">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 04 ]</span>
-              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
-                LINE 私域流量沉澱與自動轉單系統
-              </h3>
+        <!-- 04. 醫美生技合規精準廣告投放 -->
+        <div class="drawer-item group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]" onclick="toggleMobileDrawer(this)">
+          <div class="flex items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0 mt-1 sm:mt-0">[ 04 ]</span>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal lg:group-hover:text-brand-red transition-colors text-left title-text">
+                  精準獲客｜合規數位廣告投放與漏斗佈局
+                </h3>
+                <span class="font-mono text-[11px] sm:text-xs text-stone-500 tracking-wider uppercase block mt-0.5">
+                  Performance Media & Compliance Funnel
+                </span>
+              </div>
             </div>
-            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 lg:group-hover:text-brand-red lg:group-hover:rotate-90 transition-transform duration-300 chevron-icon mt-1 sm:mt-0">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </div>
-          </summary>
-          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
-            客製化分群標籤、諮詢預約自動旅程與高客單喚醒機制，告別一次性獲客，打造終身複購的私域資產。
           </div>
-        </details>
+          
+          <div class="drawer-content max-h-0 overflow-hidden lg:group-hover:max-h-[500px] transition-all duration-700 ease-in-out pl-9 sm:pl-12 pr-2">
+            <div class="pt-5 space-y-4 border-t border-brand-charcoal/10 mt-5">
+              <blockquote class="font-serif italic text-sm sm:text-base font-semibold text-brand-charcoal leading-snug">
+                “ 精準游走於法規紅線邊界，以最小成本撬動最高客單留存。 ”
+              </blockquote>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                熟悉醫療法規與生技食品宣傳審查標準，告別無預警封帳風險。透過 Meta、Google 搜尋與聯播網的全漏斗精細化人群包定向，將泛流量高效篩選為具備高付費意願的高淨值客群。
+              </p>
+              <div class="pt-1">
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-brand-red font-bold block mb-2">
+                  // SCOPE OF DELIVERY
+                </span>
+                <div class="flex flex-wrap items-center gap-y-2 text-xs font-mono text-stone-700">
+                  <span>醫事生技廣告合規素材監審</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>Meta / Google 多階漏斗架構</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>高轉化 Landing Page 頁面策劃</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>即時像素數據追蹤與歸因分析</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>週/月度廣告投報率（ROAS）審計</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- 05 -->
-        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
-          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
-            <div class="flex items-center gap-3.5 sm:gap-5">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 05 ]</span>
-              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
-                高階形象官網訂製與數位體驗
-              </h3>
+        <!-- 05. LINE私域運營與自動轉單系統 -->
+        <div class="drawer-item group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]" onclick="toggleMobileDrawer(this)">
+          <div class="flex items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0 mt-1 sm:mt-0">[ 05 ]</span>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal lg:group-hover:text-brand-red transition-colors text-left title-text">
+                  私域資產｜LINE 留存轉單與自動化旅程
+                </h3>
+                <span class="font-mono text-[11px] sm:text-xs text-stone-500 tracking-wider uppercase block mt-0.5">
+                  Private Traffic Retention & Automated Funnel
+                </span>
+              </div>
             </div>
-            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 lg:group-hover:text-brand-red lg:group-hover:rotate-90 transition-transform duration-300 chevron-icon mt-1 sm:mt-0">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </div>
-          </summary>
-          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
-            告別模板化公版。打造具備雜誌感排版與流暢微交互的專屬官方網站，大幅提升停留時長與品牌信賴感。
           </div>
-        </details>
+          
+          <div class="drawer-content max-h-0 overflow-hidden lg:group-hover:max-h-[500px] transition-all duration-700 ease-in-out pl-9 sm:pl-12 pr-2">
+            <div class="pt-5 space-y-4 border-t border-brand-charcoal/10 mt-5">
+              <blockquote class="font-serif italic text-sm sm:text-base font-semibold text-brand-charcoal leading-snug">
+                “ 買來的是流量，留下的才是資產；私域沉澱是永續盈利的解藥。 ”
+              </blockquote>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                流量越來越貴，只做單次成交注定虧損。我們為品牌導入 LINE 官方帳號深層自動化系統，包含客戶來源分群標籤、自動諮詢對話腳本、檔期促購推播與舊客定時喚醒機制，讓每一分廣告費持續產生複利。
+              </p>
+              <div class="pt-1">
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-brand-red font-bold block mb-2">
+                  // SCOPE OF DELIVERY
+                </span>
+                <div class="flex flex-wrap items-center gap-y-2 text-xs font-mono text-stone-700">
+                  <span>LINE 官方帳號視覺與選單建置</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>自動化迎賓與預約導流邏輯</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>顧客畫像多維分群標籤庫</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>客製化高轉化促購推播文案</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>沉睡客喚醒與滿意度追蹤系統</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- 06 -->
-        <details class="group py-5 sm:py-6 cursor-pointer transition-colors duration-200">
-          <summary class="flex items-center justify-between list-none focus:outline-none gap-4">
-            <div class="flex items-center gap-3.5 sm:gap-5">
-              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0">[ 06 ]</span>
-              <h3 class="text-lg sm:text-2xl font-serif font-bold text-brand-charcoal group-open:text-brand-red group-hover:text-brand-red transition-colors text-left">
-                全年度品牌增長戰略顧問
-              </h3>
+        <!-- 06. 全年度品牌常年增長戰略顧問 -->
+        <div class="drawer-item group py-6 sm:py-7 cursor-pointer transition-colors duration-300 hover:bg-brand-charcoal/[0.02]" onclick="toggleMobileDrawer(this)">
+          <div class="flex items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+              <span class="font-mono text-xs sm:text-sm text-brand-red font-bold shrink-0 mt-1 sm:mt-0">[ 06 ]</span>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-serif font-bold text-brand-charcoal lg:group-hover:text-brand-red transition-colors text-left title-text">
+                  常年陪跑｜年度增長戰略顧問與團隊賦能
+                </h3>
+                <span class="font-mono text-[11px] sm:text-xs text-stone-500 tracking-wider uppercase block mt-0.5">
+                  Annual Growth Advisory & Team Enablement
+                </span>
+              </div>
             </div>
-            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 group-hover:text-brand-charcoal group-open:text-brand-red transition-transform duration-300 group-open:rotate-90">
+            <div class="w-6 h-6 shrink-0 flex items-center justify-center text-stone-400 lg:group-hover:text-brand-red lg:group-hover:rotate-90 transition-transform duration-300 chevron-icon mt-1 sm:mt-0">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </div>
-          </summary>
-          <div class="pt-3 pl-9 sm:pl-12 pr-4 text-stone-600 text-xs sm:text-sm font-normal leading-relaxed">
-            品牌操盤手深入營運核心，從項目定價階梯、檔期大促節奏到前線團隊話術培訓，全方位護航穩健獲利。
           </div>
-        </details>
+          
+          <div class="drawer-content max-h-0 overflow-hidden lg:group-hover:max-h-[500px] transition-all duration-700 ease-in-out pl-9 sm:pl-12 pr-2">
+            <div class="pt-5 space-y-4 border-t border-brand-charcoal/10 mt-5">
+              <blockquote class="font-serif italic text-sm sm:text-base font-semibold text-brand-charcoal leading-snug">
+                “ 真正的操盤不只做外包，而是成為主理人身旁不可或缺的外腦。 ”
+              </blockquote>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                由心想事成核心創辦團隊深度介入經營層。從季度業績目標拆解、療程與產品定價架構、大型檔期促銷操盤到第一線諮詢師銷售話術培訓，確保每一個戰略落地，陪伴品牌跨越成長天花板。
+              </p>
+              <div class="pt-1">
+                <span class="font-mono text-[10px] tracking-[0.2em] uppercase text-brand-red font-bold block mb-2">
+                  // SCOPE OF DELIVERY
+                </span>
+                <div class="flex flex-wrap items-center gap-y-2 text-xs font-mono text-stone-700">
+                  <span>月度/季度營運戰略覆盤會議</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>療程組合與高利潤定價模型</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>年度行銷預算配置與效益評估</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>前線諮詢師高客單談判話術培訓</span>
+                  <span class="text-stone-300 mx-2">/</span>
+                  <span>品牌重大危機公關與輿情監控</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
     </div>
 
-    <div class="mt-14 pt-8 flex justify-between items-center border-t border-brand-charcoal/15">
+    <!-- 底部行動導引 -->
+    <div class="mt-10 sm:mt-14 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-t border-brand-charcoal/15">
       <span class="font-mono text-xs text-stone-600 tracking-wider">END-TO-END GROWTH INCUBATION</span>
       <a href="javascript:void(0)" onclick="navigateTo('services')" 
          class="inline-flex items-center gap-2 text-xs font-mono font-bold text-brand-red hover:text-brand-charcoal uppercase tracking-wider transition-colors">
@@ -460,6 +640,31 @@
 
   </div>
 </section>
+
+<!-- 手機端點擊切換腳本 (若前次已加入可保留共用) -->
+<script>
+  function toggleMobileDrawer(element) {
+    if (window.innerWidth >= 1024) return;
+    
+    const content = element.querySelector('.drawer-content');
+    const chevron = element.querySelector('.chevron-icon');
+    const title = element.querySelector('.title-text');
+    
+    const isOpen = content.classList.contains('!max-h-[500px]');
+    
+    document.querySelectorAll('.drawer-item').forEach(item => {
+      item.querySelector('.drawer-content').classList.remove('!max-h-[500px]');
+      item.querySelector('.chevron-icon').classList.remove('rotate-90', 'text-brand-red');
+      item.querySelector('.title-text').classList.remove('text-brand-red');
+    });
+
+    if (!isOpen) {
+      content.classList.add('!max-h-[500px]');
+      chevron.classList.add('rotate-90', 'text-brand-red');
+      title.classList.add('text-brand-red');
+    }
+  }
+</script>
 
 <!-- Quick CTA Banner -->
 <section class="py-28 bg-brand-red-dark text-white relative overflow-hidden">
