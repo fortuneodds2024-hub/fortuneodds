@@ -1789,7 +1789,7 @@
 
     function runNumberCounters() {
       const counters = document.querySelectorAll('.counter-item');
-      const duration = 1800; // 總時長 1.8 秒，數字越小跳越快
+      const duration = 1800;
 
       counters.forEach(counter => {
         const target = parseFloat(counter.getAttribute('data-target'));
@@ -1801,7 +1801,6 @@
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
 
-          // 先快後慢緩動效果 (easeOutExpo)
           const easeOutProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
           const currentVal = target * easeOutProgress;
 
@@ -1818,7 +1817,6 @@
       });
     }
 
-    // 初次載入或滾動到可視範圍時啟動監聽
     let counterHasRun = false;
     const numberSection = document.getElementById('numbers-section');
     if (numberSection) {
@@ -1834,34 +1832,30 @@
 
       observer.observe(numberSection);
     }
-    // ==========================================
 
     // Multi-page Router Simulator
     function navigateTo(pageId) {
-      // Hide all page sections
       document.querySelectorAll('.page-section, .page-view').forEach(sec => {
         sec.classList.remove('active');
       });
-      // Show selected page
+      
       const target = document.getElementById('page-' + pageId);
       if (target) {
         target.classList.add('active');
       }
 
-      // 當點擊導航切換回首頁時，自動重新觸發一次數字跳轉
       if (pageId === 'home') {
         runNumberCounters();
       }
 
-      // 切換至關於頁時，重置並觸發視差與進場計算
+      // 切換至關於頁時，重新觸發更強烈的視差與進場重置
       if (pageId === 'about') {
         setTimeout(() => {
           initScrollReveals();
           handleParallax();
-        }, 50);
+        }, 60);
       }
 
-      // Update Nav active classes
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
       });
@@ -1870,13 +1864,11 @@
         activeNav.classList.add('active');
       }
 
-      // Close mobile menu if open
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenu) {
         mobileMenu.classList.add('hidden');
       }
 
-      // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -1896,27 +1888,29 @@
       e.target.reset();
     }
 
-    // ==================== 視差滾動 (Parallax)  ====================
     let isTicking = false;
 
     function handleParallax() {
       const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-      // 1. 背景光暈與大浮水印多層視差
+      // 1. 背景光暈與巨幅大字水印：大幅度漂移 (倍率提升至 0.28 ~ 0.45)
       const parallaxLayers = document.querySelectorAll('.parallax-layer');
       parallaxLayers.forEach(layer => {
-        const speed = parseFloat(layer.getAttribute('data-parallax-speed')) || 0.1;
-        const yPos = -(scrollY * speed);
+        const rawSpeed = parseFloat(layer.getAttribute('data-parallax-speed')) || 0.15;
+        // 加大 2.5 倍位移幅度
+        const amplifiedSpeed = rawSpeed * 2.5; 
+        const yPos = -(scrollY * amplifiedSpeed);
         layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
       });
 
-      // 2. 肖像圖片視差微位移
+      // 2. 肖像圖片微位移：提升容器內的滑行幅度 (幅度由 0.12 放大至 0.32)
       const parallaxImages = document.querySelectorAll('.parallax-image');
       parallaxImages.forEach(img => {
         const rect = img.parentElement.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.12;
-          img.style.transform = `translate3d(0px, ${offset}px, 0px)`;
+          // 計算相對螢幕中心的垂直位移，增強上下浮動手感
+          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.32;
+          img.style.transform = `translate3d(0px, ${offset}px, 0px) scale(1.08)`;
         }
       });
 
@@ -1930,23 +1924,29 @@
       }
     }, { passive: true });
 
-    // 3. 元素進入可視範圍淡入 (Scroll Reveal)
+    // 3. 元素進場/退場大位移淡入淡出 (Scroll Reveal)
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
+        } else {
+          // 滾出可視範圍時退場，重現動態呼吸感 (若想只進場一次可刪除此行)
+          if (entry.boundingClientRect.top > window.innerHeight * 0.7) {
+            entry.target.classList.remove('revealed');
+          }
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.12,
+      rootMargin: '0px 0px -60px 0px'
     });
 
     function initScrollReveals() {
-      document.querySelectorAll('.scroll-reveal').forEach(el => {
+      document.querySelectorAll('.scroll-reveal').forEach((el, index) => {
+        // 初始狀態：較大下墜位移 (52px) + 微縮放 (0.96)
         el.style.opacity = '0';
-        el.style.transform = 'translate3d(0px, 24px, 0px)';
-        el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.transform = 'translate3d(0px, 52px, 0px) scale(0.96)';
+        el.style.transition = 'opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1)';
         revealObserver.observe(el);
       });
     }
@@ -1956,12 +1956,17 @@
       handleParallax();
     });
 
-    // 動態注入淡入樣式
+    // 動態注入大動態樣式
     const parallaxStyle = document.createElement("style");
     parallaxStyle.textContent = `
       .scroll-reveal.revealed {
         opacity: 1 !important;
-        transform: translate3d(0px, 0px, 0px) !important;
+        transform: translate3d(0px, 0px, 0px) scale(1) !important;
+      }
+      /* 肖像包覆層強化平滑過渡 */
+      .parallax-image {
+        will-change: transform;
+        transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
       }
     `;
     document.head.appendChild(parallaxStyle);
