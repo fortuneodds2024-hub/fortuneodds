@@ -820,28 +820,31 @@
 
   <!-- ==================== PAGE 2: ABOUT (關於心想事成) ==================== -->
   <main id="page-about" class="page-section flex-1">
-   <div id="page-about" class="page-view flex-1 bg-[#fef6e8]">
+   <div id="page-about" class="page-view flex-1 bg-[#140b0b] text-[#fef6e8] selection:bg-brand-red selection:text-white">
 
-  <!-- 1. 序章：簡約典雅自白 (收斂字級，強調呼吸感) -->
-  <section class="pt-24 pb-16 px-6 md:px-16 max-w-5xl mx-auto border-b border-brand-charcoal/15">
-    <div class="inline-flex items-center gap-3 text-brand-red text-xs tracking-[0.25em] font-mono uppercase mb-6">
-      <span class="w-6 h-[1px] bg-brand-red"></span>
+  <!-- ==================== 1. 序章：深暗紅典雅自白 ==================== -->
+  <section class="pt-24 pb-16 px-6 md:px-16 max-w-5xl mx-auto border-b border-brand-red/20 relative">
+    <!-- 背景暗光氛圍 -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="inline-flex items-center gap-3 text-brand-gold text-xs tracking-[0.25em] font-mono uppercase mb-6 relative z-10">
+      <span class="w-6 h-[1px] bg-brand-gold"></span>
       About Fortune Odds · Est. 2024
     </div>
     
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-charcoal font-normal leading-[1.3] mb-8">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#fef6e8] font-normal leading-[1.35] mb-8 relative z-10">
       在嚴苛法規與極致美學之間，<br />
-      我們為生醫與美學品牌，鍛造能抵禦週期的<span class="italic text-brand-red">定價尊嚴</span>。
+      我們為生醫與美學品牌，鍛造能抵禦週期的<span class="italic text-brand-gold">定價尊嚴</span>。
     </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4">
-      <div class="md:col-span-4 font-mono text-xs text-brand-gold tracking-wider space-y-1">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4 relative z-10">
+      <div class="md:col-span-4 font-mono text-xs text-brand-gold/90 tracking-wider space-y-1">
         <p>“ May the odds be ever in your favor. ”</p>
-        <p class="text-stone-500 font-serif">願機會永遠對你有利</p>
+        <p class="text-[#fef6e8]/60 font-serif">願機會永遠對你有利</p>
       </div>
-      <div class="md:col-span-8 text-stone-700 text-sm sm:text-base leading-relaxed space-y-4 font-light">
+      <div class="md:col-span-8 text-[#fef6e8]/80 text-sm sm:text-base leading-relaxed space-y-4 font-light">
         <p>
-          心想事成隸屬於 <strong>Mitoplus Biotech Corp. 美國生技集團體系</strong>，是集團旗下專注於醫美、生技、美業品牌策略與整合行銷的核心旗艦。
+          心想事成隸屬於 <strong class="text-brand-gold font-normal">Mitoplus Biotech Corp. 美國生技集團體系</strong>，是集團旗下專注於醫美、生技、美業品牌策略與整合行銷的核心旗艦。
         </p>
         <p>
           我們以「品牌策略 ✕ 行銷整合 ✕ 視覺設計」為基石。依託集團深厚的生醫背景，我們不玩低俗吸睛與踩線話術，而是將艱深的科學邏輯，轉譯為具備高度感染力與市場溫度的品牌語言。
@@ -851,75 +854,76 @@
   </section>
 
 
-  <!-- ==================== 2. 主理人專題：李維庭 (獨立質感自敘板塊) ==================== -->
-  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-charcoal/15">
+  <!-- ==================== 2. 主理人專題：李維庭 (深色自敘獨立板塊) ==================== -->
+  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20 relative">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       
-      <!-- 左側：沉穩肖像與身份 -->
+      <!-- 左側：肖像與身份 -->
       <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-        <div class="aspect-[3/4] max-w-sm rounded-xl overflow-hidden bg-stone-200">
-          <img src="https://lh3.googleusercontent.com/d/13KtBUrXDs3uKU57r4GbkIm0uz254TFsD" alt="李維庭" class="w-full h-full object-cover filter grayscale contrast-105">
+        <div class="aspect-[3/4] max-w-sm rounded-2xl overflow-hidden bg-[#1f1212] border border-brand-red/30 shadow-2xl relative group">
+          <img src="https://lh3.googleusercontent.com/d/13KtBUrXDs3uKU57r4GbkIm0uz254TFsD" alt="李維庭" class="w-full h-full object-cover filter grayscale contrast-110 group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#140b0b]/80 via-transparent to-transparent"></div>
         </div>
         <div>
-          <span class="text-xs font-mono text-brand-red tracking-widest uppercase block mb-1">FOUNDER & STRATEGY DIRECTOR</span>
-          <h2 class="text-3xl font-serif text-brand-charcoal tracking-wide">李維庭</h2>
-          <p class="text-xs font-mono text-stone-500 mt-1">創辦人 ｜ 策略總監</p>
+          <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block mb-1">FOUNDER & STRATEGY DIRECTOR</span>
+          <h2 class="text-3xl font-serif text-[#fef6e8] tracking-wide">李維庭</h2>
+          <p class="text-xs font-mono text-brand-red mt-1">創辦人 ｜ 策略總監</p>
         </div>
       </div>
 
-      <!-- 右側：創辦人自敘散文與經歷 (無框雜誌排印) -->
-      <div class="lg:col-span-7 space-y-10 text-stone-700 leading-relaxed font-light">
+      <!-- 右側：創辦人自敘散文與經歷 -->
+      <div class="lg:col-span-7 space-y-10 text-[#fef6e8]/85 leading-relaxed font-light">
         
         <div class="space-y-4 text-base sm:text-lg">
-          <h3 class="text-xl sm:text-2xl font-serif text-brand-charcoal font-medium">
+          <h3 class="text-xl sm:text-2xl font-serif text-brand-gold font-normal">
             跨足生技研發、醫療實體與跨境市場的實踐者
           </h3>
-          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
             「成立心想事成之前，我先是一位創業主理人。」
           </p>
-          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
-            從成立獲得特管法核准的<strong>樸原再生醫療健康診所</strong>，到創辦<strong>荏流生醫</strong>進行原料配方研發與代工，我走過所有品牌從 0 到 1 都會經歷的困境：研發週期冗長、法規審查嚴苛、行銷公司不懂專業、消費者缺乏信任。
+          <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
+            從成立獲得特管法核准的<strong class="text-[#fef6e8] font-normal">樸原再生醫療健康診所</strong>，到創辦<strong class="text-[#fef6e8] font-normal">荏流生醫</strong>進行原料配方研發與代工，我走過所有品牌從 0 到 1 都會經歷的困境：研發週期冗長、法規審查嚴苛、行銷公司不懂專業、消費者缺乏信任。
           </p>
-          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
-            多數行銷公司只在意表層的點擊率（CTR）與曝光；但生醫美學是個極度講求<strong>「決策鏈長、專業門檻高」</strong>的賽道。唯有真正身處第一線懂產品、懂法規、懂臨床痛點的人，才能幫品牌梳理出具備長期複利的商業壁壘。
+          <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
+            多數行銷公司只在意表層的點擊率（CTR）與曝光；但生醫美學是個極度講求<strong class="text-brand-gold font-normal">「決策鏈長、專業門檻高」</strong>的賽道。唯有真正身處第一線懂產品、懂法規、懂臨床痛點的人，才能幫品牌梳理出具備長期複利的商業壁壘。
           </p>
         </div>
 
-        <!-- 創辦經歷與榮譽 (極簡無框橫線列表) -->
-        <div class="pt-8 border-t border-brand-charcoal/15 space-y-4">
-          <span class="text-xs font-mono text-brand-red tracking-widest uppercase block">// TRACK RECORD & ROLES</span>
+        <!-- 創辦經歷與榮譽 (極簡無框深色線條列表) -->
+        <div class="pt-8 border-t border-brand-red/20 space-y-4">
+          <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block">// TRACK RECORD & ROLES</span>
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 text-xs font-mono text-stone-700">
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 text-xs font-mono text-[#fef6e8]/80">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>樸原健康診所</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>荏流生醫有限公司</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>滿拓生技股份有限公司</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>心想事成品牌孵化</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>騰璽國際股份有限公司</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>廈門心想事成品牌策劃</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>DRINK MORE君墨</span>
-              <span class="text-stone-500">創辦人</span>
+              <span class="text-brand-gold/70">創辦人</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-charcoal/10 pb-2 text-brand-red font-bold">
+            <div class="flex items-baseline justify-between border-b border-brand-red/40 pb-2 text-brand-gold font-bold">
               <span>2020 亞太生技大獎</span>
               <span>傑出健康生技品牌獎</span>
             </div>
@@ -933,22 +937,22 @@
 
 
   <!-- ==================== 3. 首席醫療策略顧問：陳智青 ==================== -->
-  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-charcoal/15">
+  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
       
       <div class="lg:col-span-5 space-y-4">
-        <span class="text-xs font-mono text-brand-red tracking-widest uppercase block">CHIEF MEDICAL STRATEGY ADVISOR</span>
-        <h2 class="text-3xl font-serif text-brand-charcoal tracking-wide">陳智青</h2>
-        <p class="text-xs font-mono text-brand-gold font-bold">首席醫療策略顧問</p>
-        <p class="text-stone-600 text-sm leading-relaxed pt-2 font-light">
+        <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block">CHIEF MEDICAL STRATEGY ADVISOR</span>
+        <h2 class="text-3xl font-serif text-[#fef6e8] tracking-wide">陳智青</h2>
+        <p class="text-xs font-mono text-brand-red font-bold">首席醫療策略顧問</p>
+        <p class="text-[#fef6e8]/75 text-sm leading-relaxed pt-2 font-light">
           橫跨亞洲醫療美容產業二十餘年，具備醫美集團經營、跨國醫療管理與醫療品牌戰略的深度實戰底蘊。
         </p>
       </div>
 
-      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-mono text-stone-700">
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-mono text-[#fef6e8]/80">
         <div class="space-y-3">
-          <span class="text-brand-charcoal font-bold tracking-wider block border-b border-brand-charcoal/20 pb-2">/ 學術與跨國管理</span>
-          <ul class="space-y-2 text-stone-600">
+          <span class="text-brand-gold font-bold tracking-wider block border-b border-brand-red/25 pb-2">/ 學術與跨國管理</span>
+          <ul class="space-y-2 text-[#fef6e8]/70">
             <li>· 麗都醫療美容集團 國際事業部總經理</li>
             <li>· 方群管理顧問股份有限公司 總經理</li>
             <li>· 漾緹思診所 總經理</li>
@@ -959,8 +963,8 @@
         </div>
 
         <div class="space-y-3">
-          <span class="text-brand-charcoal font-bold tracking-wider block border-b border-brand-charcoal/20 pb-2">/ 顧問與實戰經歷</span>
-          <ul class="space-y-2 text-stone-600">
+          <span class="text-brand-gold font-bold tracking-wider block border-b border-brand-red/25 pb-2">/ 顧問與實戰經歷</span>
+          <ul class="space-y-2 text-[#fef6e8]/70">
             <li>· 太平洋醫療管理集團 行銷副總經理</li>
             <li>· 北京中健集團股份有限公司 顧問</li>
             <li>· 香港康聯醫療管理集團 兩岸技術轉移顧問</li>
@@ -975,32 +979,32 @@
   </section>
 
 
-  <!-- ==================== 4. 集團生態與架構 (去除所有外框，改為純文字大表) ==================== -->
-  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-charcoal/15">
+  <!-- ==================== 4. 集團生態與架構 (深暗紅無框極簡排列表) ==================== -->
+  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20">
     
     <div class="max-w-3xl mb-16 space-y-3">
-      <span class="text-xs font-mono text-brand-red tracking-[0.25em] uppercase block">// GROUP ECOSYSTEM</span>
-      <h2 class="text-3xl font-serif text-brand-charcoal font-normal">依托集團的生醫醫療後盾</h2>
-      <p class="text-stone-600 text-sm sm:text-base leading-relaxed font-light">
+      <span class="text-xs font-mono text-brand-gold tracking-[0.25em] uppercase block">// GROUP ECOSYSTEM</span>
+      <h2 class="text-3xl font-serif text-[#fef6e8] font-normal">依托集團的生醫醫療後盾</h2>
+      <p class="text-[#fef6e8]/70 text-sm sm:text-base leading-relaxed font-light">
         深諳醫美與生技產業的「專業語言、法規界線、消費心理與市場結構」，我們調動集團研發與臨床資源，為孵化品牌賦能。
       </p>
     </div>
 
     <!-- 簡練無框列表 -->
-    <div class="border-t border-brand-charcoal/20 divide-y divide-brand-charcoal/10 font-mono text-xs">
+    <div class="border-t border-brand-red/20 divide-y divide-brand-red/15 font-mono text-xs">
       
       <!-- 母集團 -->
       <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
-        <span class="md:col-span-3 text-brand-red font-bold tracking-wider">GLOBAL PARENT</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-brand-charcoal">Mitoplus Biotech Corp. (美國)</div>
-        <p class="md:col-span-5 text-stone-600 font-sans font-light">全球生醫健康集團體系，提供國際研發視野與前沿技術支持。</p>
+        <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">GLOBAL PARENT</span>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">Mitoplus Biotech Corp. (美國)</div>
+        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">全球生醫健康集團體系，提供國際研發視野與前沿技術支持。</p>
       </div>
 
       <!-- 醫療資產與診所 -->
       <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
-        <span class="md:col-span-3 text-brand-red font-bold tracking-wider">CLINICAL & ASSETS</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-brand-charcoal">滿拓生技 ✕ 樸原健康 ✕ 大安頤和</div>
-        <div class="md:col-span-5 text-stone-600 font-sans font-light space-y-2">
+        <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">CLINICAL & ASSETS</span>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">滿拓生技 ✕ 樸原健康 ✕ 大安頤和</div>
+        <div class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light space-y-2">
           <p>· <strong>樸原健康診所：</strong>台灣首批通過特管法再生醫療診所之一，深耕再生醫療與高階醫美。</p>
           <p>· <strong>大安頤和診所：</strong>健保醫療、慢性病處方箋與預防健檢服務。</p>
           <p>· <strong>滿拓生技：</strong>醫療資產控股、乙類藥商與醫療儀器設備銷售資格。</p>
@@ -1009,16 +1013,16 @@
 
       <!-- 原料研發代工 -->
       <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
-        <span class="md:col-span-3 text-brand-red font-bold tracking-wider">R&D & SUPPLY</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-brand-charcoal">荏流生醫有限公司 RENLURE</div>
-        <p class="md:col-span-5 text-stone-600 font-sans font-light">生醫原料研發、保健與保養品 OEM/ODM 代工，供應再生醫療與醫療美容專用原料。</p>
+        <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">R&D & SUPPLY</span>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">荏流生醫有限公司 RENLURE</div>
+        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">生醫原料研發、保健與保養品 OEM/ODM 代工，供應再生醫療與醫療美容專用原料。</p>
       </div>
 
       <!-- 品牌策略旗艦 -->
       <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
-        <span class="md:col-span-3 text-brand-red font-bold tracking-wider">BRAND INCUBATION</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-brand-charcoal">心想事成 (台灣) ✕ 廈門心想事成 (中國)</div>
-        <p class="md:col-span-5 text-stone-600 font-sans font-light">大中華區醫療生技品牌策略、視覺設計、數位獲客與私域運營全案孵化據點。</p>
+        <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">BRAND INCUBATION</span>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">心想事成 (台灣) ✕ 廈門心想事成 (中國)</div>
+        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">大中華區醫療生技品牌策略、視覺設計、數位獲客與私域運營全案孵化據點。</p>
       </div>
 
     </div>
@@ -1027,22 +1031,26 @@
 
   <!-- ==================== 5. 核心優勢與總結邀請 ==================== -->
   <section class="py-24 px-6 md:px-16 max-w-4xl mx-auto text-center space-y-8">
-    <div class="w-10 h-[1px] bg-brand-red mx-auto"></div>
+    <div class="w-10 h-[1px] bg-brand-gold mx-auto"></div>
     
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-charcoal font-normal leading-snug">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif text-[#fef6e8] font-normal leading-snug">
       不講空泛的流量泡沫，<br />
       只做有根基、有溢價、能長期運作的常勝品牌。
     </h2>
 
-    <p class="text-stone-600 text-sm sm:text-base leading-relaxed font-light max-w-xl mx-auto">
+    <p class="text-[#fef6e8]/70 text-sm sm:text-base leading-relaxed font-light max-w-xl mx-auto">
       真誠的對話是偉大合作的起點。歡迎預約親臨台中大業路工作室品茶交流，與主理團隊共同梳理品牌的下一步。
     </p>
 
     <div class="pt-4 flex flex-wrap justify-center gap-4">
       <a href="https://lin.ee/rRWdlRi" target="_blank" rel="noopener noreferrer" 
-         class="px-8 py-3.5 rounded-full bg-brand-charcoal hover:bg-brand-red text-white font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-md">
+         class="px-8 py-3.5 rounded-full bg-brand-red hover:bg-brand-gold text-white hover:text-black font-mono text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-xl shadow-brand-red/20">
         預約創辦團隊親自諮詢 →
       </a>
+    </div>
+
+    <div class="font-mono text-[11px] text-[#fef6e8]/50 pt-4">
+      📍 台中市南屯區大業路131號 · 心想事成品牌孵化
     </div>
   </section>
   </main>
