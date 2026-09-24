@@ -820,112 +820,123 @@
 
   <!-- ==================== PAGE 2: ABOUT (關於心想事成) ==================== -->
   <main id="page-about" class="page-section flex-1">
-   <div id="page-about" class="page-view flex-1 bg-[#140b0b] text-[#fef6e8] selection:bg-brand-red selection:text-white">
+  <div id="page-about" class="page-view flex-1 bg-[#140b0b] text-[#fef6e8] selection:bg-brand-red selection:text-white relative overflow-hidden">
 
-  <!-- ==================== 1. 序章：深暗紅典雅自白 ==================== -->
+  <!-- 背景動態景深光暈 (隨滾動慢速漂移) -->
+  <div class="parallax-layer absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-red/15 rounded-full blur-[140px] pointer-events-none" data-parallax-speed="0.12"></div>
+  <div class="parallax-layer absolute top-[40%] -left-40 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[160px] pointer-events-none" data-parallax-speed="-0.1"></div>
+
+  <!-- ==================== 1. 序章：深暗紅典雅自白 (文字微位移) ==================== -->
   <section class="pt-24 pb-16 px-6 md:px-16 max-w-5xl mx-auto border-b border-brand-red/20 relative">
-    <!-- 背景暗光氛圍 -->
-    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <!-- 背景超慢速水印字 -->
+    <div class="parallax-layer absolute right-0 top-10 select-none pointer-events-none opacity-[0.03] font-display text-[18vw] leading-none font-black text-brand-gold" data-parallax-speed="0.2">
+      ODDS
+    </div>
 
-    <div class="inline-flex items-center gap-3 text-brand-gold text-xs tracking-[0.25em] font-mono uppercase mb-6 relative z-10">
+    <div class="inline-flex items-center gap-3 text-brand-gold text-xs tracking-[0.25em] font-mono uppercase mb-6 relative z-10 scroll-reveal">
       <span class="w-6 h-[1px] bg-brand-gold"></span>
       About Fortune Odds · Est. 2024
     </div>
     
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#fef6e8] font-normal leading-[1.35] mb-8 relative z-10">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#fef6e8] font-normal leading-[1.35] mb-8 relative z-10 scroll-reveal">
       在嚴苛法規與極致美學之間，<br />
       我們為生醫與美學品牌，鍛造能抵禦週期的<span class="italic text-brand-gold">定價尊嚴</span>。
     </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4 relative z-10 scroll-reveal">
       <div class="md:col-span-4 font-mono text-xs text-brand-gold/90 tracking-wider space-y-1">
         <p>“ May the odds be ever in your favor. ”</p>
         <p class="text-[#fef6e8]/60 font-serif">願機會永遠對你有利</p>
       </div>
       <div class="md:col-span-8 text-[#fef6e8]/80 text-sm sm:text-base leading-relaxed space-y-4 font-light">
         <p>
-          心想事成隸屬於 <strong class="text-brand-gold font-normal">Mitoplus Biotech Corp. 美國生技集團體系</strong>，是集團旗下專注於醫美、生技、美業品牌策略與整合行銷的核心旗艦。
+          心想事成隸屬於 <strong class="text-brand-gold font-normal">Mitoplus Biotech Corp. 美國生技集團體系</strong>，是集團旗下專注於醫美、生技、美業品牌策略與整合行銷的核心旗艦[cite: 2, 3]。
         </p>
         <p>
-          我們以「品牌策略 ✕ 行銷整合 ✕ 視覺設計」為基石。依託集團深厚的生醫背景，我們不玩低俗吸睛與踩線話術，而是將艱深的科學邏輯，轉譯為具備高度感染力與市場溫度的品牌語言。
+          我們以「品牌策略 ✕ 行銷整合 ✕ 視覺設計」為基石[cite: 2]。依託集團深厚的生醫背景，我們不玩低俗吸睛與踩線話術，而是將艱深的科學邏輯，轉譯為具備高度感染力與市場溫度的品牌語言[cite: 3, 4]。
         </p>
       </div>
     </div>
   </section>
 
 
-  <!-- ==================== 2. 主理人專題：李維庭 (深色自敘獨立板塊) ==================== -->
+  <!-- ==================== 2. 主理人專題：李維庭 (圖片視差緩動浮動) ==================== -->
   <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20 relative">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       
-      <!-- 左側：肖像與身份 -->
+      <!-- 左側：肖像 (自帶獨立平滑視差阻尼) -->
       <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-        <div class="aspect-[3/4] max-w-sm rounded-2xl overflow-hidden bg-[#1f1212] border border-brand-red/30 shadow-2xl relative group">
-          <img src="https://lh3.googleusercontent.com/d/13KtBUrXDs3uKU57r4GbkIm0uz254TFsD" alt="李維庭" class="w-full h-full object-cover filter grayscale contrast-110 group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-[#140b0b]/80 via-transparent to-transparent"></div>
+        <div class="parallax-image-wrapper aspect-[3/4] max-w-sm rounded-2xl overflow-hidden bg-[#1f1212] border border-brand-red/30 shadow-2xl relative group">
+          <!-- 內部圖片加上視差放大與位移 -->
+          <img src="https://lh3.googleusercontent.com/d/13KtBUrXDs3uKU57r4GbkIm0uz254TFsD" 
+               alt="李維庭" 
+               class="parallax-image w-full h-[115%] -top-[8%] relative object-cover filter grayscale contrast-110 group-hover:scale-105 transition-transform duration-700" 
+               data-parallax-speed="-0.15">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#140b0b]/80 via-transparent to-transparent pointer-events-none"></div>
         </div>
-        <div>
+        <div class="scroll-reveal">
           <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block mb-1">FOUNDER & STRATEGY DIRECTOR</span>
           <h2 class="text-3xl font-serif text-[#fef6e8] tracking-wide">李維庭</h2>
-          <p class="text-xs font-mono text-brand-red mt-1">創辦人 ｜ 策略總監</p>
+          <p class="text-xs font-mono text-brand-red mt-1">創辦人 ｜ 策略總監[cite: 6]</p>
         </div>
       </div>
 
-      <!-- 右側：創辦人自敘散文與經歷 -->
+      <!-- 右側：創辦人自敘散文與經歷 (逐段視差進場) -->
       <div class="lg:col-span-7 space-y-10 text-[#fef6e8]/85 leading-relaxed font-light">
         
-        <div class="space-y-4 text-base sm:text-lg">
+        <div class="space-y-4 text-base sm:text-lg scroll-reveal">
           <h3 class="text-xl sm:text-2xl font-serif text-brand-gold font-normal">
-            跨足生技研發、醫療實體與跨境市場的實踐者
+            跨足生技研發、醫療實體與跨境市場的實踐者[cite: 6]
           </h3>
           <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
             「成立心想事成之前，我先是一位創業主理人。」
           </p>
           <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
-            從成立獲得特管法核准的<strong class="text-[#fef6e8] font-normal">樸原再生醫療健康診所</strong>，到創辦<strong class="text-[#fef6e8] font-normal">荏流生醫</strong>進行原料配方研發與代工，我走過所有品牌從 0 到 1 都會經歷的困境：研發週期冗長、法規審查嚴苛、行銷公司不懂專業、消費者缺乏信任。
+            從成立獲得特管法核准的<strong class="text-[#fef6e8] font-normal">樸原再生醫療健康診所</strong>，到創辦<strong class="text-[#fef6e8] font-normal">荏流生醫</strong>進行原料配方研發與代工，我走過所有品牌從 0 到 1 都會經歷的困境：研發週期冗長、法規審查嚴苛、行銷公司不懂專業、消費者缺乏信任[cite: 3, 6]。
           </p>
           <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
-            多數行銷公司只在意表層的點擊率（CTR）與曝光；但生醫美學是個極度講求<strong class="text-brand-gold font-normal">「決策鏈長、專業門檻高」</strong>的賽道。唯有真正身處第一線懂產品、懂法規、懂臨床痛點的人，才能幫品牌梳理出具備長期複利的商業壁壘。
+            多數行銷公司只在意表層的點擊率（CTR）與曝光；但生醫美學是個極度講求<strong class="text-brand-gold font-normal">「決策鏈長、專業門檻高」</strong>的賽道[cite: 4]。唯有真正身處第一線懂產品、懂法規、懂臨床痛點的人，才能幫品牌梳理出具備長期複利的商業壁壘[cite: 4]。
           </p>
         </div>
 
-        <!-- 創辦經歷與榮譽 (極簡無框深色線條列表) -->
-        <div class="pt-8 border-t border-brand-red/20 space-y-4">
+        <!-- 創辦經歷與榮譽 (逐條淡入細線列表) -->
+        <div class="pt-8 border-t border-brand-red/20 space-y-4 scroll-reveal">
           <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block">// TRACK RECORD & ROLES</span>
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 text-xs font-mono text-[#fef6e8]/80">
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>樸原健康診所</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>荏流生醫有限公司</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>滿拓生技股份有限公司</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>心想事成品牌孵化</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>騰璽國際股份有限公司</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>廈門心想事成品牌策劃</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
               <span>DRINK MORE君墨</span>
-              <span class="text-brand-gold/70">創辦人</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
             <div class="flex items-baseline justify-between border-b border-brand-red/40 pb-2 text-brand-gold font-bold">
               <span>2020 亞太生技大獎</span>
-              <span>傑出健康生技品牌獎</span>
+              <span>傑出健康生技品牌獎[cite: 6]</span>
             </div>
           </div>
         </div>
@@ -940,37 +951,37 @@
   <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
       
-      <div class="lg:col-span-5 space-y-4">
+      <div class="lg:col-span-5 space-y-4 scroll-reveal">
         <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block">CHIEF MEDICAL STRATEGY ADVISOR</span>
         <h2 class="text-3xl font-serif text-[#fef6e8] tracking-wide">陳智青</h2>
-        <p class="text-xs font-mono text-brand-red font-bold">首席醫療策略顧問</p>
+        <p class="text-xs font-mono text-brand-red font-bold">首席醫療策略顧問[cite: 7]</p>
         <p class="text-[#fef6e8]/75 text-sm leading-relaxed pt-2 font-light">
-          橫跨亞洲醫療美容產業二十餘年，具備醫美集團經營、跨國醫療管理與醫療品牌戰略的深度實戰底蘊。
+          橫跨亞洲醫療美容產業二十餘年，具備醫美集團經營、跨國醫療管理與醫療品牌戰略的深度實戰底蘊[cite: 7]。
         </p>
       </div>
 
-      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-mono text-[#fef6e8]/80">
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs font-mono text-[#fef6e8]/80 scroll-reveal">
         <div class="space-y-3">
           <span class="text-brand-gold font-bold tracking-wider block border-b border-brand-red/25 pb-2">/ 學術與跨國管理</span>
           <ul class="space-y-2 text-[#fef6e8]/70">
-            <li>· 麗都醫療美容集團 國際事業部總經理</li>
-            <li>· 方群管理顧問股份有限公司 總經理</li>
-            <li>· 漾緹思診所 總經理</li>
-            <li>· 新加坡新康醫療管理公司 總經理</li>
-            <li>· 馬來西亞煌馬生物醫療科技公司 總經理</li>
-            <li>· 日本臨床醫療學會 理事</li>
+            <li>· 麗都醫療美容集團 國際事業部總經理[cite: 7]</li>
+            <li>· 方群管理顧問股份有限公司 總經理[cite: 7]</li>
+            <li>· 漾緹思診所 總經理[cite: 7]</li>
+            <li>· 新加坡新康醫療管理公司 總經理[cite: 7]</li>
+            <li>· 馬來西亞煌馬生物醫療科技公司 總經理[cite: 7]</li>
+            <li>· 日本臨床醫療學會 理事[cite: 7]</li>
           </ul>
         </div>
 
         <div class="space-y-3">
           <span class="text-brand-gold font-bold tracking-wider block border-b border-brand-red/25 pb-2">/ 顧問與實戰經歷</span>
           <ul class="space-y-2 text-[#fef6e8]/70">
-            <li>· 太平洋醫療管理集團 行銷副總經理</li>
-            <li>· 北京中健集團股份有限公司 顧問</li>
-            <li>· 香港康聯醫療管理集團 兩岸技術轉移顧問</li>
-            <li>· 上海狼海醫療投資集團 行銷顧問</li>
-            <li>· 台灣美容醫學會 大中華區教育委員會執行人</li>
-            <li>· 台灣/澳門麥茵茲醫學美容事業集團 總經理</li>
+            <li>· 太平洋醫療管理集團 行銷副總經理[cite: 7]</li>
+            <li>· 北京中健集團股份有限公司 顧問[cite: 7]</li>
+            <li>· 香港康聯醫療管理集團 兩岸技術轉移顧問[cite: 7]</li>
+            <li>· 上海狼海醫療投資集團 行銷顧問[cite: 7]</li>
+            <li>· 台灣美容醫學會 大中華區教育委員會執行人[cite: 7]</li>
+            <li>· 台灣/澳門麥茵茲醫學美容事業集團 總經理[cite: 7]</li>
           </ul>
         </div>
       </div>
@@ -979,14 +990,14 @@
   </section>
 
 
-  <!-- ==================== 4. 集團生態與架構 (深暗紅無框極簡排列表) ==================== -->
-  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20">
+  <!-- ==================== 4. 集團生態與架構 (視差貫穿列表) ==================== -->
+  <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20 relative">
     
-    <div class="max-w-3xl mb-16 space-y-3">
+    <div class="max-w-3xl mb-16 space-y-3 scroll-reveal">
       <span class="text-xs font-mono text-brand-gold tracking-[0.25em] uppercase block">// GROUP ECOSYSTEM</span>
-      <h2 class="text-3xl font-serif text-[#fef6e8] font-normal">依托集團的生醫醫療後盾</h2>
+      <h2 class="text-3xl font-serif text-[#fef6e8] font-normal">依托集團的生醫醫療後盾[cite: 3]</h2>
       <p class="text-[#fef6e8]/70 text-sm sm:text-base leading-relaxed font-light">
-        深諳醫美與生技產業的「專業語言、法規界線、消費心理與市場結構」，我們調動集團研發與臨床資源，為孵化品牌賦能。
+        深諳醫美與生技產業的「專業語言、法規界線、消費心理與市場結構」，我們調動集團研發與臨床資源，為孵化品牌賦能[cite: 3]。
       </p>
     </div>
 
@@ -994,35 +1005,35 @@
     <div class="border-t border-brand-red/20 divide-y divide-brand-red/15 font-mono text-xs">
       
       <!-- 母集團 -->
-      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline scroll-reveal">
         <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">GLOBAL PARENT</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">Mitoplus Biotech Corp. (美國)</div>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">Mitoplus Biotech Corp. (美國)[cite: 3]</div>
         <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">全球生醫健康集團體系，提供國際研發視野與前沿技術支持。</p>
       </div>
 
       <!-- 醫療資產與診所 -->
-      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline scroll-reveal">
         <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">CLINICAL & ASSETS</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">滿拓生技 ✕ 樸原健康 ✕ 大安頤和</div>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">滿拓生技 ✕ 樸原健康 ✕ 大安頤和[cite: 3]</div>
         <div class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light space-y-2">
-          <p>· <strong>樸原健康診所：</strong>台灣首批通過特管法再生醫療診所之一，深耕再生醫療與高階醫美。</p>
-          <p>· <strong>大安頤和診所：</strong>健保醫療、慢性病處方箋與預防健檢服務。</p>
-          <p>· <strong>滿拓生技：</strong>醫療資產控股、乙類藥商與醫療儀器設備銷售資格。</p>
+          <p>· <strong>樸原健康診所：</strong>台灣首批通過特管法再生醫療診所之一，深耕再生醫療與高階醫美[cite: 3]。</p>
+          <p>· <strong>大安頤和診所：</strong>健保醫療、慢性病處方箋與預防健檢服務[cite: 3]。</p>
+          <p>· <strong>滿拓生技：</strong>醫療資產控股、乙類藥商與醫療儀器設備銷售資格[cite: 3]。</p>
         </div>
       </div>
 
       <!-- 原料研發代工 -->
-      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline scroll-reveal">
         <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">R&D & SUPPLY</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">荏流生醫有限公司 RENLURE</div>
-        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">生醫原料研發、保健與保養品 OEM/ODM 代工，供應再生醫療與醫療美容專用原料。</p>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">荏流生醫有限公司 RENLURE[cite: 3]</div>
+        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">生醫原料研發、保健與保養品 OEM/ODM 代工，供應再生醫療與醫療美容專用原料[cite: 3]。</p>
       </div>
 
       <!-- 品牌策略旗艦 -->
-      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+      <div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline scroll-reveal">
         <span class="md:col-span-3 text-brand-gold font-bold tracking-wider">BRAND INCUBATION</span>
-        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">心想事成 (台灣) ✕ 廈門心想事成 (中國)</div>
-        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">大中華區醫療生技品牌策略、視覺設計、數位獲客與私域運營全案孵化據點。</p>
+        <div class="md:col-span-4 text-sm font-serif font-bold text-[#fef6e8]">心想事成 (台灣) ✕ 廈門心想事成 (中國)[cite: 3]</div>
+        <p class="md:col-span-5 text-[#fef6e8]/70 font-sans font-light">大中華區醫療生技品牌策略、視覺設計、數位獲客與私域運營全案孵化據點[cite: 3]。</p>
       </div>
 
     </div>
@@ -1030,7 +1041,7 @@
 
 
   <!-- ==================== 5. 核心優勢與總結邀請 ==================== -->
-  <section class="py-24 px-6 md:px-16 max-w-4xl mx-auto text-center space-y-8">
+  <section class="py-24 px-6 md:px-16 max-w-4xl mx-auto text-center space-y-8 scroll-reveal">
     <div class="w-10 h-[1px] bg-brand-gold mx-auto"></div>
     
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif text-[#fef6e8] font-normal leading-snug">
@@ -1053,6 +1064,8 @@
       📍 台中市南屯區大業路131號 · 心想事成品牌孵化
     </div>
   </section>
+
+</div>
   </main>
 
   <!-- ==================== PAGE 3: SERVICES (核心服務) ==================== -->
@@ -1771,7 +1784,7 @@
   </div>
 
   <script>
-    // Initialize Icons
+   // Initialize Icons
     lucide.createIcons();
 
     function runNumberCounters() {
@@ -1826,7 +1839,7 @@
     // Multi-page Router Simulator
     function navigateTo(pageId) {
       // Hide all page sections
-      document.querySelectorAll('.page-section').forEach(sec => {
+      document.querySelectorAll('.page-section, .page-view').forEach(sec => {
         sec.classList.remove('active');
       });
       // Show selected page
@@ -1840,6 +1853,14 @@
         runNumberCounters();
       }
 
+      // 切換至關於頁時，重置並觸發視差與進場計算
+      if (pageId === 'about') {
+        setTimeout(() => {
+          initScrollReveals();
+          handleParallax();
+        }, 50);
+      }
+
       // Update Nav active classes
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
@@ -1850,7 +1871,10 @@
       }
 
       // Close mobile menu if open
-      document.getElementById('mobile-menu').classList.add('hidden');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu) {
+        mobileMenu.classList.add('hidden');
+      }
 
       // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1858,14 +1882,89 @@
 
     function toggleMobileMenu() {
       const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
     }
 
     function handleFormSubmit(e) {
       e.preventDefault();
-      document.getElementById('formFeedback').classList.remove('hidden');
+      const feedback = document.getElementById('formFeedback');
+      if (feedback) {
+        feedback.classList.remove('hidden');
+      }
       e.target.reset();
     }
+
+    // ==================== 視差滾動 (Parallax)  ====================
+    let isTicking = false;
+
+    function handleParallax() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+      // 1. 背景光暈與大浮水印多層視差
+      const parallaxLayers = document.querySelectorAll('.parallax-layer');
+      parallaxLayers.forEach(layer => {
+        const speed = parseFloat(layer.getAttribute('data-parallax-speed')) || 0.1;
+        const yPos = -(scrollY * speed);
+        layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
+      });
+
+      // 2. 肖像圖片視差微位移
+      const parallaxImages = document.querySelectorAll('.parallax-image');
+      parallaxImages.forEach(img => {
+        const rect = img.parentElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.12;
+          img.style.transform = `translate3d(0px, ${offset}px, 0px)`;
+        }
+      });
+
+      isTicking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!isTicking) {
+        window.requestAnimationFrame(handleParallax);
+        isTicking = true;
+      }
+    }, { passive: true });
+
+    // 3. 元素進入可視範圍淡入 (Scroll Reveal)
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    function initScrollReveals() {
+      document.querySelectorAll('.scroll-reveal').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translate3d(0px, 24px, 0px)';
+        el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        revealObserver.observe(el);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initScrollReveals();
+      handleParallax();
+    });
+
+    // 動態注入淡入樣式
+    const parallaxStyle = document.createElement("style");
+    parallaxStyle.textContent = `
+      .scroll-reveal.revealed {
+        opacity: 1 !important;
+        transform: translate3d(0px, 0px, 0px) !important;
+      }
+    `;
+    document.head.appendChild(parallaxStyle);
   </script>
 </body>
 </html>
