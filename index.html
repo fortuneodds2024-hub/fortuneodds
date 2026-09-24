@@ -98,6 +98,35 @@
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    @keyframes glow-breathe-red {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes glow-breathe-gold {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(0.9);
+  }
+}
+
+.animate-glow-red {
+  animation: glow-breathe-red 7s ease-in-out infinite;
+}
+
+.animate-glow-gold {
+  animation: glow-breathe-gold 9s ease-in-out infinite 1.5s;
+}
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-red selection:text-white">
@@ -822,13 +851,10 @@
   <main id="page-about" class="page-section flex-1">
 <div id="page-about" class="page-view flex-1 text-brand-cream selection:bg-brand-red selection:text-white relative overflow-hidden font-sans">
 
-  <!-- ==================== 1. 頂部主標題 ✕ BANNER ✕ 心想優勢 (深暗墨色開場) ==================== -->
-  <section class="bg-brand-charcoal pt-24 pb-24 px-6 md:px-16 border-b border-brand-red/20 relative overflow-hidden">
-    <div class="parallax-layer absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-red/15 rounded-full blur-[140px] pointer-events-none" data-parallax-speed="0.12"></div>
-    <div class="parallax-layer absolute top-[40%] -left-40 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[160px] pointer-events-none" data-parallax-speed="-0.1"></div>
-
+ <div class="parallax-layer animate-glow-red absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[720px] bg-brand-red/40 rounded-full blur-[130px] pointer-events-none mix-blend-screen" data-parallax-speed="0.12"></div>
+ <div class="parallax-layer animate-glow-gold absolute top-[35%] -left-36 w-[560px] h-[560px] bg-brand-gold/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen" data-parallax-speed="-0.1"></div>
+   
     <div class="max-w-6xl mx-auto relative z-10">
-      <!-- 頂部標籤與大標題 -->
       <div class="max-w-4xl space-y-6">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-cream font-normal leading-[1.3] scroll-reveal">
           ABOUT US<br />
@@ -842,7 +868,6 @@
         </div>
       </div>
 
-      <!-- BANNER 專區 (純粹無框溶底) -->
       <div class="my-16 sm:my-20 scroll-reveal flex items-center justify-center">
         <img src="https://lh3.googleusercontent.com/d/1Kt2dBDVT5Us-H9NQCMghhR-PAXzXSdpi" 
              alt="心想事成 願機會永遠對你有利" 
@@ -1020,63 +1045,69 @@
 
   <!-- ==================== 4. 依托集團醫療後盾 (切回品牌深炭黑 bg-brand-charcoal) ==================== -->
   <section class="py-24 px-6 md:px-16 bg-brand-charcoal text-brand-cream border-b border-brand-red/20 relative">
-    <div class="max-w-6xl mx-auto">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="max-w-3xl mb-16 space-y-3">
+      <span class="text-xs font-mono text-brand-gold tracking-[0.25em] uppercase block">// PROVEN IMPACT</span>
+      <h2 class="text-3xl sm:text-4xl font-serif text-brand-cream font-normal tracking-wide">
+        不談空泛簡報，以數字驗證商業實戰
+      </h2>
+      <p class="text-brand-cream/70 text-sm sm:text-base leading-relaxed font-light font-sans">
+        我們將生醫實體的嚴謹邏輯，注入每一場品牌行銷戰役，用可被審計的真實成果說話。
+      </p>
+    </div>
+
+    <!-- 4 大核心數據矩陣 (無卡片・極細十字分線) -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 divide-x divide-white/10 border-t border-b border-white/10">
       
-      <div class="max-w-3xl mb-16 space-y-3 scroll-reveal">
-        <span class="text-xs font-mono text-brand-gold tracking-[0.25em] uppercase block">// GROUP ECOSYSTEM</span>
-        <h2 class="text-3xl sm:text-4xl font-serif text-brand-cream font-normal tracking-wide">依托集團的醫療後盾</h2>
-        <p class="text-brand-cream/70 text-sm sm:text-base leading-relaxed font-light font-sans">
-          深諳醫美與生技產業的「專業語言、法規界線、消費心理與市場結構」，我們調動集團研發與臨床資源，為孵化品牌賦能。
+      <!-- 01 -->
+      <div class="py-10 px-6 sm:px-8 space-y-2">
+        <span class="text-[11px] font-mono text-brand-gold uppercase tracking-wider block">累计孵化品牌溢價</span>
+        <div class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-brand-cream">
+          300<span class="text-2xl sm:text-3xl text-brand-red font-sans font-light">%+</span>
+        </div>
+        <p class="text-xs text-brand-cream/60 font-sans leading-relaxed pt-1">
+          擺脫削價競爭，為合作品牌確立不可替代的客單尊榮。
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 border-t border-brand-red/20 divide-y md:divide-y-0 divide-brand-red/15">
-        
-        <!-- 01. GLOBAL PARENT -->
-        <div class="py-10 md:py-12 md:pr-12 md:border-r md:border-b border-brand-red/15 flex flex-col justify-center space-y-3 group">
-          <h3 class="text-2xl font-serif text-brand-cream group-hover:text-brand-gold transition-colors font-medium">
-            Mitoplus Biotech Corp.
-          </h3>
-          <p class="text-brand-cream/70 text-sm leading-relaxed font-light font-sans">
-            全球生醫健康集團體系，提供國際研發視野、學術資源與尖端生物技術底層支持。
-          </p>
+      <!-- 02 -->
+      <div class="py-10 px-6 sm:px-8 space-y-2">
+        <span class="text-[11px] font-mono text-brand-gold uppercase tracking-wider block">全網總播放流量</span>
+        <div class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-brand-cream">
+          1.2<span class="text-2xl sm:text-3xl text-brand-red font-sans font-light">億+</span>
         </div>
-
-        <!-- 02. CLINICAL & ASSETS -->
-        <div class="py-10 md:py-12 md:pl-12 md:border-b border-brand-red/15 flex flex-col justify-center space-y-3 group">
-          <h3 class="text-2xl font-serif text-brand-cream group-hover:text-brand-gold transition-colors font-medium">
-            滿拓生技 ✕ 樸原健康 ✕ 大安頤和
-          </h3>
-          <div class="text-brand-cream/70 text-xs sm:text-sm font-sans font-light space-y-2 leading-relaxed">
-            <p><span class="text-brand-cream font-normal">樸原健康診所</span>：深耕再生醫療。</p>
-            <p><span class="text-brand-cream font-normal">大安頤和診所</span>：慢性病管理與高階健檢體系。</p>
-            <p><span class="text-brand-cream font-normal">滿拓生技</span>：醫療資產控股、乙類藥商與醫療儀器設備授權流通。</p>
-          </div>
-        </div>
-
-        <!-- 03. R&D & SUPPLY -->
-        <div class="py-10 md:py-12 md:pr-12 md:border-r border-brand-red/15 flex flex-col justify-center space-y-3 group">
-          <h3 class="text-2xl font-serif text-brand-cream group-hover:text-brand-gold transition-colors font-medium">
-            荏流生醫 RENLURE
-          </h3>
-          <p class="text-brand-cream/70 text-sm leading-relaxed font-light font-sans">
-            專注生醫原料精萃研發、保健保養配方開發，供應再生醫療與專業醫美專用原料代工生產。
-          </p>
-        </div>
-
-        <!-- 04. BRAND INCUBATION -->
-        <div class="py-10 md:py-12 md:pl-12 flex flex-col justify-center space-y-3 group">
-          <h3 class="text-2xl font-serif text-brand-cream group-hover:text-brand-gold transition-colors font-medium">
-            心想事成 (台灣) ✕ 廈門心想事成
-          </h3>
-          <p class="text-brand-cream/70 text-sm leading-relaxed font-light font-sans">
-            大中華區品牌定位、視覺策略、短影音矩陣、數位合規廣告投放與私域 CRM 轉單閉環孵化中心。
-          </p>
-        </div>
-
+        <p class="text-xs text-brand-cream/60 font-sans leading-relaxed pt-1">
+          醫師與主理人短影音矩陣，精準打穿目標受眾心智。
+        </p>
       </div>
+
+      <!-- 03 -->
+      <div class="py-10 px-6 sm:px-8 space-y-2">
+        <span class="text-[11px] font-mono text-brand-gold uppercase tracking-wider block">合規審查通過率</span>
+        <div class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-brand-cream">
+          99.8<span class="text-2xl sm:text-3xl text-brand-red font-sans font-light">%</span>
+        </div>
+        <p class="text-xs text-brand-cream/60 font-sans leading-relaxed pt-1">
+          深諳兩岸醫療法規邊界，杜絕帳號受罰與公關危機。
+        </p>
+      </div>
+
+      <!-- 04 -->
+      <div class="py-10 px-6 sm:px-8 space-y-2">
+        <span class="text-[11px] font-mono text-brand-gold uppercase tracking-wider block">跨國與實體資源</span>
+        <div class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-brand-cream">
+          100<span class="text-2xl sm:text-3xl text-brand-red font-sans font-light">%</span>
+        </div>
+        <p class="text-xs text-brand-cream/60 font-sans leading-relaxed pt-1">
+          自帶原料配方研發、臨床試驗與兩岸雙城落地網絡。
+        </p>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- ==================== 5. 核心優勢與總結邀請 (米白底輕盈收尾 bg-brand-cream) ==================== -->
   <section class="py-24 px-6 md:px-16 bg-brand-cream text-brand-charcoal text-center space-y-8 scroll-reveal">
@@ -1098,9 +1129,6 @@
           預約創辦團隊親自諮詢 →
         </a>
       </div>
-
-      <div class="font-mono text-xs text-brand-stone/70 pt-6">
-        📍 台中市南屯區大業路131號 · 心想事成品牌孵化
       </div>
     </div>
   </section>
@@ -1943,12 +1971,10 @@
         layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
       });
 
-      // 2. 肖像圖片微位移：提升容器內的滑行幅度 (幅度由 0.12 放大至 0.32)
       const parallaxImages = document.querySelectorAll('.parallax-image');
       parallaxImages.forEach(img => {
         const rect = img.parentElement.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          // 計算相對螢幕中心的垂直位移，增強上下浮動手感
           const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.32;
           img.style.transform = `translate3d(0px, ${offset}px, 0px) scale(1.08)`;
         }
@@ -1964,7 +1990,6 @@
       }
     }, { passive: true });
 
-    // 3. 元素進場/退場大位移淡入淡出 (Scroll Reveal)
    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1981,7 +2006,6 @@
     });
 
     function initScrollReveals() {
-      // 常規向上淡入
       document.querySelectorAll('.scroll-reveal').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translate3d(0px, 52px, 0px) scale(0.96)';
@@ -1989,7 +2013,6 @@
         revealObserver.observe(el);
       });
 
-      // 照片專屬：從左側深處滑入 (大幅度 80px 位移)
       document.querySelectorAll('.scroll-reveal-left').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translate3d(-80px, 0px, 0px) scale(0.95)';
