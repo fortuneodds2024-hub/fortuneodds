@@ -820,152 +820,77 @@
 
   <!-- ==================== PAGE 2: ABOUT (關於心想事成) ==================== -->
   <main id="page-about" class="page-section flex-1">
- <section class="pt-24 pb-20 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20 relative">
+  <div id="page-about" class="page-view flex-1 bg-[#140b0b] text-[#fef6e8] selection:bg-brand-red selection:text-white relative overflow-hidden">
+
+  <!-- 背景動態景深光暈 (隨滾動慢速漂移) -->
+  <div class="parallax-layer absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-red/15 rounded-full blur-[140px] pointer-events-none" data-parallax-speed="0.12"></div>
+  <div class="parallax-layer absolute top-[40%] -left-40 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[160px] pointer-events-none" data-parallax-speed="-0.1"></div>
+
+  <!-- ==================== 1. 序章：深暗紅典雅自白 (文字微位移) ==================== -->
+  <section class="pt-24 pb-16 px-6 md:px-16 max-w-5xl mx-auto border-b border-brand-red/20 relative">
     
     <!-- 背景超慢速水印字 -->
     <div class="parallax-layer absolute right-0 top-10 select-none pointer-events-none opacity-[0.03] font-display text-[18vw] leading-none font-black text-brand-gold" data-parallax-speed="0.2">
       ODDS
     </div>
 
-    <!-- 頂部標籤與大標題 -->
-    <div class="max-w-4xl space-y-6 relative z-10">
-      <div class="inline-flex items-center gap-3 text-brand-gold text-xs tracking-[0.25em] font-mono uppercase scroll-reveal">
-        <span class="w-6 h-[1px] bg-brand-gold"></span>
-        About Fortune Odds · Est. 2024
-      </div>
-      
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#fef6e8] font-normal leading-[1.35] scroll-reveal">
-        在嚴苛法規與極致美學之間，<br />
-        為生醫與美學品牌鍛造能抵禦週期的<span class="italic text-brand-gold">定價尊嚴</span>。
-      </h1>
+    <div class="inline-flex items-center gap-3 text-brand-gold text-xs tracking-[0.25em] font-mono uppercase mb-6 relative z-10 scroll-reveal">
+      <span class="w-6 h-[1px] bg-brand-gold"></span>
+      About Fortune Odds · Est. 2024
+    </div>
+    
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#fef6e8] font-normal leading-[1.35] mb-8 relative z-10 scroll-reveal">
+      在嚴苛法規與極致美學之間，<br />
+      我們為生醫與美學品牌，鍛造能抵禦週期的<span class="italic text-brand-gold">定價尊嚴</span>。
+    </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline pt-2 scroll-reveal">
-        <div class="md:col-span-4 font-mono text-xs text-brand-gold/90 tracking-wider space-y-1">
-          <p>“ May the odds be ever in your favor. ”</p>
-          <p class="text-[#fef6e8]/60 font-serif">願機會永遠對你有利</p>
-        </div>
-        <div class="md:col-span-8 text-[#fef6e8]/80 text-sm sm:text-base leading-relaxed font-light">
-          心想事成隸屬於 <strong class="text-brand-gold font-normal">Mitoplus Biotech Corp. 美國生技集團體系</strong>[cite: 2, 3]，專注於醫美、生技與美業品牌策略與整合行銷[cite: 2, 3]。依託集團深厚的生醫背景，將硬核科學邏輯轉譯為具備高度感染力與市場溫度的品牌語言[cite: 3, 4]。
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4 relative z-10 scroll-reveal">
+      <div class="md:col-span-4 font-mono text-xs text-brand-gold/90 tracking-wider space-y-1">
+        <p>“ May the odds be ever in your favor. ”</p>
+        <p class="text-[#fef6e8]/60 font-serif">願機會永遠對你有利</p>
+      </div>
+      <div class="md:col-span-8 text-[#fef6e8]/80 text-sm sm:text-base leading-relaxed space-y-4 font-light">
+        <p>
+          心想事成隸屬於 <strong class="text-brand-gold font-normal">Mitoplus Biotech Corp. 美國生技集團體系</strong>，是集團旗下專注於醫美、生技、美業品牌策略與整合行銷的核心旗艦[cite: 2, 3]。
+        </p>
+        <p>
+          我們以「品牌策略 ✕ 行銷整合 ✕ 視覺設計」為基石[cite: 2]。依託集團深厚的生醫背景，我們不玩低俗吸睛與踩線話術，而是將艱深的科學邏輯，轉譯為具備高度感染力與市場溫度的品牌語言[cite: 3, 4]。
+        </p>
       </div>
     </div>
-
-    <!-- ==================== BANNER 專區 (深暗紅墨色自適應溶底處理) ==================== -->
-    <div class="my-14 relative scroll-reveal">
-      <div class="relative w-full rounded-2xl overflow-hidden bg-[#180e0e] border border-brand-red/30 shadow-2xl p-6 sm:p-10 flex items-center justify-center group">
-        
-        <!-- 背景暗紅微光氛圍 -->
-        <div class="absolute inset-0 bg-radial from-brand-red/20 via-transparent to-transparent opacity-60 pointer-events-none"></div>
-        
-        <!-- 四角仿金色細線角標 -->
-        <div class="absolute top-3 left-3 w-4 h-4 border-t border-l border-brand-gold/60 pointer-events-none"></div>
-        <div class="absolute top-3 right-3 w-4 h-4 border-t border-r border-brand-gold/60 pointer-events-none"></div>
-        <div class="absolute bottom-3 left-3 w-4 h-4 border-b border-l border-brand-gold/60 pointer-events-none"></div>
-        <div class="absolute bottom-3 right-3 w-4 h-4 border-b border-r border-brand-gold/60 pointer-events-none"></div>
-
-        <!-- 
-          Banner 圖像深色化：
-          使用 invert 與 hue-rotate 將米白底反轉為深色炭黑底，並將字體與線條還原成暗赤紅與金色調
-        -->
-        <img src="心想事成_工作區域 1 複本_0.jpg" 
-             alt="心想事成 願機會永遠對你有利" 
-             class="w-full max-w-3xl h-auto object-contain select-none transition-transform duration-700 group-hover:scale-[1.02] filter invert contrast-125 brightness-95 hue-rotate-180" 
-             style="mix-blend-mode: lighten;" />
-      </div>
-    </div>
-
-    <!-- ==================== 三大核心優勢 (無框雜誌排印) ==================== -->
-    <div class="pt-6 border-t border-brand-red/20 relative z-10 scroll-reveal">
-      <div class="flex items-center justify-between mb-8">
-        <span class="text-xs font-mono text-brand-gold tracking-[0.25em] uppercase">// THREE CORE ADVANTAGES</span>
-        <span class="text-[11px] font-mono text-[#fef6e8]/40">COMPREHENSIVE VALUE PROPOSITION</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs font-mono">
-        
-        <!-- 優勢 01 -->
-        <div class="space-y-3 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-red/40 transition-colors">
-          <div class="text-brand-gold font-bold text-sm flex items-center gap-2">
-            <span class="text-brand-red font-display text-base">/ 01</span>
-            <span>專注醫美生技語境</span>
-          </div>
-          <p class="font-sans text-sm text-[#fef6e8]/70 leading-relaxed font-light">
-            熟悉衛福部醫療廣告法規界線與關鍵字規範[cite: 3, 5]。精通案例敘事、專業形象塑造與消費者信任建立，從源頭化解法規踩線風險[cite: 5]。
-          </p>
-          <div class="text-[10px] text-brand-gold/60 pt-2 border-t border-white/5">
-            #醫療法規過審 #消費信任轉譯[cite: 5]
-          </div>
-        </div>
-
-        <!-- 優勢 02 -->
-        <div class="space-y-3 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-red/40 transition-colors">
-          <div class="text-brand-gold font-bold text-sm flex items-center gap-2">
-            <span class="text-brand-red font-display text-base">/ 02</span>
-            <span>跨界美學整合調度</span>
-          </div>
-          <p class="font-sans text-sm text-[#fef6e8]/70 leading-relaxed font-light">
-            長期橫跨生活風格、旅遊、餐飲與美學精品領域[cite: 5]。打破醫療行銷常見的生硬與冰冷說教，賦予品牌兼具深度與市場溫度的視覺張力[cite: 5]。
-          </p>
-          <div class="text-[10px] text-brand-gold/60 pt-2 border-t border-white/5">
-            #生活風格語境 #無框先鋒排印[cite: 5]
-          </div>
-        </div>
-
-        <!-- 優勢 03 -->
-        <div class="space-y-3 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-red/40 transition-colors">
-          <div class="text-brand-gold font-bold text-sm flex items-center gap-2">
-            <span class="text-brand-red font-display text-base">/ 03</span>
-            <span>集團科研與通路後盾</span>
-          </div>
-          <p class="font-sans text-sm text-[#fef6e8]/70 leading-relaxed font-light">
-            背靠再生醫療診所（樸原、大安頤和）與原料研發代工廠（荏流生醫）[cite: 3]。從研發供應鏈到臨床線下接觸點，賦予品牌超越單純行銷的實體賦能[cite: 3]。
-          </p>
-          <div class="text-[10px] text-brand-gold/60 pt-2 border-t border-white/5">
-            #再生醫療診所 #原料OEM研發[cite: 3]
-          </div>
-        </div>
-
-      </div>
-    </div>
-
   </section>
 
 
-  <!-- ==================== 2. 主理人專題：李維庭  ==================== -->
+  <!-- ==================== 2. 主理人專題：李維庭 (圖片視差緩動浮動) ==================== -->
   <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20 relative">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       
-      <div class="lg:col-span-5 lg:sticky lg:top-28">
-        <div class="scroll-reveal-left parallax-image-wrapper aspect-[3/4] max-w-sm rounded-2xl overflow-hidden bg-[#1f1212] border border-brand-red/30 shadow-2xl relative group">
+      <!-- 左側：肖像 (自帶獨立平滑視差阻尼) -->
+      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+        <div class="parallax-image-wrapper aspect-[3/4] max-w-sm rounded-2xl overflow-hidden bg-[#1f1212] border border-brand-red/30 shadow-2xl relative group">
+          <!-- 內部圖片加上視差放大與位移 -->
           <img src="https://lh3.googleusercontent.com/d/13KtBUrXDs3uKU57r4GbkIm0uz254TFsD" 
                alt="李維庭" 
                class="parallax-image w-full h-[115%] -top-[8%] relative object-cover filter grayscale contrast-110 group-hover:scale-105 transition-transform duration-700" 
                data-parallax-speed="-0.15">
           <div class="absolute inset-0 bg-gradient-to-t from-[#140b0b]/80 via-transparent to-transparent pointer-events-none"></div>
         </div>
+        <div class="scroll-reveal">
+          <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block mb-1">FOUNDER & STRATEGY DIRECTOR</span>
+          <h2 class="text-3xl font-serif text-[#fef6e8] tracking-wide">李維庭</h2>
+          <p class="text-xs font-mono text-brand-red mt-1">創辦人 ｜ 策略總監[cite: 6]</p>
+        </div>
       </div>
 
-      <!-- 右側：創辦人自敘散文與經歷 -->
+      <!-- 右側：創辦人自敘散文與經歷 (逐段視差進場) -->
       <div class="lg:col-span-7 space-y-10 text-[#fef6e8]/85 leading-relaxed font-light">
         
-        <!-- 名稱與頭銜移至此處替換原標題 -->
-        <div class="space-y-3 scroll-reveal">
-          <div class="inline-flex items-center gap-2">
-            <span class="w-5 h-[1px] bg-brand-gold"></span>
-            <span class="text-xs font-mono text-brand-gold tracking-widest uppercase">FOUNDER & STRATEGY DIRECTOR</span>
-          </div>
-          <div class="flex items-baseline gap-4 flex-wrap">
-            <h2 class="text-4xl sm:text-5xl font-serif text-[#fef6e8] tracking-wide font-normal">李維庭</h2>
-            <span class="text-sm font-mono text-brand-red font-bold">創辦人 ｜ 策略總監[cite: 6]</span>
-          </div>
-          <p class="text-brand-gold/90 text-base sm:text-lg font-serif font-light pt-1">
-            跨足生技研發、醫療實體與跨境市場的多領域創業者[cite: 6]
-          </p>
-        </div>
-
         <div class="space-y-4 text-base sm:text-lg scroll-reveal">
-          <p class="text-[#fef6e8]/75 text-base sm:text-lg leading-relaxed">
+          <h3 class="text-xl sm:text-2xl font-serif text-brand-gold font-normal">
+            跨足生技研發、醫療實體與跨境市場的實踐者[cite: 6]
+          </h3>
+          <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
             「成立心想事成之前，我先是一位創業主理人。」
           </p>
           <p class="text-[#fef6e8]/75 text-sm sm:text-base leading-relaxed">
@@ -976,42 +901,42 @@
           </p>
         </div>
 
-        <!-- 創辦經歷與榮譽 (字級加大至 text-sm / text-base) -->
+        <!-- 創辦經歷與榮譽 (逐條淡入細線列表) -->
         <div class="pt-8 border-t border-brand-red/20 space-y-4 scroll-reveal">
           <span class="text-xs font-mono text-brand-gold tracking-widest uppercase block">// TRACK RECORD & ROLES</span>
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-sm sm:text-base font-mono text-[#fef6e8]/85">
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">樸原健康診所</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-8 text-xs font-mono text-[#fef6e8]/80">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>樸原健康診所</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">荏流生醫有限公司</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>荏流生醫有限公司</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">滿拓生技股份有限公司</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>滿拓生技股份有限公司</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">心想事成品牌孵化</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>心想事成品牌孵化</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">騰璽國際股份有限公司</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>騰璽國際股份有限公司</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">廈門心想事成品牌策劃</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>廈門心想事成品牌策劃</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-white/10 pb-2.5">
-              <span class="font-sans">DRINK MORE君墨</span>
-              <span class="text-brand-gold/80 text-xs sm:text-sm">創辦人</span>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-2">
+              <span>DRINK MORE君墨</span>
+              <span class="text-brand-gold/70">創辦人[cite: 6]</span>
             </div>
-            <div class="flex items-baseline justify-between border-b border-brand-red/40 pb-2.5 text-brand-gold font-bold">
-              <span class="font-sans">2020 亞太生技大獎</span>
-              <span class="text-xs sm:text-sm">傑出健康生技品牌獎</span>
+            <div class="flex items-baseline justify-between border-b border-brand-red/40 pb-2 text-brand-gold font-bold">
+              <span>2020 亞太生技大獎</span>
+              <span>傑出健康生技品牌獎[cite: 6]</span>
             </div>
           </div>
         </div>
@@ -1020,6 +945,7 @@
 
     </div>
   </section>
+
 
   <!-- ==================== 3. 首席醫療策略顧問：陳智青 ==================== -->
   <section class="py-24 px-6 md:px-16 max-w-6xl mx-auto border-b border-brand-red/20">
@@ -1999,11 +1925,12 @@
     }, { passive: true });
 
     // 3. 元素進場/退場大位移淡入淡出 (Scroll Reveal)
-const revealObserver = new IntersectionObserver((entries) => {
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
         } else {
+          // 滾出可視範圍時退場，重現動態呼吸感 (若想只進場一次可刪除此行)
           if (entry.boundingClientRect.top > window.innerHeight * 0.7) {
             entry.target.classList.remove('revealed');
           }
@@ -2015,19 +1942,11 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 
     function initScrollReveals() {
-      // 常規向上淡入
-      document.querySelectorAll('.scroll-reveal').forEach(el => {
+      document.querySelectorAll('.scroll-reveal').forEach((el, index) => {
+        // 初始狀態：較大下墜位移 (52px) + 微縮放 (0.96)
         el.style.opacity = '0';
         el.style.transform = 'translate3d(0px, 52px, 0px) scale(0.96)';
         el.style.transition = 'opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1)';
-        revealObserver.observe(el);
-      });
-
-      // 照片專屬：從左側深處滑入 (大幅度 80px 位移)
-      document.querySelectorAll('.scroll-reveal-left').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translate3d(-80px, 0px, 0px) scale(0.95)';
-        el.style.transition = 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.3s cubic-bezier(0.16, 1, 0.3, 1)';
         revealObserver.observe(el);
       });
     }
@@ -2037,13 +1956,14 @@ const revealObserver = new IntersectionObserver((entries) => {
       handleParallax();
     });
 
+    // 動態注入大動態樣式
     const parallaxStyle = document.createElement("style");
     parallaxStyle.textContent = `
-      .scroll-reveal.revealed,
-      .scroll-reveal-left.revealed {
+      .scroll-reveal.revealed {
         opacity: 1 !important;
         transform: translate3d(0px, 0px, 0px) scale(1) !important;
       }
+      /* 肖像包覆層強化平滑過渡 */
       .parallax-image {
         will-change: transform;
         transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
